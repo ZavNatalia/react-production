@@ -1,11 +1,12 @@
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
-import {BuildMOptions} from "./types/config";
+import {BuildOptions} from "./types/config";
 
-export function buildPlugins({paths}: BuildMOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({paths}: BuildOptions): webpack.WebpackPluginInstance[] {
+
     return [
         new HTMLWebpackPlugin({
-            template: paths.html
+            template: paths.html,
         }),
         new webpack.ProgressPlugin(),
     ]
