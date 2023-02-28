@@ -16,5 +16,11 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+.lang {
+  margin-left: 20px;
+  color: var(--inverted-secondary-color);
 }
