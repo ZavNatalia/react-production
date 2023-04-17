@@ -21,7 +21,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                     {t('Main')}
                 </AppLink>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-                    {t('About')}
+                    {t('About us')}
                 </AppLink>
             </div>
         </div>
