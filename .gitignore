@@ -4,5 +4,6 @@
 *.iml
 out
 gen
+/storybook-static
 
 /node_modules
