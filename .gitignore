@@ -5,5 +5,7 @@
 out
 gen
 /storybook-static
+.loki/report.html
+.loki/report.json
 
 /node_modules
