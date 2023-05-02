@@ -1,15 +1,15 @@
 {
   "About": "About",
-  "About site": "About site",
   "About us": "About us",
   "Language": "Language",
   "Log in": "Log in",
   "Main": "Main",
   "Main page": "Main page",
   "Page not found": "Page not found",
+  "Password": "Password",
   "Throw error": "Throw error",
   "Toggle": "Toggle",
-  "Toggle sidebar": "",
   "Unexpected error": "Unexpected error",
-  "Update page": "Update page"
+  "Update page": "Update page",
+  "Username": "Username"
 }
