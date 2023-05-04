@@ -10,6 +10,9 @@
   "Main page": "Главная страница",
   "About us": "О нас",
   "Log in": "Войти",
+  "Log out": "Выйти",
   "Username": "Имя пользователя",
-  "Password": "Пароль"
+  "Password": "Пароль",
+  "Invalid username or password": "Неверный логин или пароль",
+  "Authorization form": "Форма авторизации"
 }
