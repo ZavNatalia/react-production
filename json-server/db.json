@@ -10,5 +10,14 @@
     { "id": "1", "username": "admin", "password": "123" },
     { "id": "2", "username": "Vasya", "password": "456" }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "firstname": "Jane",
+    "lastname": "Doe",
+    "age": "30",
+    "currency": "KZT",
+    "country": "Kazakhstan",
+    "city": "Almaty",
+    "username": "admin",
+    "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+  }
 }
