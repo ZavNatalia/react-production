@@ -2,6 +2,7 @@
   "About": "About",
   "About us": "About us",
   "Authorization form": "",
+  "Edit": "Edit",
   "Invalid username or password": "",
   "Language": "Language",
   "Log in": "Log in",
@@ -10,9 +11,12 @@
   "Main page": "Main page",
   "Page not found": "Page not found",
   "Password": "Password",
+  "Profile": "Profile",
   "Throw error": "Throw error",
   "Toggle": "Toggle",
   "Unexpected error": "Unexpected error",
   "Update page": "Update page",
-  "Username": "Username"
+  "Username": "Username",
+  "Your firstname": "Your firstname",
+  "Your lastname": "Your lastname"
 }

@@ -2,6 +2,7 @@
   "About": "About",
   "About us": "О нас",
   "Authorization form": "Authorization form",
+  "Edit": "Edit",
   "Invalid username or password": "Invalid username or password",
   "Language": "Language",
   "Log in": "Войти",
@@ -10,9 +11,12 @@
   "Main page": "Главная страница",
   "Page not found": "Страница не найдена",
   "Password": "Пароль",
+  "Profile": "Profile",
   "Throw error": "Вернуть ошибку",
   "Toggle": "Переключить",
   "Unexpected error": "Непредвиденная ошибка",
   "Update page": "Обновить страницу",
-  "Username": "Имя пользователя"
+  "Username": "Имя пользователя",
+  "Your firstname": "Your firstname",
+  "Your lastname": "Your lastname"
 }
