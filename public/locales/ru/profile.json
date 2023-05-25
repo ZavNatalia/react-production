@@ -2,5 +2,7 @@
   "Profile": "Профиль",
   "Edit": "Редактировать",
   "Your firstname": "Ваше имя",
-  "Your lastname": "Ваша фамилия"
+  "Your lastname": "Ваша фамилия",
+  "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
+  "Try to reload the page": "Попробуйте перезагрузить страницу"
 }
