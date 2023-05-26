@@ -1,8 +1,10 @@
 {
-  "Profile": "Профиль",
-  "Edit": "Редактировать",
   "Your firstname": "Ваше имя",
   "Your lastname": "Ваша фамилия",
+  "Your age": "Ваш возраст",
+  "City": "Город",
+  "Username": "Псевдоним",
+  "Avatar": "Аватар",
   "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
   "Try to reload the page": "Попробуйте перезагрузить страницу"
 }
