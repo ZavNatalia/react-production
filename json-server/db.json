@@ -33,9 +33,9 @@
   "profile": {
     "firstname": "Jane",
     "lastname": "Doe",
-    "age": 31,
-    "currency": "EUR",
-    "country": "Kyrgyzstan",
+    "age": 30,
+    "currency": "KZT",
+    "country": "Kazakhstan",
     "city": "Almaty",
     "username": "admin",
     "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
