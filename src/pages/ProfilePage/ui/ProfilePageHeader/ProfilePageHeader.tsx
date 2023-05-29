@@ -9,10 +9,11 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
-    className?: string
+    className?: string;
+    error?: string;
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const ProfilePageHeader = ({ className, error }: ProfilePageHeaderProps) => {
     const { t } = useTranslation();
     const readonly = useSelector(getProfileReadonly);
     const dispatch = useAppDispatch();
@@ -38,6 +39,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                     <Button
                         theme={ButtonTheme.OUTLINE}
                         className={cls.editBtn}
+                        disabled={!!error}
                         onClick={onEdit}
                     >
                         {t('Edit')}

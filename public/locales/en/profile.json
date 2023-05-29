@@ -5,6 +5,8 @@
   "City": "City",
   "Username": "Username",
   "Avatar": "Avatar",
+  "Currency": "Currency",
+  "Country": "Country",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
   "Try to reload the page": "Try to reload the page"
 }
