@@ -8,5 +8,10 @@
   "Currency": "Валюта",
   "Country": "Страна",
   "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
-  "Try to reload the page": "Попробуйте перезагрузить страницу"
+  "Try to reload the page": "Попробуйте перезагрузить страницу",
+  "Server Error": "Серверная ошибка",
+  "Invalid region": "Некорректрный регион",
+  "No data added": "Данные не указаны",
+  "First and last name fields are required": "Имя и фамилия обязательны",
+  "Incorrect age": "Некорректный возраст"
 }

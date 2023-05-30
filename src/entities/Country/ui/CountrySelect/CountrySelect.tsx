@@ -18,7 +18,7 @@ export const CountrySelect = (props: CountrySelectProps) => {
         readonly,
         onChange,
     } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('profile');
 
     const countryOptions = useMemo(
         () => Object.entries(Country).map((val) => ({ value: val[0], content: val[1] })),
