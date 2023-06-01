@@ -28,6 +28,13 @@ Dark.decorators = [
     StoreDecorator({ user: { authData: {} } }),
 ];
 
+export const Green = Template.bind({});
+Green.args = {};
+Green.decorators = [
+    ThemeDecorator(Theme.GREEN),
+    StoreDecorator({ user: { authData: {} } }),
+];
+
 export const NoAuth = Template.bind({});
 NoAuth.args = {};
 NoAuth.decorators = [
