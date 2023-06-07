@@ -3,14 +3,14 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { useDispatch } from 'react-redux';
-import { userActions } from 'entities/User';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserMounted, userActions } from 'entities/User';
 import { AppRouter } from './providers/router';
 
 const App = () => {
     const { theme } = useTheme();
     const dispatch = useDispatch();
+    const mounted = useSelector(getUserMounted);
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
@@ -22,7 +22,7 @@ const App = () => {
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    <AppRouter />
+                    {mounted && <AppRouter />}
                 </div>
             </Suspense>
         </div>
