@@ -1,3 +1,7 @@
 .ArticleImageBlockComponent {
-    color: white;
+    color: var(--primary-color);
+}
+
+.img {
+    max-width: 800px;
 }

@@ -63,6 +63,33 @@
           "id": "6",
           "type": "IMAGE",
           "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "Функции-декораторы",
+          "paragraphs": [
+            "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+            "Пример класса без декоратора:"
+          ]
+        },
+        {
+          "id": "8",
+          "type": "CODE",
+          "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "paragraphs": [
+            "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+            "Пример декоратора:"
+          ]
+        },
+        {
+          "id": "10",
+          "type": "CODE",
+          "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
         }
       ]
     }
