@@ -6,7 +6,6 @@ import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import avatar from './storybook.png';
 
 export default {
     title: 'pages/ProfilePage',
@@ -30,7 +29,6 @@ Normal.decorators = [StoreDecorator({
             city: 'Astana',
             currency: Currency.KZT,
             country: Country.Kazakhstan,
-            avatar,
         },
     },
 })];
@@ -47,24 +45,6 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
             city: 'Astana',
             currency: Currency.KZT,
             country: Country.Kazakhstan,
-            avatar,
-        },
-    },
-})];
-
-export const Green = Template.bind({});
-Green.args = {};
-Green.decorators = [ThemeDecorator(Theme.GREEN), StoreDecorator({
-    profile: {
-        form: {
-            username: 'admin',
-            age: 35,
-            firstname: 'Vasya',
-            lastname: 'Petrov',
-            city: 'Astana',
-            currency: Currency.KZT,
-            country: Country.Kazakhstan,
-            avatar,
         },
     },
 })];
