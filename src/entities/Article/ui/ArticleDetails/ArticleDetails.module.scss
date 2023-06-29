@@ -10,6 +10,8 @@
 
 .avatar {
     margin: 0 auto;
+    object-fit: cover;
+    border-radius: 30px;
 }
 
 .title {
@@ -17,7 +19,7 @@
 }
 
 .skeleton {
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
 .articleInfo {
