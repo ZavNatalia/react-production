@@ -105,13 +105,13 @@
       "id": "2",
       "text": "content",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
-      "id": "2",
+      "id": "3",
       "text": "more comment",
       "articleId": "1",
-      "userId": "1"
+      "userId": "3"
     }
   ],
   "users": [
@@ -119,13 +119,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
     },
     {
       "id": "2",
       "username": "Vasya",
       "password": "456",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
+    },
+    {
+      "id": "3",
+      "username": "Petya",
+      "password": "654",
+      "role": "USER",
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }
   ],
   "profile": {

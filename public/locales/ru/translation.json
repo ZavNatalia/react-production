@@ -19,5 +19,7 @@
   "Username": "Имя пользователя",
   "Password": "Пароль",
   "Invalid username or password": "Неверный логин или пароль",
-  "Authorization form": "Форма авторизации"
+  "Authorization form": "Форма авторизации",
+  "Comments": "Комментарии",
+  "No comments": "Нет комментариев"
 }

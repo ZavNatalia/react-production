@@ -54,8 +54,8 @@ export const ProfilePageHeader = ({ className, error }: ProfilePageHeaderProps) 
                             {t('Cancel')}
                         </Button>
                         <Button
-                            theme={ButtonTheme.OUTLINE}
                             className={cls.saveBtn}
+                            theme={ButtonTheme.OUTLINE}
                             onClick={onSave}
                         >
                             {t('Save')}

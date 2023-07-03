@@ -13,6 +13,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -45,24 +46,24 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         case ArticleBlockType.TEXT:
             return (
                 <ArticleTextBlockComponent
-                    key={block.id}
                     className={cls.block}
+                    key={block.id}
                     block={block}
                 />
             );
         case ArticleBlockType.IMAGE:
             return (
                 <ArticleImageBlockComponent
-                    key={block.id}
                     className={cls.block}
+                    key={block.id}
                     block={block}
                 />
             );
         case ArticleBlockType.CODE:
             return (
                 <ArticleCodeBlockComponent
-                    key={block.id}
                     className={cls.block}
+                    key={block.id}
                     block={block}
                 />
             );
@@ -71,11 +72,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         }
     }, []);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchArticleById(id));
-        }
-    }, [dispatch, id]);
+    useInitialEffect(() => {
+        dispatch(fetchArticleById(id));
+    });
 
     let content;
 
@@ -101,9 +100,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
             <>
                 <div className={cls.avatarWrapper}>
                     <Avatar
+                        className={cls.avatar}
                         size={200}
                         src={article?.img}
-                        className={cls.avatar}
                     />
                 </div>
                 <Text
