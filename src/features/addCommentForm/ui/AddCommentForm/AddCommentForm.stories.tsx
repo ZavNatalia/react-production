@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { action } from '@storybook/addon-actions';
 import AddCommentForm from './AddCommentForm';
 
 export default {
@@ -16,19 +17,15 @@ export default {
 const Template: ComponentStory<typeof AddCommentForm> = (args) => <AddCommentForm {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-    addCommentForm: {
-        text: '123',
-    },
-})];
+Normal.args = {
+    onSendComment: action('onSendComment'),
+};
+Normal.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    onSendComment: action('onSendComment'),
+};
 Dark.decorators = [
     ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-        addCommentForm: {
-            text: '456',
-        },
-    })];
+    StoreDecorator({})];

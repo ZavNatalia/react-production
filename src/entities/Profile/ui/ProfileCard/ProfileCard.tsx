@@ -4,13 +4,12 @@ import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Select } from 'shared/ui/Select/Select';
 import { Currency } from 'entities/Currency/model/types/currency';
 import { CurrencySelect } from 'entities/Currency';
 import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
-import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
+import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
     className?: string;
@@ -82,45 +81,45 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     </div>
                 )}
                 <Input
+                    className={cls.input}
                     value={data?.firstname}
                     placeholder={t('Your firstname')}
-                    className={cls.input}
                     readonly={readonly}
                     onChange={onChangeFirstname}
                 />
                 <Input
+                    className={cls.input}
                     value={data?.lastname}
                     placeholder={t('Your lastname')}
-                    className={cls.input}
                     readonly={readonly}
                     onChange={onChangeLastname}
                 />
                 <Input
+                    className={cls.input}
                     value={data?.age}
                     placeholder={t('Your age')}
-                    className={cls.input}
                     readonly={readonly}
                     type="number"
                     onChange={onChangeAge}
                 />
                 <Input
+                    className={cls.input}
                     value={data?.city}
                     placeholder={t('City')}
-                    className={cls.input}
                     readonly={readonly}
                     onChange={onChangeCity}
                 />
                 <Input
+                    className={cls.input}
                     value={data?.username}
                     placeholder={t('Username')}
-                    className={cls.input}
                     readonly={readonly}
                     onChange={onChangeUsername}
                 />
                 <Input
+                    className={cls.input}
                     value={data?.avatar}
                     placeholder={t('Avatar')}
-                    className={cls.input}
                     readonly={readonly}
                     onChange={onChangeAvatar}
                 />
