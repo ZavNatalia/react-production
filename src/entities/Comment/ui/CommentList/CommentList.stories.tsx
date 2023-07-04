@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import { CommentList } from './CommentList';
 
 export default {
@@ -27,8 +28,11 @@ Normal.args = {
         },
     ],
 };
+Normal.decorators = [StoreDecorator({})];
+
 export const Loading = Template.bind({});
 Loading.args = {
     comments: [],
     isLoading: true,
 };
+Loading.decorators = [StoreDecorator({})];
