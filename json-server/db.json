@@ -112,6 +112,30 @@
       "text": "more comment",
       "articleId": "1",
       "userId": "3"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asddadasd",
+      "id": "FRmZJ0e"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "lasdb kjasdkagd",
+      "id": "7troKyl"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "This, Args extends number[]",
+      "id": "QytKwF7"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "return function(this: This, ...args: Args) {}",
+      "id": "13PvoZ9"
     }
   ],
   "users": [
@@ -159,6 +183,17 @@
       "city": "Moscow",
       "username": "Vasya I",
       "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
+    },
+    {
+      "id": "3",
+      "firstname": "Petya",
+      "lastname": "Ivanov",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Petya I",
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }
   ]
 }

@@ -50,7 +50,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 
     return (
         // eslint-disable-next-line i18next/no-literal-string
-        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Authorization form')} />
                 {error && <Text className={error} text={t('Invalid username or password')} theme={TextTheme.ERROR} />}
