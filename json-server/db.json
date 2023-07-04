@@ -137,14 +137,28 @@
       "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }
   ],
-  "profile": {
-    "firstname": "Jane",
-    "lastname": "Doe",
-    "age": 30,
-    "currency": "KZT",
-    "country": "Kazakhstan",
-    "city": "Almaty",
-    "username": "admin",
-    "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "age": 30,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Almaty",
+      "username": "Admin Jane",
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+    },
+    {
+      "id": "2",
+      "firstname": "Vasya",
+      "lastname": "Ivanov",
+      "age": 20,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Vasya I",
+      "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
+    }
+  ]
 }
