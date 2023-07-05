@@ -4,6 +4,17 @@ export enum ArticleBlockType {
     TEXT = 'TEXT'
 }
 
+export enum ArticleType {
+    IT = 'IT',
+    SCIENCE = 'SCIENCE',
+    ECONOMICS = 'ECONOMICS'
+}
+
+export enum ArticleView {
+    LIST = 'LIST',
+    PLATE = 'PLATE'
+}
+
 export interface ArticleBlockBase {
     id: string;
     type: ArticleBlockType;
@@ -27,12 +38,6 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
-
-export enum ArticleType {
-    IT = 'IT',
-    SCIENCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS'
-}
 
 export interface Article {
     id: string;
