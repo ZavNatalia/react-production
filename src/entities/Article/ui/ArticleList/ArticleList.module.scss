@@ -1,4 +1,11 @@
-.ArticleList {
+.LIST {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+}
+
+.PLATE {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
 }

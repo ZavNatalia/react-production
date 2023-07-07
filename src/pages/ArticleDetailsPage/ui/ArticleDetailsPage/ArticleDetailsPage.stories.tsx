@@ -22,6 +22,10 @@ const article: Article = {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png',
     views: 1022,
     createdAt: '12.02.2023',
+    user: {
+        id: '1',
+        username: 'Jane',
+    },
     type: [
         ArticleType.IT,
     ],

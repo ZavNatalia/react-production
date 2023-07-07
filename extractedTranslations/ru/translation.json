@@ -7,6 +7,7 @@
   "Article not found": "Article not found",
   "Authorization form": "Authorization form",
   "Avatar": "Avatar",
+  "Back to the list": "Back to the list",
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
@@ -28,6 +29,13 @@
   "Page not found": "Page not found",
   "Password": "Password",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Send": "Send",
   "Server Error": "Server Error",

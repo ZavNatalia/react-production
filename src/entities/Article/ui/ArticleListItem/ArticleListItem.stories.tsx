@@ -1,7 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article, ArticleView } from '../../model/types/article';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import { ArticleListItem } from './ArticleListItem';
+import { Article, ArticleView } from '../../model/types/article';
 
 const article = {
     id: '1',
@@ -10,6 +12,11 @@ const article = {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Rufous-collared_sparrow_%28Zonotrichia_capensis_costaricensis%29_2.jpg/500px-Rufous-collared_sparrow_%28Zonotrichia_capensis_costaricensis%29_2.jpg',
     views: '1022',
     createdAt: '12.02.2023',
+    user: {
+        id: '1',
+        username: 'Jane',
+        avatar: 'https://t3.ftcdn.net/jpg/01/71/25/36/360_F_171253642_miKXqvj5DeDNKipuJERPQZM1gQWX0C2d.jpg',
+    },
     type: [
         'IT',
         'SCIENCE',
@@ -34,7 +41,7 @@ const article = {
 } as unknown as Article;
 
 export default {
-    title: 'shared/ArticleListItem',
+    title: 'entities/ArticleListItem',
     component: ArticleListItem,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -43,8 +50,27 @@ export default {
 
 const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const NormalList = Template.bind({});
+NormalList.args = {
+    article,
+    view: ArticleView.LIST,
+};
+export const DarkList = Template.bind({});
+DarkList.args = {
+    article,
+    view: ArticleView.LIST,
+};
+DarkList.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const NormalPlate = Template.bind({});
+NormalPlate.args = {
     article,
     view: ArticleView.PLATE,
 };
+
+export const DarkPlate = Template.bind({});
+DarkPlate.args = {
+    article,
+    view: ArticleView.PLATE,
+};
+DarkPlate.decorators = [ThemeDecorator(Theme.DARK)];
