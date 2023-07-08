@@ -1,10 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text } from 'shared/ui/Text/Text';
-import cls from './CommentList.module.scss';
 import { Comment } from '../../model/types/comment';
 import { CommentCard } from '../CommentCard/CommentCard';
+import cls from './CommentList.module.scss';
 
 interface CommentListProps {
     className?: string;
@@ -39,7 +39,7 @@ export const CommentList = memo((props: CommentListProps) => {
                     ))
                 )
                 : (
-                    <Text text={t('No comments')} />
+                    <Text text={t('No comments')} className={cls.emptyList} />
                 )}
         </div>
     );
