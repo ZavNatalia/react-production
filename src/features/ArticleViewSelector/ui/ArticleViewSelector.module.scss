@@ -1,0 +1,11 @@
+.ArticleViewSelector {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+    justify-content: flex-end;
+}
+
+.selected {
+    fill: var(--selector-bg);
+    scale: 1.3;
+}

@@ -1,7 +1,7 @@
 .app_green_theme {
     --bg-color: #eaf8f6;
     --primary-color: #3a635c;
-    --secondary-color: #2b4a33;
+    --secondary-color: #404245;
     --inverted-bg-color: #3a635c;
     --inverted-primary-color: #eaf8f6;
     --inverted-secondary-color: #98c2bc;
@@ -15,4 +15,7 @@
 
     // card
     --card-bg: #a4bbb7;
+
+    // view selector
+    --selector-bg: #168573;
 }

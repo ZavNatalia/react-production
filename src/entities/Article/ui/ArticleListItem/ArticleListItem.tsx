@@ -12,8 +12,8 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
 } from '../../model/types/article';
-import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {
     className?: string;

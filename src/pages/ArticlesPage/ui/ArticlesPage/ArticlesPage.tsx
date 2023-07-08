@@ -1,10 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
-import { ArticleList } from 'entities/Article';
+import { memo, useCallback } from 'react';
+import { ArticleList, ArticleView } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
+import { ArticleViewSelector } from 'features/ArticleViewSelector';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
     getArticlesPageError,
@@ -12,7 +13,7 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelector';
 import cls from './ArticlesPage.module.scss';
-import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
+import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 
 interface ArticlesPageProps {
     className?: string
@@ -31,11 +32,17 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
 
     useInitialEffect(() => {
         dispatch(fetchArticlesList());
+        dispatch(articlesPageActions.initState());
     });
+
+    const onChangeView = useCallback((view: ArticleView) => {
+        dispatch(articlesPageActions.setView(view));
+    }, [dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.ArticlesPage, {}, [className])}>
+                <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
