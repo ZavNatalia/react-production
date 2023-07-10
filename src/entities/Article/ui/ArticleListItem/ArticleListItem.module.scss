@@ -6,8 +6,9 @@
     }
 
     .img {
-        width: 100%;
-        max-height: 320px;
+        max-width: 100%;
+        width: fit-content;
+        max-height: 220px;
         object-fit: cover;
         margin: 16px 0;
     }
@@ -37,7 +38,7 @@
 }
 
 .PLATE {
-    width: 240px;
+    width: 230px;
     transition: 0.2s;
     cursor: pointer;
 
@@ -62,6 +63,7 @@
         width: 200px;
         height: 200px;
         position: relative;
+        margin: 0;
     }
 
     .img {

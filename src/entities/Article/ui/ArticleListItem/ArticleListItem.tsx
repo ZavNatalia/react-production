@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import { Card } from 'shared/ui/Card/Card';
@@ -48,7 +48,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         <Text className={cls.username} text={article.user?.username} />
                         <Text className={cls.date} text={article.createdAt} />
                     </div>
-                    <Text className={cls.title} title={article.title} />
+                    <Text className={cls.title} size={TextSize.L} title={article.title} />
                     {types}
                     <img className={cls.img} src={article.img} alt={article.title} />
                     {textBlock && (
