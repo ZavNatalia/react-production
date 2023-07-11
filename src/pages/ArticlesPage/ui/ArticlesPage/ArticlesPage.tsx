@@ -7,6 +7,9 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useSelector } from 'react-redux';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
 import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
     getArticlesPageError,
@@ -25,6 +28,7 @@ const reducers: ReducersList = {
 };
 
 const ArticlesPage = ({ className }: ArticlesPageProps) => {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
@@ -42,9 +46,29 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlesPage());
+    }, [dispatch]);
+
+    if (error) {
+        return (
+            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+                <Text
+                    theme={TextTheme.ERROR}
+                    title={t('An error occurred while loading articles')}
+                    text={t('Try to reload the page')}
+                    align={TextAlign.CENTER}
+                />
+            </div>
+        );
+    }
+
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <Page className={classNames(cls.ArticlesPage, {}, [className])}>
+            <Page
+                className={classNames(cls.ArticlesPage, {}, [className])}
+                onScrollEnd={onLoadNextPart}
+            >
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <ArticleList
                     isLoading={isLoading}

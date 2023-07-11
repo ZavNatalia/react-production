@@ -24,5 +24,7 @@
   "No comments": "No comments",
   "Enter the comment text": "Enter the comment text",
   "Send": "Send",
-  "Read more": "Read more..."
+  "Read more": "Read more",
+  "An error occurred while loading articles": "An error occurred while loading articles",
+  "Try to reload the page": "Try to reload the page"
 }

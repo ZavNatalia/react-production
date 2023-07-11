@@ -1,9 +1,8 @@
 {
-  "": "",
   "About us": "About us",
+  "An error occurred while loading articles": "An error occurred while loading articles",
   "An error occurred while loading the article": "An error occurred while loading the article",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
-  "Article": "Article",
   "Article not found": "Article not found",
   "Authorization form": "Authorization form",
   "Avatar": "Avatar",
@@ -11,16 +10,14 @@
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
-  "Country": "",
+  "Country": "Country",
   "Currency": "Currency",
   "Edit": "Edit",
   "Enter the comment text": "Enter the comment text",
-  "Error": "Error",
   "First and last name fields are required": "First and last name fields are required",
   "Incorrect age": "Incorrect age",
   "Invalid region": "Invalid region",
   "Invalid username or password": "Invalid username or password",
-  "Loading": "Loading",
   "Log in": "Log in",
   "Log out": "Log out",
   "Main page": "Main page",
@@ -29,13 +26,7 @@
   "Page not found": "Page not found",
   "Password": "Password",
   "Profile": "Profile",
-  "Read more": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
+  "Read more": "Read more",
   "Save": "Save",
   "Send": "Send",
   "Server Error": "Server Error",
@@ -45,7 +36,6 @@
   "Update page": "Update page",
   "Username": "Username",
   "Your age": "Your age",
-  "Your city": "Your city",
   "Your firstname": "Your firstname",
   "Your lastname": "Your lastname"
 }

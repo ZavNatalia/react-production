@@ -5,12 +5,19 @@
         gap: 8px;
     }
 
-    .img {
-        max-width: 100%;
-        width: fit-content;
-        max-height: 220px;
-        object-fit: cover;
-        margin: 16px 0;
+    .imgWrapper {
+        max-height: 400px;
+        max-width: 400px;
+        margin: 8px auto 0;
+        text-align: center;
+
+        .img {
+            max-width: 100%;
+            max-height: 100%;
+            min-width: 100px;
+            min-height: 100px;
+            object-fit: contain;
+        }
     }
 
     .date {
@@ -23,6 +30,10 @@
     }
 
     .title {
+        margin-top: 8px;
+    }
+
+    .types {
         margin-top: 8px;
     }
 
@@ -46,8 +57,10 @@
         display: none;
         position: absolute;
         right: 6px;
-        top: 4px;
-        text-shadow: 1px 1px 2px white;
+        top: 6px;
+        background-color: var(--bg-color);
+        padding: 2px 4px;
+        opacity: 0.8;
     }
 
     &:hover {
@@ -64,12 +77,12 @@
         height: 200px;
         position: relative;
         margin: 0;
-    }
 
-    .img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
+        .img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
     }
 
     .infoWrapper {
@@ -78,16 +91,22 @@
         margin-top: 8px;
     }
 
-    .types p {
-        width: 115px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .types {
+        flex: 1;
+
+        p {
+            width: 140px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+        }
     }
 
     .views {
-        margin-left: auto;
-        margin-right: 8px;
+        p {
+            font-size: 12px;
+        }
     }
 
     .title {

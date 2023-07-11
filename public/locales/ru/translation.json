@@ -24,5 +24,7 @@
   "No comments": "Нет комментариев",
   "Enter the comment text": "Введите текст комментария",
   "Send": "Отправить",
-  "Read more": "Читать далее..."
+  "Read more": "Читать далее",
+  "An error occurred while loading articles": "Произошла ошибка при загрузке статей",
+  "Try to reload the page": "Попробуйте перезагрузить страницу"
 }

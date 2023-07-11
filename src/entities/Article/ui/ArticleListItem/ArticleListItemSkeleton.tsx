@@ -22,9 +22,11 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
                         <Skeleton className={cls.username} width={150} height={16} />
                         <Skeleton className={cls.date} width={150} height={16} />
                     </div>
-                    <Skeleton className={cls.title} width={250} height={24} />
-
-                    <Skeleton className={cls.img} height={200} />
+                    <Skeleton className={cls.title} width={300} height={24} />
+                    <Skeleton className={cls.types} width={150} height={18} />
+                    <div className={cls.imgWrapper}>
+                        <Skeleton className={cls.img} height={200} />
+                    </div>
                     <div className={cls.footer}>
                         <Skeleton className={cls.moreBtn} width={200} height={36} />
                     </div>

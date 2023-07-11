@@ -33,8 +33,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const types = <Text className={cls.types} text={article.type.join(', ')} />;
     const views = (
         <>
-            <Text className={cls.views} text={String(article.views)} />
             <Icon Svg={EyeIcon} />
+            <Text className={cls.views} text={String(article.views)} />
         </>
     );
     if (view === ArticleView.LIST) {
@@ -50,7 +50,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <Text className={cls.title} size={TextSize.L} title={article.title} />
                     {types}
-                    <img className={cls.img} src={article.img} alt={article.title} />
+                    <div className={cls.imgWrapper}>
+                        <img className={cls.img} src={article.img} alt={article.title} />
+                    </div>
                     {textBlock && (
                         <ArticleTextBlockComponent className={cls.textBlock} block={textBlock} />
                     )}
