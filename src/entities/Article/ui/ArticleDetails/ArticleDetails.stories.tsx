@@ -16,9 +16,9 @@ const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetail
 
 const article: Article = {
     id: '1',
-    title: 'TypeScript news',
-    subtitle: 'TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png',
+    title: 'HTML news',
+    subtitle: 'HTML: оцениваем и сравниваем изменения.',
+    img: 'https://w0.peakpx.com/wallpaper/214/158/HD-wallpaper-html5-logo-white-silk-texture-html5-emblem-programming-language-html-silk-background.jpg',
     views: 1022,
     createdAt: '12.02.2023',
     user: {

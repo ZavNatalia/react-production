@@ -18,9 +18,9 @@ export const ArticleViewSelector = ({ className, view, onViewClick }: ArticleVie
 
     return (
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-            {viewTypes.map((viewType, index) => (
+            {viewTypes.map((viewType) => (
                 <Button
-                    key={index}
+                    key={viewType.view}
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
                 >
