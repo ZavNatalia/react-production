@@ -20,5 +20,17 @@ Normal.decorators = [StoreDecorator({
     articlesPage: {
         view: ArticleView.PLATE,
         isLoading: false,
+        _inited: true,
     },
+    scrollRestoration: { scroll: { articles: 0 } },
+})];
+export const Loading = Template.bind({});
+Loading.args = {};
+Loading.decorators = [StoreDecorator({
+    articlesPage: {
+        view: ArticleView.PLATE,
+        isLoading: true,
+        _inited: false,
+    },
+    scrollRestoration: { scroll: { articles: 0 } },
 })];
