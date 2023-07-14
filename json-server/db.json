@@ -88,7 +88,7 @@
       "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
       "img": "https://miro.medium.com/v2/resize:fit:365/1*Jr3NFSKTfQWRUyjblBSKeg.png",
       "views": "722",
-      "createdAt": "12.08.2023",
+      "createdAt": "01.03.2023",
       "userId": "2",
       "type": [
         "IT"
@@ -193,7 +193,7 @@
       "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
       "views": "322",
-      "createdAt": "09.02.2023",
+      "createdAt": "09.08.2018",
       "userId": "1",
       "type": [
         "IT",
@@ -314,14 +314,16 @@
     },
     {
       "id": "6",
-      "title": "Как настроить Node.js Express сервер для React",
-      "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://codemobiles.com/biz/training/images/react.js.jpg",
+      "title": "Космический сервер уже на орбите: как принять с него сигнал",
+      "subtitle": "Как же следить за нашим спутником и получать с него данные?",
+      "img": "https://habrastorage.org/webt/pj/xa/hc/pjxahc-vsrfj1evkmzolxlco8r8.png",
       "views": "722",
-      "createdAt": "12.08.2023",
+      "createdAt": "27.06.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "SPACE",
+        "DIY"
       ],
       "blocks": [
         {
@@ -692,14 +694,15 @@
     },
     {
       "id": "13",
-      "title": "Как настроить Node.js Express сервер для React",
-      "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://codemobiles.com/biz/training/images/react.js.jpg",
+      "title": "Экстренное шифрование данных",
+      "subtitle": "Представим такую ситуацию: на вашем компьютере хранятся очень важные или компрометирующие вас данные, а в вашу дверь кто-то ломится. Ваша задача заключается в том, что бы быстро и незаметно зашифровать всю важную информацию на своём компьютере. Как это сделать?",
+      "img": "https://habrastorage.org/r/w780/getpro/habr/upload_files/062/94d/487/06294d48779d0062bc8fe18731e17590.jpg",
       "views": "722",
-      "createdAt": "12.08.2023",
+      "createdAt": "12.08.2022",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "PYTHON"
       ],
       "blocks": [
         {
@@ -797,11 +800,11 @@
     },
     {
       "id": "15",
-      "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
-      "img": "https://w0.peakpx.com/wallpaper/214/158/HD-wallpaper-html5-logo-white-silk-texture-html5-emblem-programming-language-html-silk-background.jpg",
+      "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
+      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+      "img": "https://habrastorage.org/webt/vj/eb/gn/vjebgnmqximd2g6hmph8yit4-ee.png",
       "views": "322",
-      "createdAt": "09.02.2023",
+      "createdAt": "09.02.2020",
       "userId": "1",
       "type": [
         "IT",
