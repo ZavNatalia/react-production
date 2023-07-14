@@ -3,7 +3,7 @@ import { ArticleView } from 'entities/Article';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 import cls from './ArticleViewSelector.module.scss';
-import { viewTypes } from '../model/types/articleViewSelector';
+import { viewTypes } from '../../model/types/articleViewSelector';
 
 interface ArticleViewSelectorProps {
     className?: string;

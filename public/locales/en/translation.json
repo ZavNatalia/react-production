@@ -26,5 +26,13 @@
   "Send": "Send",
   "Read more": "Read more",
   "An error occurred while loading articles": "An error occurred while loading articles",
-  "Try to reload the page": "Try to reload the page"
+  "Try to reload the page": "Try to reload the page",
+  "Sort by": "Sort by",
+  "By": "By",
+  "Ascending": "Ascending",
+  "Descending": "Descending",
+  "Creation date": "Creation date",
+  "Title": "Title",
+  "Views": "Views",
+  "Search": "Search"
 }

@@ -26,5 +26,13 @@
   "Send": "Отправить",
   "Read more": "Читать далее",
   "An error occurred while loading articles": "Произошла ошибка при загрузке статей",
-  "Try to reload the page": "Попробуйте перезагрузить страницу"
+  "Try to reload the page": "Попробуйте перезагрузить страницу",
+  "Sort by": "Сортировать по",
+  "By": "По",
+  "Ascending": "Возрастанию",
+  "Descending": "Убыванию",
+  "Creation date": "Дате создания",
+  "Title": "Названию",
+  "Views": "Просмотрам",
+  "Search": "Поиск"
 }
