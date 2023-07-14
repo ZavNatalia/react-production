@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { ArticleList } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -8,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
@@ -34,27 +35,26 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const error = useSelector(getArticlesPageError);
     const view = useSelector(getArticlesPageView);
+    const [searchParams] = useSearchParams();
 
     useInitialEffect(() => {
-        dispatch(initArticlesPage());
+        dispatch(initArticlesPage(searchParams));
     });
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
 
-    if (error) {
-        return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
-                <Text
-                    theme={TextTheme.ERROR}
-                    title={t('An error occurred while loading articles')}
-                    text={t('Try to reload the page')}
-                    align={TextAlign.CENTER}
-                />
-            </div>
-        );
-    }
+    const errorMsg = (
+        <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <Text
+                theme={TextTheme.ERROR}
+                title={t('An error occurred while loading articles')}
+                text={t('Try to reload the page')}
+                align={TextAlign.CENTER}
+            />
+        </div>
+    );
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
@@ -63,12 +63,16 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
             >
                 <ArticlesPageFilters />
-                <ArticleList
-                    className={cls.list}
-                    isLoading={isLoading}
-                    view={view}
-                    articles={articles}
-                />
+                {error
+                    ? errorMsg
+                    : (
+                        <ArticleList
+                            className={cls.list}
+                            isLoading={isLoading}
+                            view={view}
+                            articles={articles}
+                        />
+                    )}
             </Page>
         </DynamicModuleLoader>
     );

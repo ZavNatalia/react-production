@@ -1,7 +1,10 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { ArticleView } from 'entities/Article';
+import { ArticleSortField, ArticleView } from 'entities/Article';
+import { SortOrder } from 'shared/types';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import ArticlesPage from './ArticlesPage';
 
 export default {
@@ -17,20 +20,13 @@ const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {.
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.PLATE,
-        isLoading: false,
-        _inited: true,
-    },
     scrollRestoration: { scroll: { articles: 0 } },
 })];
-export const Loading = Template.bind({});
-Loading.args = {};
-Loading.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.PLATE,
-        isLoading: true,
-        _inited: false,
-    },
-    scrollRestoration: { scroll: { articles: 0 } },
-})];
+
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        scrollRestoration: { scroll: { articles: 0 } },
+    })];
