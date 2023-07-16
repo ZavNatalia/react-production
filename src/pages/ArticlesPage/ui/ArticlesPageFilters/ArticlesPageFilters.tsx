@@ -2,7 +2,11 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import {
-    ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector,
+    ArticleSortField,
+    ArticleSortSelector,
+    ArticleTypeTabs,
+    ArticleView,
+    ArticleViewSelector,
 } from 'entities/Article';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -11,10 +15,13 @@ import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/useDebounce/useDebounce';
+import { TabItem } from 'shared/ui/Tabs/Tabs';
+import { ArticleType } from 'entities/Article/model/types/article';
 import {
     getArticlesPageOrder,
     getArticlesPageSearchQuery,
     getArticlesPageSort,
+    getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelector';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
@@ -31,6 +38,7 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     const view = useSelector(getArticlesPageView);
     const order = useSelector(getArticlesPageOrder);
     const sort = useSelector(getArticlesPageSort);
+    const type = useSelector(getArticlesPageType);
     const searchQuery = useSelector(getArticlesPageSearchQuery);
 
     const fetchData = useCallback(() => {
@@ -52,6 +60,12 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
 
     const onChangeSort = useCallback((sort: ArticleSortField) => {
         dispatch(articlesPageActions.setSort(sort));
+        dispatch(articlesPageActions.setPage(1));
+        fetchData();
+    }, [dispatch, fetchData]);
+
+    const onChangeType = useCallback((value: ArticleType) => {
+        dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
         fetchData();
     }, [dispatch, fetchData]);
@@ -83,6 +97,11 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
                     onChange={onChangeSearchQuery}
                 />
             </Card>
+            <ArticleTypeTabs
+                className={cls.tabs}
+                onChangeType={onChangeType}
+                value={type}
+            />
         </div>
     );
 });

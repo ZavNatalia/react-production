@@ -9,7 +9,7 @@
       "createdAt": "12.02.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "FRONTEND"
       ],
       "blocks": [
         {
@@ -192,13 +192,12 @@
       "title": "Разбираем useId( ) хук под микроскопом",
       "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
-      "views": "322",
+      "views": "321",
       "createdAt": "09.08.2018",
       "userId": "1",
       "type": [
-        "IT",
         "FRONTEND",
-        "REACT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -234,12 +233,14 @@
       "id": "5",
       "title": "TypeScript and React news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://dev-gang.ru/static/storage/19323330856321185560492900951444365867.png",
-      "views": "1022",
+      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--RXS92V-v--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2AGh4eaAQU432ZQH7qsVbJ_A.png",
+      "views": "1002",
       "createdAt": "12.02.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -317,7 +318,7 @@
       "title": "Космический сервер уже на орбите: как принять с него сигнал",
       "subtitle": "Как же следить за нашим спутником и получать с него данные?",
       "img": "https://habrastorage.org/webt/pj/xa/hc/pjxahc-vsrfj1evkmzolxlco8r8.png",
-      "views": "722",
+      "views": "491",
       "createdAt": "27.06.2023",
       "userId": "2",
       "type": [
@@ -372,11 +373,12 @@
       "id": "7",
       "title": "Supercharge Your React Projects with Custom Hooks",
       "img": "https://images0.androeed.ru/icon/2022/04/25/ico-upload-simulator-1650902402.webp",
-      "views": "192",
+      "views": "587",
       "createdAt": "10.07.2023",
       "userId": "3",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -422,9 +424,9 @@
     {
       "id": "8",
       "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
-      "img": "https://www.educative.io/v2api/editorpage/6018530514305024/image/5753173610332160",
-      "views": "322",
+      "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0q_hsfq8w2ok2hrIbZM9vC8bRjMh8rVfzfDKKRsOQKFBErFfFJ8DLiszlc7CulDVFlYg&usqp=CAU",
+      "views": "421",
       "createdAt": "09.02.2023",
       "userId": "1",
       "type": [
@@ -464,14 +466,15 @@
     },
     {
       "id": "9",
-      "title": "Как настроить Node.js Express сервер для React",
+      "title": "Node.js Express сервер для React",
       "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://miro.medium.com/v2/resize:fit:365/1*Jr3NFSKTfQWRUyjblBSKeg.png",
-      "views": "722",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2022/10/Building-simple-login-form-node-js.png",
+      "views": "539",
       "createdAt": "12.08.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "IT",
+        "FRONTEND"
       ],
       "blocks": [
         {
@@ -520,7 +523,7 @@
       "id": "10",
       "title": "Supercharge Your React Projects with Custom Hooks",
       "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--It08Rf6h--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/anmi8d6zn1f5fucgc20y.png",
-      "views": "192",
+      "views": "937",
       "createdAt": "10.07.2023",
       "userId": "3",
       "type": [
@@ -572,13 +575,14 @@
       "title": "Разбираем useId( ) хук под микроскопом",
       "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
-      "views": "322",
+      "views": "2918",
       "createdAt": "09.02.2023",
       "userId": "1",
       "type": [
         "IT",
         "FRONTEND",
-        "REACT"
+        "REACT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -615,11 +619,12 @@
       "title": "TypeScript and React news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
       "img": "https://dev-gang.ru/static/storage/19323330856321185560492900951444365867.png",
-      "views": "1022",
+      "views": "1001",
       "createdAt": "12.02.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -697,12 +702,12 @@
       "title": "Экстренное шифрование данных",
       "subtitle": "Представим такую ситуацию: на вашем компьютере хранятся очень важные или компрометирующие вас данные, а в вашу дверь кто-то ломится. Ваша задача заключается в том, что бы быстро и незаметно зашифровать всю важную информацию на своём компьютере. Как это сделать?",
       "img": "https://habrastorage.org/r/w780/getpro/habr/upload_files/062/94d/487/06294d48779d0062bc8fe18731e17590.jpg",
-      "views": "722",
+      "views": "4883",
       "createdAt": "12.08.2022",
       "userId": "2",
       "type": [
         "IT",
-        "PYTHON"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -751,11 +756,12 @@
       "id": "14",
       "title": "Supercharge Your React Projects with Custom Hooks",
       "img": "https://images0.androeed.ru/icon/2022/04/25/ico-upload-simulator-1650902402.webp",
-      "views": "192",
+      "views": "2957",
       "createdAt": "10.07.2023",
       "userId": "3",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -803,7 +809,7 @@
       "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
       "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
       "img": "https://habrastorage.org/webt/vj/eb/gn/vjebgnmqximd2g6hmph8yit4-ee.png",
-      "views": "322",
+      "views": "4817",
       "createdAt": "09.02.2020",
       "userId": "1",
       "type": [

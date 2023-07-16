@@ -34,5 +34,11 @@
   "Creation date": "Дате создания",
   "Title": "Названию",
   "Views": "Просмотрам",
-  "Search": "Поиск"
+  "Search": "Поиск",
+  "All articles": "Все статьи",
+  "IT": "IT",
+  "Science": "Наука",
+  "Economics": "Экономика",
+  "Frontend": "Frontend",
+  "Articles not found": "Статьи не найдены"
 }
