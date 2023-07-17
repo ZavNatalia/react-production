@@ -196,7 +196,6 @@
       "createdAt": "09.08.2018",
       "userId": "1",
       "type": [
-        "FRONTEND",
         "ECONOMICS"
       ],
       "blocks": [
@@ -238,8 +237,6 @@
       "createdAt": "12.02.2023",
       "userId": "1",
       "type": [
-        "IT",
-        "ECONOMICS",
         "SCIENCE"
       ],
       "blocks": [
@@ -322,9 +319,7 @@
       "createdAt": "27.06.2023",
       "userId": "2",
       "type": [
-        "IT",
-        "SPACE",
-        "DIY"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -377,7 +372,6 @@
       "createdAt": "10.07.2023",
       "userId": "3",
       "type": [
-        "IT",
         "ECONOMICS"
       ],
       "blocks": [
@@ -430,9 +424,7 @@
       "createdAt": "09.02.2023",
       "userId": "1",
       "type": [
-        "IT",
-        "FRONTEND",
-        "REACT"
+        "FRONTEND"
       ],
       "blocks": [
         {
@@ -473,8 +465,7 @@
       "createdAt": "12.08.2023",
       "userId": "2",
       "type": [
-        "IT",
-        "FRONTEND"
+        "IT"
       ],
       "blocks": [
         {
@@ -579,10 +570,7 @@
       "createdAt": "09.02.2023",
       "userId": "1",
       "type": [
-        "IT",
-        "FRONTEND",
-        "REACT",
-        "SCIENCE"
+        "FRONTEND"
       ],
       "blocks": [
         {
@@ -706,8 +694,7 @@
       "createdAt": "12.08.2022",
       "userId": "2",
       "type": [
-        "IT",
-        "SCIENCE"
+        "IT"
       ],
       "blocks": [
         {
@@ -813,9 +800,7 @@
       "createdAt": "09.02.2020",
       "userId": "1",
       "type": [
-        "IT",
-        "FRONTEND",
-        "REACT"
+        "IT"
       ],
       "blocks": [
         {

@@ -17,3 +17,25 @@ body {
 .content-page {
     display: flex;
 }
+
+/* width */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover);
+}
