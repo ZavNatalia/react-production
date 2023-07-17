@@ -21,20 +21,17 @@ import {
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
 import { getArticleCommentsError, getArticleCommentsIsLoading } from '../../model/selectors/comments';
-import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slices/articleDetailsCommentSlice';
-import {
-    articleDetailsRecommendationsReducer,
-    getArticleRecommendations,
-} from '../../model/slices/articleDetailsRecommendationsSlice';
+import { getArticleComments } from '../../model/slices/articleDetailsCommentSlice';
+import { getArticleRecommendations } from '../../model/slices/articleDetailsRecommendationsSlice';
 import cls from './ArticleDetailsPage.module.scss';
+import { articleDetailsPageReducer } from '../../model/slices/index';
 
 interface ArticleDetailsPageProps {
     className?: string
 }
 
 const reducers: ReducersList = {
-    articleDetailsComments: articleDetailsCommentsReducer,
-    articleDetailsRecommendations: articleDetailsRecommendationsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
@@ -89,6 +86,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     className={cls.recommendations}
                     articles={recommendations}
                     isLoading={recommendationsIsLoading}
+                    target="_blank"
                 />
                 <Text
                     className={cls.commentsTitle}

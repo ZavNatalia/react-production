@@ -37,14 +37,18 @@
         margin-top: 8px;
     }
 
+    .views {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 2px;
+    }
+
     .footer {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-top: 16px;
-    }
-
-    .moreBtn {
-        margin-right: auto;
     }
 }
 
@@ -88,24 +92,28 @@
     .infoWrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-top: 8px;
     }
 
     .types {
-        flex: 1;
-
         p {
             width: 140px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            font-size: 12px;
+            font: var(--font-xs);
         }
     }
 
     .views {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 2px;
+
         p {
-            font-size: 12px;
+            font: var(--font-xs);
         }
     }
 

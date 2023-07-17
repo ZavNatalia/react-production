@@ -170,7 +170,6 @@
           "type": "CODE",
           "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
         },
-
         {
           "id": "4",
           "type": "TEXT",
@@ -179,7 +178,6 @@
             "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
           ]
         },
-
         {
           "id": "5",
           "type": "CODE",
@@ -220,7 +218,6 @@
           "type": "CODE",
           "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
         },
-
         {
           "id": "3",
           "type": "IMAGE",
@@ -398,7 +395,6 @@
           "type": "CODE",
           "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
         },
-
         {
           "id": "4",
           "type": "TEXT",
@@ -407,7 +403,6 @@
             "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
           ]
         },
-
         {
           "id": "5",
           "type": "CODE",
@@ -448,7 +443,6 @@
           "type": "CODE",
           "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
         },
-
         {
           "id": "3",
           "type": "IMAGE",
@@ -544,7 +538,6 @@
           "type": "CODE",
           "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
         },
-
         {
           "id": "4",
           "type": "TEXT",
@@ -553,7 +546,6 @@
             "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
           ]
         },
-
         {
           "id": "5",
           "type": "CODE",
@@ -594,7 +586,6 @@
           "type": "CODE",
           "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
         },
-
         {
           "id": "3",
           "type": "IMAGE",
@@ -774,7 +765,6 @@
           "type": "CODE",
           "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
         },
-
         {
           "id": "4",
           "type": "TEXT",
@@ -783,7 +773,6 @@
             "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
           ]
         },
-
         {
           "id": "5",
           "type": "CODE",
@@ -824,7 +813,6 @@
           "type": "CODE",
           "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
         },
-
         {
           "id": "4",
           "type": "IMAGE",
@@ -905,6 +893,18 @@
       "userId": "2",
       "text": "оцениваем и сравниваем изменения",
       "id": "kGnYUnf"
+    },
+    {
+      "articleId": "4",
+      "userId": "2",
+      "text": "Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице.",
+      "id": "-sPP4fS"
+    },
+    {
+      "articleId": "9",
+      "userId": "2",
+      "text": "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+      "id": "d8xs8kG"
     }
   ],
   "users": [
