@@ -6,8 +6,10 @@
 .normal {
     background: var(--card-bg);
     border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .outlined {
     border: 1px solid var(--card-bg-border);
+    color: var(--secondary-color);
 }

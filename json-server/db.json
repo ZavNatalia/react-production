@@ -188,7 +188,6 @@
     {
       "id": "4",
       "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
       "views": "321",
       "createdAt": "09.08.2018",
@@ -229,7 +228,7 @@
       "id": "5",
       "title": "TypeScript and React news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--RXS92V-v--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://miro.medium.com/max/1400/1%2AGh4eaAQU432ZQH7qsVbJ_A.png",
+      "img": "https://ionic.io/blog/wp-content/uploads/2019/02/typescript-in-react.png",
       "views": "1002",
       "createdAt": "12.02.2023",
       "userId": "1",
@@ -364,7 +363,7 @@
     {
       "id": "7",
       "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://images0.androeed.ru/icon/2022/04/25/ico-upload-simulator-1650902402.webp",
+      "img": "https://www.syncfusion.com/blogs/wp-content/uploads/2022/04/Implementing-React-Custom-Hooks-A-Complete-Guide.png",
       "views": "587",
       "createdAt": "10.07.2023",
       "userId": "3",
@@ -413,7 +412,7 @@
     {
       "id": "8",
       "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
+      "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0q_hsfq8w2ok2hrIbZM9vC8bRjMh8rVfzfDKKRsOQKFBErFfFJ8DLiszlc7CulDVFlYg&usqp=CAU",
       "views": "421",
       "createdAt": "09.02.2023",
@@ -556,7 +555,7 @@
     {
       "id": "11",
       "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники. И теперь потыкав этот хук палкой, почитав React документацию, пролистав несколько статей и изучив парочку видео на YouTube.",
+      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
       "views": "2918",
       "createdAt": "09.02.2023",
@@ -905,6 +904,18 @@
       "userId": "2",
       "text": "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
       "id": "d8xs8kG"
+    },
+    {
+      "articleId": "3",
+      "userId": "3",
+      "text": "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+      "id": "CgXVS4P"
+    },
+    {
+      "articleId": "11",
+      "userId": "3",
+      "text": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+      "id": "1Rm3LuP"
     }
   ],
   "users": [

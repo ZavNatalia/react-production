@@ -1,4 +1,5 @@
 {
+  "Open source": "Open source",
   "Language": "Русский",
   "Language short": "RU",
   "Page not found": "Страница не найдена",
@@ -38,5 +39,6 @@
   "Science": "Наука",
   "Economics": "Экономика",
   "Frontend": "Frontend",
-  "Articles not found": "Статьи не найдены"
+  "Articles not found": "Статьи не найдены",
+  "Create article": "Создать статью"
 }

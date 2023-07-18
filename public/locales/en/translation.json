@@ -1,4 +1,5 @@
 {
+  "Open source": "Open source",
   "Language": "English",
   "Language short": "EN",
   "Page not found": "Page not found",
@@ -38,5 +39,6 @@
   "Science": "Science",
   "Economics": "Economics",
   "Frontend": "Frontend",
-  "Articles not found": "Articles not found"
+  "Articles not found": "Articles not found",
+  "Create article": "Create article"
 }

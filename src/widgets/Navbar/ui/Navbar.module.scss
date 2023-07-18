@@ -14,3 +14,15 @@
 .mainLink {
     padding-right: 15px;
 }
+
+.appName {
+    font: var(--font-xl);
+    text-transform: uppercase;
+    margin-left: 16px;
+    flex: 1;
+}
+
+.createLink {
+    text-align: right;
+    margin-right: 18px;
+}
