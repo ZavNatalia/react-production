@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { CountrySelect } from 'entities/Country/ui/CountrySelect/CountrySelect';
+import { CountrySelect } from '../../ui/CountrySelect/CountrySelect';
 
 export default {
     title: 'entities/CountrySelect',

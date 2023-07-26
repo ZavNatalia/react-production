@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from './Input';
 
 export default {

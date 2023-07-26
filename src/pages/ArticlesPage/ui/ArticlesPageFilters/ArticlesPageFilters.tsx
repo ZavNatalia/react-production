@@ -13,10 +13,9 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/useDebounce/useDebounce';
-import { TabItem } from 'shared/ui/Tabs/Tabs';
 import { ArticleType } from 'entities/Article/model/types/article';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
     getArticlesPageOrder,
     getArticlesPageSearchQuery,
