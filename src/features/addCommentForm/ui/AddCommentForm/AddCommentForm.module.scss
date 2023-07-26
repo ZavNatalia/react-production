@@ -1,5 +1,6 @@
 .AddCommentForm {
     border: 1px solid var(--primary-color);
+    background-color: var(--card-bg);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -9,4 +10,12 @@
 .input {
     flex-grow: 1;
     margin-right: 10px;
+
+    input {
+        padding: 6px;
+    }
+}
+
+.sendBtn {
+    border: 1px solid var(--primary-color);
 }
