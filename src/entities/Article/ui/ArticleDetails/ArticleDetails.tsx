@@ -10,6 +10,7 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleCodeBlockComponent } from '../../ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../../ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -79,15 +80,19 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <div>
-                <div className={cls.headerImgWrapper}>
-                    <Skeleton className={cls.headerImg} />
-                </div>
-                <Skeleton className={cls.title} width={300} height={32} />
-                <Skeleton className={cls.skeleton} width={600} height={24} />
+            <VStack gap="16" max>
+                <HStack className={cls.headerImgWrapper}>
+                    <Skeleton width={600} height={400} />
+                </HStack>
+                <VStack gap="4">
+                    <Skeleton className={cls.title} width={300} height={32} />
+                    <Skeleton className={cls.skeleton} width={600} height={24} />
+                    <Skeleton className={cls.skeleton} width={150} height={24} />
+                    <Skeleton className={cls.skeleton} width={200} height={24} />
+                </VStack>
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
-            </div>
+            </VStack>
         );
     } else if (error) {
         content = (
@@ -99,27 +104,29 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     } else {
         content = (
             <>
-                <div className={cls.headerImgWrapper}>
+                <HStack className={cls.headerImgWrapper}>
                     <img
                         className={cls.headerImg}
                         src={article?.img}
                         alt={article?.title}
                     />
-                </div>
-                <Text
-                    className={cls.title}
-                    title={article?.title}
-                    text={article?.subtitle}
-                    size={TextSize.L}
-                />
-                <div className={cls.articleInfo}>
-                    <Icon Svg={EyeIcon} />
-                    <Text text={String(article?.views)} />
-                </div>
-                <div className={cls.articleInfo}>
-                    <Icon Svg={CalendarIcon} />
-                    <Text text={article?.createdAt} />
-                </div>
+                </HStack>
+                <VStack gap="4" max>
+                    <Text
+                        className={cls.title}
+                        title={article?.title}
+                        text={article?.subtitle}
+                        size={TextSize.L}
+                    />
+                    <HStack gap="8" className={cls.articleInfo}>
+                        <Icon Svg={EyeIcon} />
+                        <Text text={String(article?.views)} />
+                    </HStack>
+                    <HStack gap="8" className={cls.articleInfo}>
+                        <Icon Svg={CalendarIcon} />
+                        <Text text={article?.createdAt} />
+                    </HStack>
+                </VStack>
                 {article?.blocks.map(renderBlock)}
             </>
         );
@@ -127,9 +134,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.ArticleDetails, {}, [className])}>
+            <VStack gap="16" max className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
-            </div>
+            </VStack>
         </DynamicModuleLoader>
     );
 });

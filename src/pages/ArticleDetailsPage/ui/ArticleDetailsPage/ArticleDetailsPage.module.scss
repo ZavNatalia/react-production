@@ -1,13 +1,12 @@
-.commentsTitle {
-    margin-top: 30px;
-    margin-bottom: 16px;
-    padding: 20px 0;
-    border-top: 1px solid var(--inverted-secondary-color);
+.ArticleDetailsPage {
+    width: 100%;
 }
 
+.commentsTitle,
 .recommendationsTitle {
-    margin-top: 30px;
-    padding: 20px 0;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
     border-top: 1px solid var(--inverted-secondary-color);
 }
 
@@ -15,5 +14,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 6px;
+    padding: 2px 2px 8px;
+    gap: 20px;
+    width: calc(100vw - var(--sidebar-width) - 30px);
 }

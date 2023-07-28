@@ -6,16 +6,13 @@
 .header {
     display: flex;
     align-items: center;
-}
-
-.text {
-    margin-top: 10px;
-}
-
-.username {
-    margin-left: 10px;
+    gap: 8px;
 }
 
 .loading {
     border: none;
+}
+
+.text {
+    text-align: justify;
 }
