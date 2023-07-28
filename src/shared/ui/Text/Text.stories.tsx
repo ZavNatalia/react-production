@@ -56,6 +56,20 @@ Error.args = {
     theme: TextTheme.ERROR,
 };
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Doloremque dolorum ducimus earum exercitationem explicabo',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cum eveniet magni tenetur.',
+    size: TextSize.S,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Doloremque dolorum ducimus earum exercitationem explicabo',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cum eveniet magni tenetur.',
+    size: TextSize.M,
+};
+
 export const SizeL = Template.bind({});
 SizeL.args = {
     title: 'Doloremque dolorum ducimus earum exercitationem explicabo',
