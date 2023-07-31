@@ -940,6 +940,12 @@
       "userId": "3",
       "text": "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.  To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility.",
       "id": "FmJyhJK"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+      "id": "JL0IcJl"
     }
   ],
   "users": [
@@ -993,9 +999,9 @@
       "firstname": "Petya",
       "lastname": "Ivanov",
       "age": 30,
-      "currency": "RUB",
-      "country": "Russia",
-      "city": "Moscow",
+      "currency": "EUR",
+      "country": "Uzbekistan",
+      "city": "Tashkent",
       "username": "Petya I",
       "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }

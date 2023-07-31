@@ -1,17 +1,19 @@
 {
-  "Your firstname": "Ваше имя",
-  "Your lastname": "Ваша фамилия",
-  "Your age": "Ваш возраст",
-  "City": "Город",
-  "Username": "Псевдоним",
+  "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
   "Avatar": "Аватар",
+  "City": "Город",
   "Currency": "Валюта",
   "Country": "Страна",
-  "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
-  "Try to reload the page": "Попробуйте перезагрузить страницу",
-  "Server Error": "Серверная ошибка",
   "Invalid region": "Некорректрный регион",
+  "Incorrect age": "Некорректный возраст",
   "No data added": "Данные не указаны",
   "First and last name fields are required": "Имя и фамилия обязательны",
-  "Incorrect age": "Некорректный возраст"
+  "Select currency": "Выберите валюту",
+  "Server Error": "Серверная ошибка",
+  "Select country": "Выберите страну",
+  "Try to reload the page": "Попробуйте перезагрузить страницу",
+  "Username": "Псевдоним",
+  "Your firstname": "Ваше имя",
+  "Your lastname": "Ваша фамилия",
+  "Your age": "Ваш возраст"
 }

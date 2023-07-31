@@ -133,13 +133,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={onChangeAvatar}
             />
             <CurrencySelect
-                className={cls.input}
                 value={data?.currency}
                 onChange={onChangeCurrency}
                 readonly={readonly}
             />
             <CountrySelect
-                className={cls.input}
                 value={data?.country}
                 onChange={onChangeCountry}
                 readonly={readonly}
