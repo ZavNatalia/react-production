@@ -4,11 +4,17 @@
     background-color: var(--inverted-bg-color);
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 20px;
 }
 
-.links {
+.links,
+.dropdown {
     margin-left: auto;
+}
+
+.menuIcon {
+    fill: var(--inverted-primary-color);
 }
 
 .mainLink {

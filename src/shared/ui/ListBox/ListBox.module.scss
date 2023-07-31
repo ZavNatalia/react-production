@@ -1,9 +1,9 @@
 .ListBox {
     position: relative;
+    width: fit-content;
 }
 
 .label {
-    margin-right: 8px;
     color: var(--secondary-color);
 }
 
@@ -33,6 +33,7 @@
 
 .item {
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .active {
@@ -50,7 +51,22 @@
     }
 }
 
-.optionsTop {
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
     bottom: 100%;
-    left: 80%;
+    right: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
 }
