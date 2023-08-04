@@ -14,7 +14,6 @@ import {
 } from '../../model/selectors/articlesPageSelector';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import cls from './ArticleInfiniteList.module.scss';
 
 interface ArticleInfiniteListProps {
     className?: string
@@ -34,7 +33,7 @@ export const ArticleInfiniteList = memo(({ className }: ArticleInfiniteListProps
     });
 
     const errorMsg = (
-        <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+        <div className={classNames('', {}, [className])}>
             <Text
                 theme={TextTheme.ERROR}
                 title={t('An error occurred while loading articles')}
@@ -49,12 +48,11 @@ export const ArticleInfiniteList = memo(({ className }: ArticleInfiniteListProps
     }
 
     return (
-        <div className={classNames(cls.ArticleInfiniteList, {}, [className])}>
-            <ArticleList
-                isLoading={isLoading}
-                view={view}
-                articles={articles}
-            />
-        </div>
+        <ArticleList
+            className={classNames('', {}, [className])}
+            isLoading={isLoading}
+            view={view}
+            articles={articles}
+        />
     );
 });

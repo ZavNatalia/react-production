@@ -1,4 +1,5 @@
 {
+  "": "",
   "An error occurred while loading the profile": "",
   "Avatar": "",
   "City": "",
@@ -8,6 +9,7 @@
   "Incorrect age": "",
   "Invalid region": "",
   "No data added": "",
+  "Profile not found": "",
   "Select country": "",
   "Select currency": "",
   "Server Error": "",

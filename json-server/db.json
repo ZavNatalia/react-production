@@ -986,10 +986,10 @@
     {
       "id": "2",
       "firstname": "Vasya",
-      "lastname": "Ivanov",
-      "age": 25,
-      "currency": "KZT",
-      "country": "Kazakhstan",
+      "lastname": "Petrov",
+      "age": 26,
+      "currency": "EUR",
+      "country": "Kyrgyzstan",
       "city": "Astana",
       "username": "Vasya I",
       "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
