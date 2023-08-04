@@ -5,6 +5,7 @@
 out
 gen
 /storybook-static
+/reports
 .loki/report.html
 .loki/report.json
 
