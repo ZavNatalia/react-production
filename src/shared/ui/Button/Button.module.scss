@@ -23,15 +23,13 @@
 }
 
 .outline {
-    border: 1px solid;
-    border-color: var(--primary-color);
+    border: 1px solid var(--card-border);
     color: var(--primary-color);
-    background: none;
+    background: var(--card-bg);
 }
 
 .outlineRed {
-    border: 1px solid;
-    border-color: var(--red-light);
+    border: 1px solid var(--red-light);
     color: var(--red-light);
     background: none;
 }

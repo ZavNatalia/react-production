@@ -1,14 +1,16 @@
 .LoginForm {
-    display: flex;
-    flex-direction: column;
     min-width: 400px;
 }
 
+.title {
+    margin-bottom: 12px;
+}
+
 .input {
-    margin-top: 10px;
+    width: 100%;
 }
 
 .loginBtn {
-    margin-top: 15px;
+    margin-top: 12px;
     margin-left: auto;
 }

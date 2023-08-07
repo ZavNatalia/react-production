@@ -4,6 +4,8 @@
     height: calc(100vh - var(--navbar-height));
     width: 100%;
     overflow-y: auto;
+    border-radius: 12px 0 0;
+    background-color: var(--bg-color);
 }
 
 .trigger {

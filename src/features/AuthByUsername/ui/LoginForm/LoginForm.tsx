@@ -7,6 +7,7 @@ import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { VStack } from 'shared/ui/Stack';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -51,9 +52,11 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     return (
         // eslint-disable-next-line i18next/no-literal-string
         <DynamicModuleLoader reducers={initialReducers}>
-            <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Authorization form')} />
-                {error && <Text className={error} text={t('Invalid username or password')} theme={TextTheme.ERROR} />}
+            <VStack gap="8" className={classNames(cls.LoginForm, {}, [className])}>
+                <Text className={cls.title} title={t('Authorization form')} />
+                {error && (
+                    <Text className={cls.error} text={t('Invalid username or password')} theme={TextTheme.ERROR} />
+                )}
                 <Input
                     type="text"
                     className={cls.input}
@@ -77,7 +80,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 >
                     {t('Log in')}
                 </Button>
-            </div>
+            </VStack>
         </DynamicModuleLoader>
     );
 });

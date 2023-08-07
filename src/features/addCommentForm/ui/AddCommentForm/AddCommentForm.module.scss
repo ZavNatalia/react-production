@@ -1,5 +1,5 @@
 .AddCommentForm {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--card-border);
     border-radius: var(--radius-l);
     background-color: var(--card-bg);
     padding: 20px;
@@ -15,5 +15,5 @@
 }
 
 .sendBtn {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--card-border);
 }
