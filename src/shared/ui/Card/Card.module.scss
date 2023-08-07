@@ -1,11 +1,11 @@
 .Card {
     padding: 15px;
-    border-radius: 12px;
+    border-radius: var(--radius-l);
 }
 
 .normal {
     background: var(--card-bg);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--card-border);
     color: var(--primary-color);
 }
 

@@ -1,6 +1,8 @@
 .ProfileCard {
     padding: 20px 40px;
-    border: 2px solid var(--inverted-secondary-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-l);
 }
 
 .loading,
@@ -10,10 +12,6 @@
 
 .avatarWrapper {
     object-fit: cover;
-}
-
-.editing {
-    border: 2px solid var(--inverted-bg-color);
 }
 
 .input {

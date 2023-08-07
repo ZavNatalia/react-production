@@ -3,8 +3,8 @@ import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import { Button } from '../Button/Button';
-import cls from './ListBox.module.scss';
 import { HStack } from '../Stack';
+import cls from './ListBox.module.scss';
 
 export interface ListBoxItem {
     value: string;
@@ -38,11 +38,11 @@ export function ListBox(props: ListBoxProps) {
     const optionsClasses = [mapDirectionClass[direction]];
 
     return (
-        <HStack gap="8">
+        <HStack className={classNames(cls.ListBox, { [cls.readonly]: readonly }, [className])} gap="8">
             {label && <span className={cls.label}>{label}</span>}
 
             <HListBox
-                className={classNames(cls.ListBox, { [cls.readonly]: readonly }, [className])}
+                className={cls.wrapper}
                 disabled={readonly}
                 as="div"
                 value={value}

@@ -1,6 +1,7 @@
 .Button {
     cursor: pointer;
     padding: 6px 15px;
+    border-radius: var(--radius-m);
 
     &:hover {
         opacity: 0.8;

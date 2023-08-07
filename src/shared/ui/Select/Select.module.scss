@@ -1,5 +1,6 @@
 .Wrapper {
     display: flex;
+    align-items: center;
     opacity: 1;
 }
 
@@ -9,11 +10,12 @@
 }
 
 .select {
-    background: none;
-    outline-color: transparent;
+    background: var(--card-bg);
+    outline-color: var(--card-border);
     color: var(--primary-color);
-    padding: 2px 10px 2px 2px;
-    border: 1px solid var(--primary-color);
+    padding: 6px 10px 6px 6px;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-m);
 }
 
 .option {
@@ -22,9 +24,9 @@
 }
 
 .readonly {
-    opacity: 0.5;
+    opacity: 0.6;
 
     .input {
-        cursor: default;
+        cursor: not-allowed;
     }
 }

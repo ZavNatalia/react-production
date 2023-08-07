@@ -40,7 +40,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
             <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
-                    placeholder={t('Enter the comment text')}
+                    label={t('Enter the comment text')}
                     value={text}
                     onChange={onCommentTextChange}
                 />

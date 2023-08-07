@@ -1,4 +1,4 @@
-.ListBox {
+.wrapper {
     position: relative;
     width: fit-content;
 }
@@ -8,7 +8,8 @@
 }
 
 .trigger {
-    background: none;
+    background: var(--bg-color);
+    border-radius: var(--radius-m);
     border: none;
     outline-color: transparent;
     padding: 0;
@@ -16,7 +17,8 @@
 
     button {
         padding: 8px 12px;
-        border-color: var(--inverted-bg-color);
+        border-color: var(--card-border);
+        border-radius: var(--radius-m);
     }
 }
 
@@ -47,7 +49,7 @@
 
 .readonly {
     .label {
-        opacity: 0.6;
+        opacity: 0.8;
     }
 }
 
