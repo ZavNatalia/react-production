@@ -34,7 +34,6 @@ export const EditableProfilePageHeader = memo(({ className, error }: EditablePro
     }, [dispatch]);
 
     const onSave = useCallback(() => {
-        //
         dispatch(updateProfileData());
     }, [dispatch]);
 
@@ -48,6 +47,7 @@ export const EditableProfilePageHeader = memo(({ className, error }: EditablePro
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 disabled={!!error}
+                                data-testid="EditableProfilePageHeader.EditButton"
                                 onClick={onEdit}
                             >
                                 {t('Edit')}
@@ -56,12 +56,14 @@ export const EditableProfilePageHeader = memo(({ className, error }: EditablePro
                             <HStack gap="8">
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
+                                    data-testid="EditableProfilePageHeader.CancelButton"
                                     onClick={onCancelEdit}
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
                                     theme={ButtonTheme.OUTLINE}
+                                    data-testid="EditableProfilePageHeader.SaveButton"
                                     onClick={onSave}
                                 >
                                     {t('Save')}

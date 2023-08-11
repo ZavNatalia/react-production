@@ -16,12 +16,12 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     const { t } = useTranslation();
     const { isLoading, data: articles, error } = useArticlesRecommendationsList(6);
 
-    if (isLoading || error) {
+    if (isLoading || error || !articles) {
         return null;
     }
 
     return (
-        <VStack gap="8" max className={classNames('', {}, [className])}>
+        <VStack gap="16" max className={classNames('', {}, [className])}>
             <Text
                 className={cls.title}
                 size={TextSize.L}

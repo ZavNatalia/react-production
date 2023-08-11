@@ -94,6 +94,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 value={data?.firstname}
                 label={t('Your firstname')}
                 readonly={readonly}
+                data-testid="ProfileCard.firstname"
                 onChange={onChangeFirstname}
             />
             <Input
@@ -101,6 +102,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 value={data?.lastname}
                 label={t('Your lastname')}
                 readonly={readonly}
+                data-testid="ProfileCard.lastname"
                 onChange={onChangeLastname}
             />
             <Input
