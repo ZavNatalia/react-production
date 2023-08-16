@@ -2,6 +2,7 @@
   "All articles": "All articles",
   "About us": "About us",
   "Articles": "Articles",
+  "Admin panel": "Admin panel",
   "Articles not found": "Articles not found",
   "An error occurred while loading articles": "An error occurred while loading articles",
   "Authorization form": "Authorization form",
@@ -40,5 +41,6 @@
   "IT": "IT",
   "Science": "Science",
   "Economics": "Economics",
-  "Frontend": "Frontend"
+  "Frontend": "Frontend",
+  "You do not have access to this page": "You do not have access to this page"
 }

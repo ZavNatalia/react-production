@@ -3,6 +3,7 @@
   "All articles": "Все статьи",
   "Articles not found": "Статьи не найдены",
   "Articles": "Статьи",
+  "Admin panel": "Панель администратора",
   "Ascending": "Возрастанию",
   "About us": "О нас",
   "Authorization form": "Форма авторизации",
@@ -40,5 +41,6 @@
   "Try to reload the page": "Попробуйте перезагрузить страницу",
   "Title": "Названию",
   "Username": "Имя пользователя",
-  "Views": "Просмотрам"
+  "Views": "Просмотрам",
+  "You do not have access to this page": "У вас нет доступа к этой странице"
 }
