@@ -2,6 +2,8 @@
   "name": "production-project",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/ZavNatalia/react-production",
+  "author": "Zav Natalia",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
@@ -26,7 +28,6 @@
     "generate:slice": "node ./scripts/createSlice/index.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.17.5",

@@ -1,8 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { ArticleSortField, ArticleView } from 'entities/Article';
-import { SortOrder } from 'shared/types';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import ArticlesPage from './ArticlesPage';
