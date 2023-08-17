@@ -19,32 +19,12 @@ const Template: ComponentStory<typeof EditableProfileCard> = (args) => <Editable
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({
-    profile: {
-        form: {
-            username: 'admin',
-            age: 35,
-            firstname: 'Vasya',
-            lastname: 'Petrov',
-            city: 'Astana',
-            currency: Currency.KZT,
-            country: Country.Kazakhstan,
-        },
-    },
-})];
+Normal.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: {
-        form: {
-            username: 'admin',
-            age: 35,
-            firstname: 'Vasya',
-            lastname: 'Petrov',
-            city: 'Astana',
-            currency: Currency.KZT,
-            country: Country.Kazakhstan,
-        },
-    },
-})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+
+export const Green = Template.bind({});
+Green.args = {};
+Green.decorators = [ThemeDecorator(Theme.GREEN), StoreDecorator({})];

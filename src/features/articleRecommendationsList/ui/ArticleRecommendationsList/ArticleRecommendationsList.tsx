@@ -21,7 +21,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     }
 
     return (
-        <VStack gap="16" max className={classNames('', {}, [className])}>
+        <VStack gap="16" max className={classNames(cls.ArticleRecommendationsList, {}, [className])}>
             <Text
                 className={cls.title}
                 size={TextSize.L}
