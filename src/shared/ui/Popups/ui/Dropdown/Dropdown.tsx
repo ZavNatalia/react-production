@@ -2,8 +2,10 @@ import { Menu } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui';
+import { AppLink } from '../../../AppLink/AppLink';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink/AppLink';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -11,13 +13,6 @@ export interface DropdownItem {
     href?: string;
     onClick?: () => void;
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.menuBottomLeft,
-    'bottom right': cls.menuBottomRight,
-    'top left': cls.menuTopLeft,
-    'top right': cls.menuTopRight,
-};
 
 interface DropdownProps {
     className?: string;
@@ -34,7 +29,7 @@ export function Dropdown(props: DropdownProps) {
     const menuClasses = [mapDirectionClass[direction]];
 
     return (
-        <Menu as="div" className={classNames(cls.Dropdown, {}, [className])}>
+        <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
             <Menu.Button className={cls.btn}>
                 {trigger}
             </Menu.Button>
@@ -42,7 +37,7 @@ export function Dropdown(props: DropdownProps) {
                 {items.map((item, index) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
-                            className={classNames(cls.item, { [cls.active]: active })}
+                            className={classNames(cls.item, { [popupCls.active]: active })}
                             type="button"
                             onClick={item.onClick}
                             disabled={item.disabled}

@@ -10,9 +10,12 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import ProfileIcon from 'shared/assets/icons/profile-20-20.svg';
+import { HStack } from 'shared/ui/Stack';
+import { Icon } from 'shared/ui/Icon/Icon';
+import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -57,27 +60,31 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     {t('Create article')}
                 </AppLink>
 
-                <Dropdown
-                    className={cls.dropdown}
-                    items={[
-                        ...(isAdminPanelAvailable ? [{
-                            content: t('Admin panel'),
-                            href: RoutePath.admin_panel,
-                        }] : []),
-                        {
-                            content: t('Profile'),
-                            href: RoutePath.profile + autData.id,
-                        },
-                        {
-                            content: t('Log out'),
-                            onClick: onLogOut,
-                        },
-                    ]}
-                    trigger={autData?.avatar
-                        ? <Avatar size={30} src={autData?.avatar} />
-                        : <ProfileIcon className={cls.menuIcon} />}
-                    direction="bottom left"
-                />
+                <HStack gap="16" className={cls.actions}>
+                    <Button theme={ButtonTheme.CLEAR}>
+                        <Icon Svg={NotificationIcon} inverted />
+                    </Button>
+                    <Dropdown
+                        items={[
+                            ...(isAdminPanelAvailable ? [{
+                                content: t('Admin panel'),
+                                href: RoutePath.admin_panel,
+                            }] : []),
+                            {
+                                content: t('Profile'),
+                                href: RoutePath.profile + autData.id,
+                            },
+                            {
+                                content: t('Log out'),
+                                onClick: onLogOut,
+                            },
+                        ]}
+                        trigger={autData?.avatar
+                            ? <Avatar size={30} src={autData?.avatar} />
+                            : <ProfileIcon className={cls.menuIcon} />}
+                        direction="bottom left"
+                    />
+                </HStack>
                 {isAuthModal && (
                     <LoginModal
                         isOpen={isAuthModal}

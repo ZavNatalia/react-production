@@ -1,8 +1,3 @@
-.Dropdown {
-    position: relative;
-    width: fit-content;
-}
-
 .btn {
     background: none;
     outline-color: transparent;
@@ -26,35 +21,8 @@
 .item {
     padding: 10px 25px;
     width: 100%;
-    background: none;
     border: none;
     outline-color: transparent;
-    color: var(--primary-color);
     cursor: pointer;
     white-space: nowrap;
-}
-
-.active {
-    background: var(--inverted-bg-color);
-    color: var(--inverted-primary-color);
-}
-
-.menuBottomLeft {
-    top: 100%;
-    right: 0;
-}
-
-.menuBottomRight {
-    top: 100%;
-    left: 0;
-}
-
-.menuTopLeft {
-    bottom: 100%;
-    right: 0;
-}
-
-.menuTopRight {
-    bottom: 100%;
-    left: 0;
 }
