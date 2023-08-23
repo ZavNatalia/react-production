@@ -21,8 +21,8 @@
     position: absolute;
     z-index: 1000;
     color: var(--primary-color);
-    background: var(--listbox-bg);
-    border: 1px solid var(--listbox-border);
+    background: var(--popover-bg);
+    border: 1px solid var(--popover-border);
     min-width: 120px;
     width: fit-content;
     max-width: 300px;

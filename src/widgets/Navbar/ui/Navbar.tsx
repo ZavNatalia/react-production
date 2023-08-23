@@ -16,6 +16,8 @@ import ProfileIcon from 'shared/assets/icons/profile-20-20.svg';
 import { HStack } from 'shared/ui/Stack';
 import { Icon } from 'shared/ui/Icon/Icon';
 import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
+import { Popover } from 'shared/ui/Popups';
+import { NotificationList } from 'entities/Notification';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -52,18 +54,23 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     theme={TextTheme.INVERTED}
                     title={t('Open source')}
                 />
-                <AppLink
-                    className={cls.createLink}
-                    theme={AppLinkTheme.SECONDARY}
-                    to={RoutePath.article_create}
-                >
-                    {t('Create article')}
-                </AppLink>
-
-                <HStack gap="16" className={cls.actions}>
-                    <Button theme={ButtonTheme.CLEAR}>
-                        <Icon Svg={NotificationIcon} inverted />
-                    </Button>
+                <HStack gap="32" className={cls.actions}>
+                    <AppLink
+                        theme={AppLinkTheme.SECONDARY}
+                        to={RoutePath.article_create}
+                    >
+                        {t('Create article')}
+                    </AppLink>
+                    <Popover
+                        direction="bottom left"
+                        trigger={(
+                            <Button theme={ButtonTheme.CLEAR}>
+                                <Icon Svg={NotificationIcon} inverted />
+                            </Button>
+                        )}
+                    >
+                        <NotificationList className={cls.notifications} />
+                    </Popover>
                     <Dropdown
                         items={[
                             ...(isAdminPanelAvailable ? [{

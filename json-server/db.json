@@ -1011,5 +1011,33 @@
       "username": "Petya I",
       "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification 1",
+      "description": "Event 123",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Notification 12",
+      "description": "Event 456",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Notification 13",
+      "description": "Event 678",
+      "userId": "2",
+      "href": "http://localhost:3000/profile"
+    },
+    {
+      "id": "4",
+      "title": "Notification 14",
+      "description": "Event 901",
+      "userId": "3"
+    }
   ]
 }

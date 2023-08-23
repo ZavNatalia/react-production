@@ -5,6 +5,7 @@
     --inverted-bg-color: #53535a;
     --inverted-primary-color: #f4f4fb;
     --inverted-secondary-color: #bebec4;
+    --box-shadow: rgba(0 0 0 / 30%);
 
     // skeleton
     --skeleton-bg: #f1f1f6;
@@ -18,9 +19,9 @@
     --card-bg: #d6d6ea;
     --card-border: #a9a9be;
 
-    // list-box
-    --listbox-bg: #d6d6e3;
-    --listbox-border: #9c9ca6;
+    // popover
+    --popover-bg: #d6d6e3;
+    --popover-border: #9c9ca6;
 
     // scrollbar
     --scroll-track: #d2d2da;

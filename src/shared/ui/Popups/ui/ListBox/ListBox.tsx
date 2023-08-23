@@ -40,7 +40,6 @@ export function ListBox(props: ListBoxProps) {
             {label && <span className={cls.label}>{label}</span>}
 
             <HListBox
-                className={cls.wrapper}
                 disabled={readonly}
                 as="div"
                 value={value}
