@@ -18,9 +18,8 @@ export const NotificationButton = memo(({ className }: NotificationButtonProps) 
     const isMobile = useDevice();
 
     const onOpenDrawer = useCallback(() => {
-        console.log(isMobile);
         setIsOpen(true);
-    }, [isMobile]);
+    }, []);
 
     const onCloseDrawer = useCallback(() => {
         setIsOpen(false);
