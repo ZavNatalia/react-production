@@ -1,7 +1,7 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
@@ -10,6 +10,7 @@ interface InputProps extends HTMLInputProps{
     className?: string;
     value?: string | number;
     label?: string;
+    direction?: string;
     autofocus?: boolean;
     onChange?: (value: string) => void;
     readonly?: boolean;
@@ -19,6 +20,7 @@ export const Input = memo((props: InputProps) => {
     const {
         className,
         value,
+        direction = 'row',
         onChange,
         type = 'text',
         label,
@@ -43,7 +45,7 @@ export const Input = memo((props: InputProps) => {
     };
 
     return (
-        <div className={classNames(cls.InputWrapper, mods, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className, cls[direction]])}>
             {label && <div className={cls.label}>{label}</div>}
             <input
                 ref={ref}

@@ -18,6 +18,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
         'node_modules',
     ];
     config!.resolve!.extensions!.push('.ts', '.tsx');
+    config!.resolve!.alias = { '@': paths.src };
 
     const rules = config!.module!.rules as RuleSetRule[];
     config!.module!.rules = rules.map((rule) => (

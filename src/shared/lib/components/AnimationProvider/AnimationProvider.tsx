@@ -13,6 +13,7 @@ interface AnimationContextPayload {
 
 const AnimationContext = createContext<AnimationContextPayload>({});
 
+// lazy loading libraries
 const getAsyncAnimationModules = async () => {
     return Promise.all([
         import('@react-spring/web'),
