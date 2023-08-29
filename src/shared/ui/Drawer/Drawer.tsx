@@ -4,7 +4,7 @@ import {
 import { useTheme } from '@/app/providers/ThemeProvider';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
-import { useAnimationModules } from '@/shared/lib/components/AnimationProvider';
+import { AnimationProvider, useAnimationModules } from '@/shared/lib/components/AnimationProvider';
 import { Portal } from '../Portal/Portal';
 import { Overlay } from '../Overlay/Overlay';
 import cls from './Drawer.module.scss';
@@ -115,11 +115,19 @@ const DrawerContent = memo((props: DrawerProps) => {
     );
 });
 
-export const Drawer = memo((props: DrawerProps) => {
+const DrawerAsync = (props: DrawerProps) => {
     const { isLoaded } = useAnimationModules();
     if (!isLoaded) {
         return null;
     }
 
     return <DrawerContent {...props} />;
-});
+};
+
+export const Drawer = (props: DrawerProps) => {
+    return (
+        <AnimationProvider>
+            <DrawerAsync {...props} />
+        </AnimationProvider>
+    );
+};
