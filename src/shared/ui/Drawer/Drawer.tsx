@@ -17,7 +17,7 @@ interface DrawerProps {
     lazy?: boolean;
 }
 
-const height = window.innerHeight - 100;
+const height = window.innerHeight - 200;
 
 const DrawerContent = memo((props: DrawerProps) => {
     const { Spring, Gesture } = useAnimationModules();

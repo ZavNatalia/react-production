@@ -42,5 +42,8 @@
   "Title": "Названию",
   "Username": "Имя пользователя",
   "Views": "Просмотрам",
-  "You do not have access to this page": "У вас нет доступа к этой странице"
+  "You do not have access to this page": "У вас нет доступа к этой странице",
+  "Notification list is empty": "Список уведомлений пуст",
+  "Your feedback": "Ваш отзыв",
+  "Rate the article": "Оцените статью"
 }

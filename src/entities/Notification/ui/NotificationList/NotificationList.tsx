@@ -1,4 +1,6 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Text } from '@/shared/ui/Text/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { VStack } from '@/shared/ui/Stack';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
@@ -11,6 +13,7 @@ interface NotificationListProps {
 }
 
 export const NotificationList = memo(({ className }: NotificationListProps) => {
+    const { t } = useTranslation();
     const { data, isLoading } = useNotifications(null, {
         pollingInterval: 10000,
     });
@@ -26,6 +29,14 @@ export const NotificationList = memo(({ className }: NotificationListProps) => {
                 <Skeleton width="100%" height="80px" border="8px" />
                 <Skeleton width="100%" height="80px" border="8px" />
             </VStack>
+        );
+    }
+
+    if (!isLoading && data?.length === 0) {
+        return (
+            <div className={classNames(cls.NotificationList, {}, [className])}>
+                <Text text={t('Notification list is empty')} />
+            </div>
         );
     }
 

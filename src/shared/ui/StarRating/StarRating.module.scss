@@ -1,0 +1,18 @@
+.starIcon {
+    cursor: pointer;
+    stroke-width: 1;
+    stroke: var(--star-border);
+}
+
+.normal {
+    fill: var(--star-normal);
+}
+
+.hovered {
+    fill: var(--star-selected);
+    scale: 1.2;
+}
+
+.selected {
+    cursor: auto;
+}

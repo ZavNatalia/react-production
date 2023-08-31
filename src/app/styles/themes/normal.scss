@@ -5,7 +5,7 @@
     --inverted-bg-color: #53535a;
     --inverted-primary-color: #f4f4fb;
     --inverted-secondary-color: #bebec4;
-    --box-shadow: rgba(0 0 0 / 30%);
+    --box-shadow: rgba(0 0 0 / 20%);
 
     // skeleton
     --skeleton-bg: #f1f1f6;
@@ -30,4 +30,9 @@
 
     // view selector
     --selector-bg: #43679b;
+
+    // star
+    --star-normal: #f4f4fb;
+    --star-selected: rgb(255 199 0 / 70%);
+    --star-border: rgba(0 0 0 / 40%);
 }
