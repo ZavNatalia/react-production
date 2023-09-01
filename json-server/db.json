@@ -959,21 +959,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
     },
     {
       "id": "2",
       "username": "Vasya",
       "password": "456",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
     },
     {
       "id": "3",
       "username": "Petya",
       "password": "654",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     }
   ],
@@ -1038,6 +1044,79 @@
       "title": "Notification 14",
       "description": "Event 901",
       "userId": "3"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "2",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 5,
+      "feedback": "Полезный материал",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 3,
+      "feedback": "Не хватило примеров в статье",
+      "userId": "3",
+      "articleId": "3"
+    },
+    {
+      "userId": "2",
+      "articleId": "6",
+      "rate": 4,
+      "feedback": "",
+      "id": "8l_hO_q"
+    },
+    {
+      "userId": "2",
+      "articleId": "13",
+      "rate": 3,
+      "feedback": "not bad",
+      "id": "kDvDKVb"
+    },
+    {
+      "userId": "2",
+      "articleId": "14",
+      "rate": 5,
+      "feedback": "",
+      "id": "P0l0qAf"
+    },
+    {
+      "userId": "2",
+      "articleId": "15",
+      "rate": 3,
+      "id": "yhCZPls"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошие статьи у автора",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "id": "2",
+      "rate": 1,
+      "feedback": "Ничего не понятно",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "id": "3",
+      "rate": 5,
+      "feedback": "Объясняет сложные темы простым языком",
+      "userId": "2",
+      "profileId": "3"
     }
   ]
 }
