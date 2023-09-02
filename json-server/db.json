@@ -952,6 +952,12 @@
       "userId": "2",
       "text": "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.  Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.  Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y.",
       "id": "T8ddHsb"
+    },
+    {
+      "articleId": "15",
+      "userId": "2",
+      "text": "<label>   <span>Some label</span>   <input name=\"some-input\" /> </label>",
+      "id": "cGrZYrh"
     }
   ],
   "users": [
@@ -1094,6 +1100,19 @@
       "articleId": "15",
       "rate": 3,
       "id": "yhCZPls"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 3,
+      "id": "t9Dhndr"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 2,
+      "feedback": "Cool!",
+      "id": "OE7bWjL"
     }
   ],
   "profile-ratings": [
@@ -1112,11 +1131,29 @@
       "profileId": "2"
     },
     {
-      "id": "3",
-      "rate": 5,
-      "feedback": "Объясняет сложные темы простым языком",
       "userId": "2",
-      "profileId": "3"
+      "profileId": "2",
+      "rate": 4,
+      "id": "GSu6B9m"
+    },
+    {
+      "userId": "2",
+      "profileId": "3",
+      "rate": 2,
+      "id": "Hs9sK9A"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 4,
+      "id": "VF_bod4"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 5,
+      "feedback": "not bad",
+      "id": "UgtFFs4"
     }
   ]
 }
