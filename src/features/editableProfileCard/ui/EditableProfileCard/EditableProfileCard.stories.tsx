@@ -4,8 +4,8 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { EditableProfileCard } from './EditableProfileCard';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'features/editableProfileCard/EditableProfileCard',

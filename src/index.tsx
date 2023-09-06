@@ -1,4 +1,3 @@
-import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
@@ -25,3 +24,4 @@ root.render(
         </StoreProvider>
     </BrowserRouter>,
 );
+export { Theme } from '@/shared/const/theme';
