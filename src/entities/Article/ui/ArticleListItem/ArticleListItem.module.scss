@@ -54,8 +54,8 @@
 
 .PLATE {
     width: 272px;
-    transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s ease-in;
 
     .date {
         display: none;
@@ -68,7 +68,7 @@
     }
 
     &:hover {
-        opacity: 0.8;
+        filter: brightness(0.9);
         transform: scale(1.01);
 
         .date {
