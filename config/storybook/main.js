@@ -4,15 +4,15 @@ module.exports = {
     ],
     addons: [
         '@storybook/addon-links',
-        '@storybook/addon-interactions',
-        'storybook-addon-mock/register',
-        'storybook-addon-themes',
         {
             name: '@storybook/addon-essentials',
             options: {
                 backgrounds: false,
             },
         },
+        '@storybook/addon-interactions',
+        'storybook-addon-mock/register',
+        'storybook-addon-themes',
     ],
     framework: '@storybook/react',
     core: {
