@@ -5,6 +5,7 @@
     box-shadow: 0 2px 10px 0 var(--skeleton-shadow);
     overflow: hidden;
     background-color: var(--skeleton-bg);
+    border-radius: var(--radius-m);
 
     &::before {
         content: "";

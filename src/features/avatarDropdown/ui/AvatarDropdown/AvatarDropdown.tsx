@@ -50,7 +50,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
                 },
             ]}
             trigger={autData?.avatar
-                ? <Avatar size={30} src={autData?.avatar} />
+                ? <Avatar size={30} src={autData?.avatar} fallbackInverted />
                 : <ProfileIcon className={cls.menuIcon} />}
             direction="bottom left"
         />

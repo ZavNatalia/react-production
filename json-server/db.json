@@ -4,7 +4,7 @@
       "id": "1",
       "title": "TypeScript news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://img-c.udemycdn.com/course/750x422/3591648_7284_6.jpg",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2020/08/8-ways-deploy-react-app-free.png",
       "views": "1022",
       "createdAt": "12.02.2023",
       "userId": "1",
@@ -86,7 +86,7 @@
       "id": "2",
       "title": "Как настроить Node.js Express сервер для React",
       "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://miro.medium.com/v2/resize:fit:365/1*Jr3NFSKTfQWRUyjblBSKeg.png",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
       "views": "722",
       "createdAt": "01.03.2023",
       "userId": "2",
@@ -139,7 +139,7 @@
     {
       "id": "3",
       "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--It08Rf6h--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/anmi8d6zn1f5fucgc20y.png",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2021/01/react-native-navigation-tutorial.png",
       "views": "192",
       "createdAt": "10.07.2023",
       "userId": "3",
@@ -188,7 +188,7 @@
     {
       "id": "4",
       "title": "Разбираем useId( ) хук под микроскопом",
-      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
+      "img": "https://miro.medium.com/v2/resize:fit:512/1*jA5lTgPRbyimsFNod7SlFQ.png",
       "views": "321",
       "createdAt": "09.08.2018",
       "userId": "1",
@@ -228,7 +228,7 @@
       "id": "5",
       "title": "TypeScript and React news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://ionic.io/blog/wp-content/uploads/2019/02/typescript-in-react.png",
+      "img": "https://lh3.googleusercontent.com/00hjufFKhWveAIuUfk5CfBL4FI0I4TdFMJ0KunpCPr1SMFDcAYM8q6g3vrW27DNVhCHyiDyXcjifJN2XTGwdNNWs7n0QAR8zePHALaRTQ9d7qBIL7lBGtw5XeEvbvbN_s7r1oMaY",
       "views": "1002",
       "createdAt": "12.02.2023",
       "userId": "1",
@@ -310,7 +310,7 @@
       "id": "6",
       "title": "Космический сервер уже на орбите: как принять с него сигнал",
       "subtitle": "Как же следить за нашим спутником и получать с него данные?",
-      "img": "https://habrastorage.org/webt/pj/xa/hc/pjxahc-vsrfj1evkmzolxlco8r8.png",
+      "img": "https://www.rentallscript.com/resources/content/images/2021/09/React--1-.gif",
       "views": "491",
       "createdAt": "27.06.2023",
       "userId": "2",
@@ -363,7 +363,7 @@
     {
       "id": "7",
       "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://www.syncfusion.com/blogs/wp-content/uploads/2022/04/Implementing-React-Custom-Hooks-A-Complete-Guide.png",
+      "img": "https://www.bigscal.com/wp-content/uploads/2022/03/RTK-Query-Redux-toolkit.jpg",
       "views": "587",
       "createdAt": "10.07.2023",
       "userId": "3",
@@ -413,7 +413,7 @@
       "id": "8",
       "title": "Разбираем useId( ) хук под микроскопом",
       "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0q_hsfq8w2ok2hrIbZM9vC8bRjMh8rVfzfDKKRsOQKFBErFfFJ8DLiszlc7CulDVFlYg&usqp=CAU",
+      "img": "https://miro.medium.com/v2/resize:fit:1400/1*-U4maCVfQf5Du120SDuqSw.jpeg",
       "views": "421",
       "createdAt": "09.02.2023",
       "userId": "1",
@@ -453,7 +453,7 @@
       "id": "9",
       "title": "Node.js Express сервер для React",
       "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2022/10/Building-simple-login-form-node-js.png",
+      "img": "https://miro.medium.com/v2/resize:fit:1024/0*LBJqrDLFVBMXVTnk.png",
       "views": "539",
       "createdAt": "12.08.2023",
       "userId": "2",
@@ -506,7 +506,7 @@
     {
       "id": "10",
       "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--It08Rf6h--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/anmi8d6zn1f5fucgc20y.png",
+      "img": "https://procoders.tech/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/01/How_to_Outsource_ReactJS_Development_Services_to_Grow_Your_Company.png.webp",
       "views": "937",
       "createdAt": "10.07.2023",
       "userId": "3",
@@ -556,7 +556,7 @@
       "id": "11",
       "title": "Разбираем useId( ) хук под микроскопом",
       "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/cb7/7b1/85d/cb77b185dea8039940d74f0212479537.png",
+      "img": "https://www.xcodecreative.web.id/wp-content/uploads/2023/09/wp4923981-react-js-wallpapers-1.jpg",
       "views": "2918",
       "createdAt": "09.02.2023",
       "userId": "1",
@@ -596,7 +596,7 @@
       "id": "12",
       "title": "TypeScript and React news",
       "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://dev-gang.ru/static/storage/19323330856321185560492900951444365867.png",
+      "img": "https://miro.medium.com/v2/resize:fit:1000/1*e9zrFUT29KkMFf0-Jlb4FQ.jpeg",
       "views": "1001",
       "createdAt": "12.02.2023",
       "userId": "1",
@@ -679,7 +679,7 @@
       "id": "13",
       "title": "Экстренное шифрование данных",
       "subtitle": "Представим такую ситуацию: на вашем компьютере хранятся очень важные или компрометирующие вас данные, а в вашу дверь кто-то ломится. Ваша задача заключается в том, что бы быстро и незаметно зашифровать всю важную информацию на своём компьютере. Как это сделать?",
-      "img": "https://habrastorage.org/r/w780/getpro/habr/upload_files/062/94d/487/06294d48779d0062bc8fe18731e17590.jpg",
+      "img": "https://www.syntonize.com/wp-content/uploads/2021/02/React-Syntonize.png",
       "views": "4883",
       "createdAt": "12.08.2022",
       "userId": "2",
@@ -732,7 +732,7 @@
     {
       "id": "14",
       "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://images0.androeed.ru/icon/2022/04/25/ico-upload-simulator-1650902402.webp",
+      "img": "https://miro.medium.com/v2/resize:fit:1200/1*odW0CyTVxMVt5s3yhjjOhw.png",
       "views": "2957",
       "createdAt": "10.07.2023",
       "userId": "3",
@@ -783,7 +783,7 @@
       "id": "15",
       "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
       "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
-      "img": "https://habrastorage.org/webt/vj/eb/gn/vjebgnmqximd2g6hmph8yit4-ee.png",
+      "img": "https://systango-website.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2017/05/React-Js.jpg",
       "views": "4817",
       "createdAt": "09.02.2020",
       "userId": "1",
@@ -1080,39 +1080,6 @@
       "rate": 4,
       "feedback": "",
       "id": "8l_hO_q"
-    },
-    {
-      "userId": "2",
-      "articleId": "13",
-      "rate": 3,
-      "feedback": "not bad",
-      "id": "kDvDKVb"
-    },
-    {
-      "userId": "2",
-      "articleId": "14",
-      "rate": 5,
-      "feedback": "",
-      "id": "P0l0qAf"
-    },
-    {
-      "userId": "2",
-      "articleId": "15",
-      "rate": 3,
-      "id": "yhCZPls"
-    },
-    {
-      "userId": "1",
-      "articleId": "15",
-      "rate": 3,
-      "id": "t9Dhndr"
-    },
-    {
-      "userId": "1",
-      "articleId": "7",
-      "rate": 2,
-      "feedback": "Cool!",
-      "id": "OE7bWjL"
     }
   ],
   "profile-ratings": [
@@ -1131,29 +1098,10 @@
       "profileId": "2"
     },
     {
-      "userId": "2",
-      "profileId": "2",
-      "rate": 4,
-      "id": "GSu6B9m"
-    },
-    {
-      "userId": "2",
+      "userId": "3",
       "profileId": "3",
-      "rate": 2,
-      "id": "Hs9sK9A"
-    },
-    {
-      "userId": "1",
-      "profileId": "1",
-      "rate": 4,
-      "id": "VF_bod4"
-    },
-    {
-      "userId": "1",
-      "profileId": "3",
-      "rate": 5,
-      "feedback": "not bad",
-      "id": "UgtFFs4"
+      "rate": 3,
+      "id": "qmGx10a"
     }
   ]
 }

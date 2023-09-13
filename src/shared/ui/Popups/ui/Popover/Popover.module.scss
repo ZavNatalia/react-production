@@ -3,7 +3,7 @@
     box-shadow: 0 2px 10px 0 var(--box-shadow);
     position: absolute;
     z-index: 1000;
-    border-radius: 8px;
+    border-radius: var(--radius-m);
     border: 1px solid var(--card-border);
     padding: 14px;
 }

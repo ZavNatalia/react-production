@@ -1,8 +1,9 @@
 import { memo, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import StarIcon from '@/shared/assets/icons/star-20-20.svg';
-import cls from './StarRating.module.scss';
 import { Icon } from '../Icon/Icon';
+import { HStack } from '../../ui/Stack';
+import cls from './StarRating.module.scss';
 
 interface StarRatingProps {
     className?: string;
@@ -41,7 +42,7 @@ export const StarRating = memo((props: StarRatingProps) => {
     };
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <HStack gap="8" className={classNames('', {}, [className])}>
             {starts.map((starNumber) => (
                 <Icon
                     className={classNames(
@@ -58,6 +59,6 @@ export const StarRating = memo((props: StarRatingProps) => {
                     onClick={onClick(starNumber)}
                 />
             ))}
-        </div>
+        </HStack>
     );
 });

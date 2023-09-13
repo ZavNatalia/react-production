@@ -85,16 +85,16 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         content = (
             <VStack gap="16" max>
                 <HStack className={cls.headerImgWrapper}>
-                    <Skeleton width={600} height={400} />
+                    <Skeleton className={cls.headerImg} width={600} height={400} />
                 </HStack>
                 <VStack gap="4">
                     <Skeleton className={cls.title} width={300} height={32} />
-                    <Skeleton className={cls.skeleton} width={600} height={24} />
-                    <Skeleton className={cls.skeleton} width={150} height={24} />
-                    <Skeleton className={cls.skeleton} width={200} height={24} />
+                    <Skeleton width={600} height={24} />
+                    <Skeleton width={150} height={24} />
+                    <Skeleton width={200} height={24} />
                 </VStack>
-                <Skeleton className={cls.skeleton} width="100%" height={200} />
-                <Skeleton className={cls.skeleton} width="100%" height={200} />
+                <Skeleton width="100%" height={200} />
+                <Skeleton width="100%" height={200} />
             </VStack>
         );
     } else if (error) {

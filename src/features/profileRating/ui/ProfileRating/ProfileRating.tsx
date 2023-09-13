@@ -45,7 +45,7 @@ const ProfileRating = memo(({ className, profileId }: ProfileRatingProps) => {
 
     if (isLoading) {
         return (
-            <Skeleton width="100%" height="120px" />
+            <Skeleton width="100%" height="120px" border="12px" />
         );
     }
 
