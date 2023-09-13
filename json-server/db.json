@@ -1080,6 +1080,32 @@
       "rate": 4,
       "feedback": "",
       "id": "8l_hO_q"
+    },
+    {
+      "userId": "3",
+      "articleId": "2",
+      "rate": 5,
+      "feedback": "",
+      "id": "jBXLG2S"
+    },
+    {
+      "userId": "3",
+      "articleId": "8",
+      "rate": 4,
+      "feedback": "",
+      "id": "YwEWrUb"
+    },
+    {
+      "userId": "3",
+      "articleId": "15",
+      "rate": 3,
+      "id": "LoSrLmF"
+    },
+    {
+      "userId": "2",
+      "articleId": "15",
+      "rate": 3,
+      "id": "2zg9sTU"
     }
   ],
   "profile-ratings": [

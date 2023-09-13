@@ -6,7 +6,7 @@ const MainPage = () => {
     const { t } = useTranslation();
 
     return (
-        <Page>
+        <Page data-testid="MainPage">
             <h2>{t('Main page')}</h2>
         </Page>
     );
