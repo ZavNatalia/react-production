@@ -3,6 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { ProfileCard } from './ProfileCard';
+import AvatarImage from '@/shared/assets/tests/avatar.png';
 
 export default {
     title: 'entities/ProfileCard',
@@ -24,7 +25,7 @@ Primary.args = {
         city: 'Tashkent',
         currency: Currency.USD,
         country: Country.Uzbekistan,
-        avatar: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png',
+        avatar: AvatarImage,
     },
 };
 
