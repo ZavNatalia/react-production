@@ -17,7 +17,7 @@ describe('Routing', () => {
     });
     describe('User is authorized', () => {
         beforeEach(() => {
-            cy.login('testuser', 'gfhjkm');
+            cy.login();
         });
         it('Go to the user page', () => {
             cy.visit('/profile/1');
