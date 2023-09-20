@@ -58,13 +58,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 className={cls.input}
                 placeholder={t('Your feedback')}
                 value={feedback}
+                data-testid="RatingCard.Input"
                 onChange={setFeedback}
             />
         </>
     );
 
     return (
-        <Card className={classNames('', {}, [className])} max>
+        <Card
+            className={classNames('', {}, [className])}
+            max
+        >
             <VStack align="center" gap="8" max>
                 <Text title={startsCount ? t('Thanks for the rating!') : title} />
                 <StarRating size={40} selectedStars={startsCount} onSelect={onSelectStarts} />
@@ -77,22 +81,27 @@ export const RatingCard = memo((props: RatingCardProps) => {
                             {t('Send')}
                         </Button>
                     </VStack>
-
                 </Drawer>
             ) : (
                 <Modal isOpen={isModalOpen} lazy>
                     <VStack gap="16" max>
                         {modalContent}
                         <HStack max gap="16" justify="end">
-                            <Button theme={ButtonTheme.OUTLINE_RED} onClick={cancelHandler}>
-                                {t('Cancel')}
+                            <Button
+                                theme={ButtonTheme.OUTLINE_RED}
+                                data-testid="RatingCard.Close"
+                                onClick={cancelHandler}
+                            >
+                                {t('Close')}
                             </Button>
-                            <Button onClick={acceptHandler}>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandler}
+                            >
                                 {t('Send')}
                             </Button>
                         </HStack>
                     </VStack>
-
                 </Modal>
             )}
         </Card>

@@ -40,7 +40,11 @@ export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCom
     }
 
     return (
-        <VStack gap="16" max className={classNames('', {}, [className])}>
+        <VStack
+            className={classNames('', {}, [className])}
+            gap="16"
+            max
+        >
             <Text
                 className={cls.title}
                 size={TextSize.L}
