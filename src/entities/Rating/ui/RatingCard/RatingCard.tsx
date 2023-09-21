@@ -68,6 +68,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <Card
             className={classNames('', {}, [className])}
             max
+            data-testid="RatingCard"
         >
             <VStack align="center" gap="8" max>
                 <Text title={startsCount ? t('Thanks for the rating!') : title} />

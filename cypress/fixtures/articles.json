@@ -1,0 +1,493 @@
+[
+  {
+    "id": "2",
+    "title": "Как настроить Node.js Express сервер для React",
+    "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
+    "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
+    "views": "722",
+    "createdAt": "01.03.2023",
+    "userId": "2",
+    "type": [
+      "IT"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Необходимые условия",
+        "paragraphs": [
+          "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+          "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+          "2) Установленный Node.js.",
+          "3) Текстовый редактор",
+          "4) Веб-браузер, в данном случае Google Chrome."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "IMAGE",
+        "title": "Настройка структуры папок",
+        "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+      },
+      {
+        "id": "3",
+        "type": "TEXT",
+        "paragraphs": [
+          "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+          "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+          "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+        ]
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "title": "Создание React приложения",
+        "paragraphs": [
+          "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+        ]
+      },
+      {
+        "id": "5",
+        "type": "CODE",
+        "code": "$cd express-react-app\n$npx create-react-app client"
+      }
+    ],
+    "user": {
+      "id": "2",
+      "username": "Vasya",
+      "password": "456",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
+    }
+  },
+  {
+    "id": "15",
+    "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
+    "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+    "img": "https://systango-website.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2017/05/React-Js.jpg",
+    "views": "4817",
+    "createdAt": "09.02.2020",
+    "userId": "1",
+    "type": [
+      "IT"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Что такое useId( ) ?",
+        "paragraphs": [
+          "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Зачем нужен такой невнятный id?",
+        "paragraphs": [
+          "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+      },
+      {
+        "id": "4",
+        "type": "IMAGE",
+        "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+    }
+  },
+  {
+    "id": "8",
+    "title": "Разбираем useId( ) хук под микроскопом",
+    "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+    "img": "https://miro.medium.com/v2/resize:fit:1400/1*-U4maCVfQf5Du120SDuqSw.jpeg",
+    "views": "421",
+    "createdAt": "09.02.2023",
+    "userId": "1",
+    "type": [
+      "FRONTEND"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Что такое useId( ) ?",
+        "paragraphs": [
+          "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Зачем нужен такой невнятный id?",
+        "paragraphs": [
+          "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+      },
+      {
+        "id": "3",
+        "type": "IMAGE",
+        "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+    }
+  },
+  {
+    "id": "11",
+    "title": "Разбираем useId( ) хук под микроскопом",
+    "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+    "img": "https://www.xcodecreative.web.id/wp-content/uploads/2023/09/wp4923981-react-js-wallpapers-1.jpg",
+    "views": "2918",
+    "createdAt": "09.02.2023",
+    "userId": "1",
+    "type": [
+      "FRONTEND"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Что такое useId( ) ?",
+        "paragraphs": [
+          "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Зачем нужен такой невнятный id?",
+        "paragraphs": [
+          "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+      },
+      {
+        "id": "3",
+        "type": "IMAGE",
+        "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Разбираем useId( ) хук под микроскопом",
+    "img": "https://miro.medium.com/v2/resize:fit:512/1*jA5lTgPRbyimsFNod7SlFQ.png",
+    "views": "321",
+    "createdAt": "09.08.2018",
+    "userId": "1",
+    "type": [
+      "ECONOMICS"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Что такое useId( ) ?",
+        "paragraphs": [
+          "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Зачем нужен такой невнятный id?",
+        "paragraphs": [
+          "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+      },
+      {
+        "id": "3",
+        "type": "IMAGE",
+        "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Supercharge Your React Projects with Custom Hooks",
+    "img": "https://blog.logrocket.com/wp-content/uploads/2021/01/react-native-navigation-tutorial.png",
+    "views": "192",
+    "createdAt": "10.07.2023",
+    "userId": "3",
+    "type": [
+      "IT"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "paragraphs": [
+          "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "useClickOutside",
+        "paragraphs": [
+          "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+          "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "paragraphs": [
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "5",
+        "type": "CODE",
+        "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "Petya",
+      "password": "654",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
+    }
+  },
+  {
+    "id": "7",
+    "title": "Supercharge Your React Projects with Custom Hooks",
+    "img": "https://www.bigscal.com/wp-content/uploads/2022/03/RTK-Query-Redux-toolkit.jpg",
+    "views": "587",
+    "createdAt": "10.07.2023",
+    "userId": "3",
+    "type": [
+      "ECONOMICS"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "paragraphs": [
+          "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "useClickOutside",
+        "paragraphs": [
+          "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+          "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "paragraphs": [
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "5",
+        "type": "CODE",
+        "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "Petya",
+      "password": "654",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
+    }
+  },
+  {
+    "id": "10",
+    "title": "Supercharge Your React Projects with Custom Hooks",
+    "img": "https://procoders.tech/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/01/How_to_Outsource_ReactJS_Development_Services_to_Grow_Your_Company.png.webp",
+    "views": "937",
+    "createdAt": "10.07.2023",
+    "userId": "3",
+    "type": [
+      "IT"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "paragraphs": [
+          "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "useClickOutside",
+        "paragraphs": [
+          "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+          "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "paragraphs": [
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "5",
+        "type": "CODE",
+        "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "Petya",
+      "password": "654",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
+    }
+  },
+  {
+    "id": "14",
+    "title": "Supercharge Your React Projects with Custom Hooks",
+    "img": "https://miro.medium.com/v2/resize:fit:1200/1*odW0CyTVxMVt5s3yhjjOhw.png",
+    "views": "2957",
+    "createdAt": "10.07.2023",
+    "userId": "3",
+    "type": [
+      "IT",
+      "SCIENCE"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "paragraphs": [
+          "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "useClickOutside",
+        "paragraphs": [
+          "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+          "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "3",
+        "type": "CODE",
+        "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "paragraphs": [
+          "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+          "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+        ]
+      },
+      {
+        "id": "5",
+        "type": "CODE",
+        "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "Petya",
+      "password": "654",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
+    }
+  }
+]
