@@ -110,6 +110,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 label={t('Your age')}
                 readonly={readonly}
                 type="number"
+                data-testid="ProfileCard.age"
                 onChange={onChangeAge}
             />
             <Input
