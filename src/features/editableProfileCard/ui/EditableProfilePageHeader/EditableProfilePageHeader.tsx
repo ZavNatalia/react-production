@@ -14,36 +14,40 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 
 interface EditableProfilePageHeaderProps {
     className?: string;
-    error?: string
+    error?: string;
 }
 
-export const EditableProfilePageHeader = memo(({ className, error }: EditableProfilePageHeaderProps) => {
-    const { t } = useTranslation();
-    const readonly = useSelector(getProfileReadonly);
-    const dispatch = useAppDispatch();
-    const authData = useSelector(getUserAuthData);
-    const profileData = useSelector(getProfileData);
-    const canEdit = authData?.id === profileData?.id;
+export const EditableProfilePageHeader = memo(
+    ({ className, error }: EditableProfilePageHeaderProps) => {
+        const { t } = useTranslation();
+        const readonly = useSelector(getProfileReadonly);
+        const dispatch = useAppDispatch();
+        const authData = useSelector(getUserAuthData);
+        const profileData = useSelector(getProfileData);
+        const canEdit = authData?.id === profileData?.id;
 
-    const onEdit = useCallback(() => {
-        dispatch(profileActions.setReadonly(false));
-    }, [dispatch]);
+        const onEdit = useCallback(() => {
+            dispatch(profileActions.setReadonly(false));
+        }, [dispatch]);
 
-    const onCancelEdit = useCallback(() => {
-        dispatch(profileActions.cancelEdit());
-    }, [dispatch]);
+        const onCancelEdit = useCallback(() => {
+            dispatch(profileActions.cancelEdit());
+        }, [dispatch]);
 
-    const onSave = useCallback(() => {
-        dispatch(updateProfileData());
-    }, [dispatch]);
+        const onSave = useCallback(() => {
+            dispatch(updateProfileData());
+        }, [dispatch]);
 
-    return (
-        <HStack className={classNames('', {}, [className])} justify="between" max>
-            <Text title={t('Profile')} />
-            {canEdit && (
-                <div>
-                    {readonly
-                        ? (
+        return (
+            <HStack
+                className={classNames('', {}, [className])}
+                justify="between"
+                max
+            >
+                <Text title={t('Profile')} />
+                {canEdit && (
+                    <div>
+                        {readonly ? (
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 disabled={!!error}
@@ -70,8 +74,9 @@ export const EditableProfilePageHeader = memo(({ className, error }: EditablePro
                                 </Button>
                             </HStack>
                         )}
-                </div>
-            )}
-        </HStack>
-    );
-});
+                    </div>
+                )}
+            </HStack>
+        );
+    },
+);

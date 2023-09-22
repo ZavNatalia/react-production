@@ -1,63 +1,59 @@
 {
-  "id": "2",
-  "title": "Как настроить Node.js Express сервер для React",
-  "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-  "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
-  "views": "722",
-  "createdAt": "01.03.2023",
-  "userId": "2",
-  "type": [
-    "IT"
-  ],
-  "blocks": [
-    {
-      "id": "1",
-      "type": "TEXT",
-      "title": "Необходимые условия",
-      "paragraphs": [
-        "Для успешного выполнения данного гайда будет полезно иметь следующее:",
-        "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
-        "2) Установленный Node.js.",
-        "3) Текстовый редактор",
-        "4) Веб-браузер, в данном случае Google Chrome."
-      ]
-    },
-    {
-      "id": "2",
-      "type": "IMAGE",
-      "title": "Настройка структуры папок",
-      "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
-    },
-    {
-      "id": "3",
-      "type": "TEXT",
-      "paragraphs": [
-        "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
-        "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-        "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
-      ]
-    },
-    {
-      "id": "4",
-      "type": "TEXT",
-      "title": "Создание React приложения",
-      "paragraphs": [
-        "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
-      ]
-    },
-    {
-      "id": "5",
-      "type": "CODE",
-      "code": "$cd express-react-app\n$npx create-react-app client"
-    }
-  ],
-  "user": {
     "id": "2",
-    "username": "Vasya",
-    "password": "456",
-    "roles": [
-      "USER"
+    "title": "Как настроить Node.js Express сервер для React",
+    "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
+    "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
+    "views": "722",
+    "createdAt": "01.03.2023",
+    "userId": "2",
+    "type": ["IT"],
+    "blocks": [
+        {
+            "id": "1",
+            "type": "TEXT",
+            "title": "Необходимые условия",
+            "paragraphs": [
+                "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+                "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+                "2) Установленный Node.js.",
+                "3) Текстовый редактор",
+                "4) Веб-браузер, в данном случае Google Chrome."
+            ]
+        },
+        {
+            "id": "2",
+            "type": "IMAGE",
+            "title": "Настройка структуры папок",
+            "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+        },
+        {
+            "id": "3",
+            "type": "TEXT",
+            "paragraphs": [
+                "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+                "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+                "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+            ]
+        },
+        {
+            "id": "4",
+            "type": "TEXT",
+            "title": "Создание React приложения",
+            "paragraphs": [
+                "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+            ]
+        },
+        {
+            "id": "5",
+            "type": "CODE",
+            "code": "$cd express-react-app\n$npx create-react-app client"
+        }
     ],
-    "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
-  }
+    "user": {
+        "id": "2",
+        "username": "Vasya",
+        "password": "456",
+        "roles": ["USER"],
+        "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
+    }
 }

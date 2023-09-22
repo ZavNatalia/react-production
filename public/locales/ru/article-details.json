@@ -1,8 +1,8 @@
 {
-  "Article": "Статья",
-  "Article not found": "Статья не найдена",
-  "Loading": "Загрузка",
-  "An error occurred while loading the article": "Произошла ошибка при загрузке статьи",
-  "Edit page with id": "Отредактировать статью с id",
-  "Create article": "Создать статью"
+    "Article": "Статья",
+    "Article not found": "Статья не найдена",
+    "Loading": "Загрузка",
+    "An error occurred while loading the article": "Произошла ошибка при загрузке статьи",
+    "Edit page with id": "Отредактировать статью с id",
+    "Create article": "Создать статью"
 }

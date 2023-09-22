@@ -16,43 +16,45 @@ import { getArticles } from '../../model/slices/articlesPageSlice';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticleInfiniteListProps {
-    className?: string
+    className?: string;
 }
 
-export const ArticleInfiniteList = memo(({ className }: ArticleInfiniteListProps) => {
-    const { t } = useTranslation();
-    const articles = useSelector(getArticles.selectAll);
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const error = useSelector(getArticlesPageError);
-    const view = useSelector(getArticlesPageView);
-    const [searchParams] = useSearchParams();
-    const dispatch = useAppDispatch();
+export const ArticleInfiniteList = memo(
+    ({ className }: ArticleInfiniteListProps) => {
+        const { t } = useTranslation();
+        const articles = useSelector(getArticles.selectAll);
+        const isLoading = useSelector(getArticlesPageIsLoading);
+        const error = useSelector(getArticlesPageError);
+        const view = useSelector(getArticlesPageView);
+        const [searchParams] = useSearchParams();
+        const dispatch = useAppDispatch();
 
-    useInitialEffect(() => {
-        dispatch(initArticlesPage(searchParams));
-    });
+        useInitialEffect(() => {
+            dispatch(initArticlesPage(searchParams));
+        });
 
-    const errorMsg = (
-        <div className={classNames('', {}, [className])}>
-            <Text
-                theme={TextTheme.ERROR}
-                title={t('An error occurred while loading articles')}
-                text={t('Try to reload the page')}
-                align={TextAlign.CENTER}
+        const errorMsg = (
+            <div className={classNames('', {}, [className])}>
+                <Text
+                    theme={TextTheme.ERROR}
+                    title={t('An error occurred while loading articles')}
+                    text={t('Try to reload the page')}
+                    align={TextAlign.CENTER}
+                />
+            </div>
+        );
+
+        if (error) {
+            return errorMsg;
+        }
+
+        return (
+            <ArticleList
+                className={classNames('', {}, [className])}
+                isLoading={isLoading}
+                view={view}
+                articles={articles}
             />
-        </div>
-    );
-
-    if (error) {
-        return errorMsg;
-    }
-
-    return (
-        <ArticleList
-            className={classNames('', {}, [className])}
-            isLoading={isLoading}
-            view={view}
-            articles={articles}
-        />
-    );
-});
+        );
+    },
+);

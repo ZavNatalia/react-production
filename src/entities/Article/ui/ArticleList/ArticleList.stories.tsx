@@ -18,9 +18,7 @@ const article = {
         username: 'Jane',
         avatar: 'https://t3.ftcdn.net/jpg/01/71/25/36/360_F_171253642_miKXqvj5DeDNKipuJERPQZM1gQWX0C2d.jpg',
     },
-    type: [
-        'IT',
-    ],
+    type: ['IT'],
     blocks: [
         {
             id: '1',
@@ -47,7 +45,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleList>;
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+);
 
 export const isLoadingNormalList = Template.bind({});
 isLoadingNormalList.args = {
@@ -58,14 +58,10 @@ isLoadingNormalList.args = {
 
 export const NormalList = Template.bind({});
 NormalList.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => (
-            {
-                ...article,
-                id: String(index),
-            }
-        )),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.LIST,
 };
 
@@ -79,14 +75,10 @@ isLoadingDarkList.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const DarkList = Template.bind({});
 DarkList.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => (
-            {
-                ...article,
-                id: String(index),
-            }
-        )),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.LIST,
 };
 DarkList.decorators = [ThemeDecorator(Theme.DARK)];
@@ -100,14 +92,10 @@ isLoadingNormalPlate.args = {
 
 export const NormalPlate = Template.bind({});
 NormalPlate.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => (
-            {
-                ...article,
-                id: String(index),
-            }
-        )),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.PLATE,
 };
 export const isLoadingDarkPlate = Template.bind({});
@@ -120,14 +108,10 @@ isLoadingDarkPlate.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const DarkPlate = Template.bind({});
 DarkPlate.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => (
-            {
-                ...article,
-                id: String(index),
-            }
-        )),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.PLATE,
 };
 DarkPlate.decorators = [ThemeDecorator(Theme.DARK)];

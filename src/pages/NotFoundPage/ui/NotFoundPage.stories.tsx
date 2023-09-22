@@ -11,24 +11,20 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StoreDecorator({}),
-    ],
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof NotFoundPage>;
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage {...args} />;
+const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+    <NotFoundPage {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Green = Template.bind({});
 Green.args = {};
-Green.decorators = [
-    ThemeDecorator(Theme.GREEN),
-];
+Green.decorators = [ThemeDecorator(Theme.GREEN)];

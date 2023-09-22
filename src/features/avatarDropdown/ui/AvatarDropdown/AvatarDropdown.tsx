@@ -6,13 +6,16 @@ import { Avatar } from '@/shared/ui/Avatar';
 import ProfileIcon from '@/shared/assets/icons/profile-20-20.svg';
 import { Dropdown } from '@/shared/ui/Popups';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/entities/User';
 import cls from './AvatarDropdown.module.scss';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
-    className?: string
+    className?: string;
 }
 
 export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
@@ -36,10 +39,14 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
         <Dropdown
             className={classNames('', {}, [className])}
             items={[
-                ...(isAdminPanelAvailable ? [{
-                    content: t('Admin panel'),
-                    href: getRouteAdmin(),
-                }] : []),
+                ...(isAdminPanelAvailable
+                    ? [
+                          {
+                              content: t('Admin panel'),
+                              href: getRouteAdmin(),
+                          },
+                      ]
+                    : []),
                 {
                     content: t('Profile'),
                     href: getRouteProfile(autData.id),
@@ -49,9 +56,13 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
                     onClick: onLogOut,
                 },
             ]}
-            trigger={autData?.avatar
-                ? <Avatar size={30} src={autData?.avatar} fallbackInverted />
-                : <ProfileIcon className={cls.menuIcon} />}
+            trigger={
+                autData?.avatar ? (
+                    <Avatar size={30} src={autData?.avatar} fallbackInverted />
+                ) : (
+                    <ProfileIcon className={cls.menuIcon} />
+                )
+            }
             direction="bottom left"
         />
     );

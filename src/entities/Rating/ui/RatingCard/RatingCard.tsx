@@ -24,7 +24,13 @@ interface RatingCardProps {
 
 export const RatingCard = memo((props: RatingCardProps) => {
     const {
-        className, title, feedbackTitle, hasFeedback, onCancel, onAccept, rate,
+        className,
+        title,
+        feedbackTitle,
+        hasFeedback,
+        onCancel,
+        onAccept,
+        rate,
     } = props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,14 +38,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [feedback, setFeedback] = useState('');
     const isMobile = useDevice();
 
-    const onSelectStarts = useCallback((selectedStarsCount: number) => {
-        setStartsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [hasFeedback, onAccept]);
+    const onSelectStarts = useCallback(
+        (selectedStarsCount: number) => {
+            setStartsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandler = useCallback(() => {
         setIsModalOpen(false);
@@ -71,14 +80,24 @@ export const RatingCard = memo((props: RatingCardProps) => {
             data-testid="RatingCard"
         >
             <VStack align="center" gap="8" max>
-                <Text title={startsCount ? t('Thanks for the rating!') : title} />
-                <StarRating size={40} selectedStars={startsCount} onSelect={onSelectStarts} />
+                <Text
+                    title={startsCount ? t('Thanks for the rating!') : title}
+                />
+                <StarRating
+                    size={40}
+                    selectedStars={startsCount}
+                    onSelect={onSelectStarts}
+                />
             </VStack>
             {isMobile ? (
                 <Drawer isOpen={isModalOpen} lazy onClose={cancelHandler}>
                     <VStack gap="32">
                         {modalContent}
-                        <Button fullwidth theme={ButtonTheme.OUTLINE_RED} onClick={cancelHandler}>
+                        <Button
+                            fullwidth
+                            theme={ButtonTheme.OUTLINE_RED}
+                            onClick={cancelHandler}
+                        >
                             {t('Send')}
                         </Button>
                     </VStack>

@@ -14,7 +14,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleTypeTabs>;
 
-const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />;
+const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => (
+    <ArticleTypeTabs {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -25,14 +27,10 @@ export const Dark = Template.bind({});
 Dark.args = {
     value: ArticleType.ECONOMICS,
 };
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Green = Template.bind({});
 Green.args = {
     value: ArticleType.ALL,
 };
-Green.decorators = [
-    ThemeDecorator(Theme.GREEN),
-];
+Green.decorators = [ThemeDecorator(Theme.GREEN)];

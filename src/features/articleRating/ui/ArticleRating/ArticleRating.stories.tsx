@@ -13,7 +13,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleRating>;
 
-const Template: ComponentStory<typeof ArticleRating> = (args) => <ArticleRating {...args} />;
+const Template: ComponentStory<typeof ArticleRating> = (args) => (
+    <ArticleRating {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -46,11 +48,14 @@ export const Green = Template.bind({});
 Green.args = {
     articleId: '2',
 };
-Green.decorators = [ThemeDecorator(Theme.GREEN), StoreDecorator({
-    user: {
-        authData: { id: '1' },
-    },
-})];
+Green.decorators = [
+    ThemeDecorator(Theme.GREEN),
+    StoreDecorator({
+        user: {
+            authData: { id: '1' },
+        },
+    }),
+];
 Green.parameters = {
     mockData: [
         {
@@ -70,11 +75,14 @@ export const WithoutRateDark = Template.bind({});
 WithoutRateDark.args = {
     articleId: '3',
 };
-WithoutRateDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    user: {
-        authData: { id: '1' },
-    },
-})];
+WithoutRateDark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        user: {
+            authData: { id: '1' },
+        },
+    }),
+];
 WithoutRateDark.parameters = {
     mockData: [
         {

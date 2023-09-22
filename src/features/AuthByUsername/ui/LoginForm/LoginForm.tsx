@@ -5,7 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Text, TextTheme } from '@/shared/ui/Text';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from '@/shared/ui/Stack';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
@@ -17,8 +20,8 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-    className?: string,
-    onSuccess: () => void,
+    className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -34,13 +37,19 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
 
-    const onChangeUsername = useCallback((value: string) => {
-        dispatch(loginActions.setUsername(value));
-    }, [dispatch]);
+    const onChangeUsername = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setUsername(value));
+        },
+        [dispatch],
+    );
 
-    const onChangePassword = useCallback((value: string) => {
-        dispatch(loginActions.setPassword(value));
-    }, [dispatch]);
+    const onChangePassword = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setPassword(value));
+        },
+        [dispatch],
+    );
 
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }));
@@ -52,10 +61,17 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     return (
         // eslint-disable-next-line i18next/no-literal-string
         <DynamicModuleLoader reducers={initialReducers}>
-            <VStack gap="8" className={classNames(cls.LoginForm, {}, [className])}>
+            <VStack
+                gap="8"
+                className={classNames(cls.LoginForm, {}, [className])}
+            >
                 <Text className={cls.title} title={t('Authorization form')} />
                 {error && (
-                    <Text className={cls.error} text={t('Invalid username or password')} theme={TextTheme.ERROR} />
+                    <Text
+                        className={cls.error}
+                        text={t('Invalid username or password')}
+                        theme={TextTheme.ERROR}
+                    />
                 )}
                 <Input
                     type="text"

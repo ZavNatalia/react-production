@@ -10,9 +10,7 @@ const data = {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png',
     views: 1022,
     createdAt: '12.02.2023',
-    type: [
-        ArticleType.IT,
-    ],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',
@@ -91,10 +89,12 @@ describe('articleDetailsSlice.test', () => {
             isLoading: true,
             error: undefined,
         };
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.pending,
-        )).toEqual(state);
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.pending,
+            ),
+        ).toEqual(state);
     });
     // test('test get article service fulfilled', () => {
     //     const state: DeepPartial<ArticleDetailsSchema> = {

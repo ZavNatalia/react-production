@@ -11,7 +11,11 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof ListBox>;
 
@@ -23,7 +27,9 @@ const people: ListBoxItem[] = [
     { value: 'Katelyn', content: <div>Katelyn Rohan</div> },
 ];
 
-const Template: ComponentStory<typeof ListBox > = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = (args) => (
+    <ListBox {...args} />
+);
 
 export const NormalTopLeft = Template.bind({});
 NormalTopLeft.args = {

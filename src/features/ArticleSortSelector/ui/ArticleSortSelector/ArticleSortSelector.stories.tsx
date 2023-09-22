@@ -14,7 +14,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleSortSelector>;
 
-const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />;
+const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
+    <ArticleSortSelector {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -27,14 +29,10 @@ Dark.args = {
     sort: ArticleSortField.CREATED,
     order: 'asc',
 };
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
 export const Green = Template.bind({});
 Green.args = {
     sort: ArticleSortField.TITLE,
     order: 'desc',
 };
-Green.decorators = [
-    ThemeDecorator(Theme.GREEN),
-];
+Green.decorators = [ThemeDecorator(Theme.GREEN)];

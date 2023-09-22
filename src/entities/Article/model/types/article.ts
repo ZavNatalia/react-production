@@ -8,7 +8,7 @@ export interface ArticleBlockBase {
 
 export interface ArticleCodeBlock extends ArticleBlockBase {
     type: ArticleBlockType.CODE;
-    code: string
+    code: string;
 }
 
 export interface ArticleImageBlock extends ArticleBlockBase {
@@ -23,7 +23,10 @@ export interface ArticleTextBlock extends ArticleBlockBase {
     paragraphs: string[];
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
+export type ArticleBlock =
+    | ArticleCodeBlock
+    | ArticleImageBlock
+    | ArticleTextBlock;
 
 export interface Article {
     id: string;

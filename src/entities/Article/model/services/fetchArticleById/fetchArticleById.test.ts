@@ -14,9 +14,7 @@ const data: Article = {
         id: '1',
         username: 'Jane',
     },
-    type: [
-        ArticleType.IT,
-    ],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',

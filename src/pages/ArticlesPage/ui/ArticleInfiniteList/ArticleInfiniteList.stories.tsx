@@ -16,9 +16,7 @@ const articles: Article[] = [
             id: '1',
             username: 'Jane',
         },
-        type: [
-            ArticleType.FRONTEND,
-        ],
+        type: [ArticleType.FRONTEND],
         blocks: [
             {
                 id: '1',
@@ -93,7 +91,8 @@ const articles: Article[] = [
     {
         id: '2',
         title: 'Как настроить Node.js Express сервер для React',
-        subtitle: 'Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.',
+        subtitle:
+            'Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.',
         img: 'https://miro.medium.com/v2/resize:fit:365/1*Jr3NFSKTfQWRUyjblBSKeg.png',
         views: 722,
         createdAt: '01.03.2023',
@@ -101,9 +100,7 @@ const articles: Article[] = [
             id: '1',
             username: 'Jane',
         },
-        type: [
-            ArticleType.IT,
-        ],
+        type: [ArticleType.IT],
         blocks: [
             {
                 id: '1',
@@ -157,7 +154,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleInfiniteList>;
 
-const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => <ArticleInfiniteList {...args} />;
+const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => (
+    <ArticleInfiniteList {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

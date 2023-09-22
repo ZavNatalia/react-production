@@ -10,46 +10,47 @@ import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
-    className?: string
+    className?: string;
 }
 
-export const NotificationButton = memo(({ className }: NotificationButtonProps) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const isMobile = useDevice();
+export const NotificationButton = memo(
+    ({ className }: NotificationButtonProps) => {
+        const [isOpen, setIsOpen] = useState(false);
+        const isMobile = useDevice();
 
-    const onOpenDrawer = useCallback(() => {
-        setIsOpen(true);
-    }, []);
+        const onOpenDrawer = useCallback(() => {
+            setIsOpen(true);
+        }, []);
 
-    const onCloseDrawer = useCallback(() => {
-        setIsOpen(false);
-    }, []);
+        const onCloseDrawer = useCallback(() => {
+            setIsOpen(false);
+        }, []);
 
-    const trigger = (
-        <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
-            <Icon Svg={NotificationIcon} inverted />
-        </Button>
-    );
-
-    if (isMobile) {
-        return (
-            <>
-                {trigger}
-                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-                    <NotificationList />
-                </Drawer>
-            </>
+        const trigger = (
+            <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
+                <Icon Svg={NotificationIcon} inverted />
+            </Button>
         );
-    }
 
-    return (
-        <Popover
-            className={classNames('', {}, [className])}
-            direction="bottom left"
-            trigger={trigger}
-        >
-            <NotificationList className={cls.notifications} />
-        </Popover>
+        if (isMobile) {
+            return (
+                <>
+                    {trigger}
+                    <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                        <NotificationList />
+                    </Drawer>
+                </>
+            );
+        }
 
-    );
-});
+        return (
+            <Popover
+                className={classNames('', {}, [className])}
+                direction="bottom left"
+                trigger={trigger}
+            >
+                <NotificationList className={cls.notifications} />
+            </Popover>
+        );
+    },
+);

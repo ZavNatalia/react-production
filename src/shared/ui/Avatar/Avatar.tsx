@@ -21,10 +21,13 @@ export const Avatar = ({
     size = 100,
     fallbackInverted,
 }: AvatarProps) => {
-    const styles = useMemo<CSSProperties>(() => ({
-        width: size,
-        height: size,
-    }), [size]);
+    const styles = useMemo<CSSProperties>(
+        () => ({
+            width: size,
+            height: size,
+        }),
+        [size],
+    );
 
     const fallback = <Skeleton width={size} height={size} border="50%" />;
     const errorFallback = (

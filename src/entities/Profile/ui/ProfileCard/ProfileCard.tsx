@@ -47,7 +47,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
     if (isLoading) {
         return (
             <HStack
-                className={classNames(cls.ProfileCard, {}, [className, cls.loading])}
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.loading,
+                ])}
                 gap="8"
                 max
                 justify="center"
@@ -60,7 +63,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
     if (error) {
         return (
             <HStack
-                className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
                 gap="8"
                 justify="center"
             >
@@ -78,14 +84,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <VStack className={classNames(cls.ProfileCard, mods, [className])} gap="16" max>
+        <VStack
+            className={classNames(cls.ProfileCard, mods, [className])}
+            gap="16"
+            max
+        >
             {data?.avatar && (
                 <HStack justify="center" max>
-                    <Avatar
-                        size={180}
-                        src={data.avatar}
-                        alt={t('Avatar')}
-                    />
+                    <Avatar size={180} src={data.avatar} alt={t('Avatar')} />
                 </HStack>
             )}
             <Input

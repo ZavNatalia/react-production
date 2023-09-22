@@ -24,9 +24,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
-        className, article, view, target,
-    } = props;
+    const { className, article, view, target } = props;
     const { t } = useTranslation();
 
     const types = <Text className={cls.types} text={article.type.join(', ')} />;
@@ -37,40 +35,59 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         </div>
     );
     if (view === ArticleView.LIST) {
-        const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
+        const textBlock = article.blocks.find(
+            (block) => block.type === ArticleBlockType.TEXT,
+        ) as ArticleTextBlock;
 
         return (
             <div
-                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+                className={classNames(cls.ArticleListItem, {}, [
+                    className,
+                    cls[view],
+                ])}
                 data-testid="ArticleListItem"
             >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user?.avatar} />
-                        <Text className={cls.username} text={article.user?.username} />
+                        <Text
+                            className={cls.username}
+                            text={article.user?.username}
+                        />
                         <Text className={cls.date} text={article.createdAt} />
                     </div>
-                    <Text className={cls.title} size={TextSize.L} title={article.title} />
+                    <Text
+                        className={cls.title}
+                        size={TextSize.L}
+                        title={article.title}
+                    />
                     {types}
                     <div className={cls.imgWrapper}>
                         <AppImage
                             className={cls.img}
                             src={article.img}
                             alt={article.title}
-                            fallback={<Skeleton className={cls.img} width="100%" height="200px" />}
+                            fallback={
+                                <Skeleton
+                                    className={cls.img}
+                                    width="100%"
+                                    height="200px"
+                                />
+                            }
                         />
                     </div>
                     {textBlock && (
-                        <ArticleTextBlockComponent className={cls.textBlock} block={textBlock} />
+                        <ArticleTextBlockComponent
+                            className={cls.textBlock}
+                            block={textBlock}
+                        />
                     )}
                     <div className={cls.footer}>
                         <AppLink
                             to={getRouteArticleDetails(article.id)}
                             target={target}
                         >
-                            <Button
-                                theme={ButtonTheme.OUTLINE}
-                            >
+                            <Button theme={ButtonTheme.OUTLINE}>
                                 {t('Read more')}
                             </Button>
                         </AppLink>
@@ -84,7 +101,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            className={classNames(cls.ArticleListItem, {}, [
+                className,
+                cls[view],
+            ])}
             to={getRouteArticleDetails(article.id)}
             target={target}
             data-testid="ArticleListItem"
@@ -95,7 +115,13 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         className={cls.img}
                         src={article.img}
                         alt={article.title}
-                        fallback={<Skeleton className={cls.img} width="210px" height="210px" />}
+                        fallback={
+                            <Skeleton
+                                className={cls.img}
+                                width="210px"
+                                height="210px"
+                            />
+                        }
                     />
                 </div>
                 <Text className={cls.date} text={article.createdAt} />

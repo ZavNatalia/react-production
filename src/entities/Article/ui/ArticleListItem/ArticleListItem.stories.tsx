@@ -18,11 +18,7 @@ const article = {
         username: 'Jane',
         avatar: 'https://t3.ftcdn.net/jpg/01/71/25/36/360_F_171253642_miKXqvj5DeDNKipuJERPQZM1gQWX0C2d.jpg',
     },
-    type: [
-        'IT',
-        'SCIENCE',
-        'POLITIC',
-    ],
+    type: ['IT', 'SCIENCE', 'POLITIC'],
     blocks: [
         {
             id: '1',
@@ -49,7 +45,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+    <ArticleListItem {...args} />
+);
 
 export const NormalList = Template.bind({});
 NormalList.args = {

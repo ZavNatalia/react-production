@@ -4,7 +4,7 @@ import { Page } from '@/widgets/Page';
 import cls from './ForbiddenPage.module.scss';
 
 interface ForbiddenPageProps {
-    className?: string
+    className?: string;
 }
 
 export const ForbiddenPage = ({ className }: ForbiddenPageProps) => {

@@ -1,5 +1,9 @@
 import {
-    ImgHTMLAttributes, memo, ReactElement, useLayoutEffect, useState,
+    ImgHTMLAttributes,
+    memo,
+    ReactElement,
+    useLayoutEffect,
+    useState,
 } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 

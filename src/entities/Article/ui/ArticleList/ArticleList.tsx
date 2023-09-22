@@ -16,11 +16,12 @@ interface ArticleListProps {
     target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.PLATE ? 9 : 3)
-    .fill(0)
-    .map((item, index) => (
-        <ArticleListItemSkeleton key={index} view={view} />
-    ));
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.PLATE ? 9 : 3)
+        .fill(0)
+        .map((item, index) => (
+            <ArticleListItemSkeleton key={index} view={view} />
+        ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
@@ -55,9 +56,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             className={classNames('', {}, [className, cls[view]])}
             data-testid="ArticleList"
         >
-            {articles?.length > 0
-                ? articles.map(renderArticle)
-                : null}
+            {articles?.length > 0 ? articles.map(renderArticle) : null}
             {isLoading && getSkeletons(view)}
         </div>
     );

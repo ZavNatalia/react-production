@@ -12,7 +12,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
+    <ArticleRecommendationsList {...args} />
+);
 
 const article = {
     id: '1',
@@ -26,11 +28,7 @@ const article = {
         username: 'Jane',
         avatar: 'https://t3.ftcdn.net/jpg/01/71/25/36/360_F_171253642_miKXqvj5DeDNKipuJERPQZM1gQWX0C2d.jpg',
     },
-    type: [
-        'IT',
-        'SCIENCE',
-        'POLITIC',
-    ],
+    type: ['IT', 'SCIENCE', 'POLITIC'],
     blocks: [
         {
             id: '1',
@@ -50,8 +48,7 @@ const article = {
 } as unknown as Article;
 
 export const Normal = Template.bind({});
-Normal.args = {
-};
+Normal.args = {};
 Normal.decorators = [
     StoreDecorator({
         scrollRestoration: { scroll: { about: 0 } },

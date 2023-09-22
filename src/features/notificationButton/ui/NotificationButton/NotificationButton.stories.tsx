@@ -10,11 +10,17 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ paddingLeft: 500, paddingTop: 100 }}><Story /></div>,
+        (Story) => (
+            <div style={{ paddingLeft: 500, paddingTop: 100 }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof NotificationButton>;
 
-const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
+const Template: ComponentStory<typeof NotificationButton> = (args) => (
+    <NotificationButton {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

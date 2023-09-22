@@ -23,7 +23,11 @@ export const viewTypes = [
     },
 ];
 
-export const ArticleViewSelector = ({ className, view, onViewClick }: ArticleViewSelectorProps) => {
+export const ArticleViewSelector = ({
+    className,
+    view,
+    onViewClick,
+}: ArticleViewSelectorProps) => {
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);
     };
@@ -37,7 +41,9 @@ export const ArticleViewSelector = ({ className, view, onViewClick }: ArticleVie
                     onClick={onClick(viewType.view)}
                 >
                     <Icon
-                        className={classNames('', { [cls.selected]: viewType.view === view })}
+                        className={classNames('', {
+                            [cls.selected]: viewType.view === view,
+                        })}
                         Svg={viewType.icon}
                     />
                 </Button>

@@ -14,7 +14,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleViewSelector>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleViewSelector> = (args) => (
+    <ArticleViewSelector {...args} />
+);
 
 export const NormalPlate = Template.bind({});
 NormalPlate.args = {
@@ -25,6 +27,4 @@ export const DarkList = Template.bind({});
 DarkList.args = {
     view: ArticleView.LIST,
 };
-DarkList.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+DarkList.decorators = [ThemeDecorator(Theme.DARK)];
