@@ -3,7 +3,8 @@ FROM node:17.4-alpine AS builder
 WORKDIR /app
 COPY package*.json /app/
 COPY ./ /app/
-RUN npm install
+RUN npm install -g npm@10.1.0
+RUN npm ci
 RUN npm run build:prod
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
