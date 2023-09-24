@@ -3,7 +3,7 @@ FROM node:17.4-alpine AS builder
 WORKDIR /app
 COPY package*.json /app/
 COPY ./ /app/
-RUN npm install -g npm@10.1.0
+RUN npm install -g npm
 RUN npm ci
 RUN npm run build:prod
 
