@@ -25,7 +25,7 @@ interface ArticleDetailsCommentsProps {
 
 export const ArticleDetailsComments = memo(
     ({ className, id }: ArticleDetailsCommentsProps) => {
-        const { t } = useTranslation();
+        const { t } = useTranslation('articles-page');
         const dispatch = useAppDispatch();
         const comments = useSelector(getArticleComments.selectAll);
         const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
