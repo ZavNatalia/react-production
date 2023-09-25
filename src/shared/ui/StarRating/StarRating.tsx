@@ -40,7 +40,7 @@ export const StarRating = memo((props: StarRatingProps) => {
     };
 
     return (
-        <HStack gap="8" className={classNames('', {}, [className])}>
+        <HStack gap="16" className={classNames('', {}, [className])}>
             {starts.map((starNumber) => (
                 <Icon
                     className={classNames(

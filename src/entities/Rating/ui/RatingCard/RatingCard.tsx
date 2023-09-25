@@ -3,7 +3,6 @@ import { memo, useCallback, useState } from 'react';
 import { Card } from '@/shared/ui/Card';
 import { Text } from '@/shared/ui/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './RatingCard.module.scss';
 import { StarRating } from '@/shared/ui/StarRating';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Modal } from '@/shared/ui/Modal';
@@ -11,6 +10,7 @@ import { Input } from '@/shared/ui/Input';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
 import { Drawer } from '@/shared/ui/Drawer';
+import cls from './RatingCard.module.scss';
 
 interface RatingCardProps {
     className?: string;
@@ -84,7 +84,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                     title={startsCount ? t('Thanks for the rating!') : title}
                 />
                 <StarRating
-                    size={40}
+                    size={24}
                     selectedStars={startsCount}
                     onSelect={onSelectStarts}
                 />
@@ -104,7 +104,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 </Drawer>
             ) : (
                 <Modal isOpen={isModalOpen} lazy>
-                    <VStack gap="16" max>
+                    <VStack gap="16" className={cls.modal}>
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
