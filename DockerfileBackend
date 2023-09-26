@@ -1,0 +1,6 @@
+FROM node:alpine
+WORKDIR /server
+COPY ./json-server /server
+
+EXPOSE 80 443
+CMD ["node", "./index.js"]

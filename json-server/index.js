@@ -19,7 +19,9 @@ server.use(async (req, res, next) => {
 server.post('/login', (req, res) => {
     try {
         const { username, password } = req.body;
-        const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+        const db = JSON.parse(
+            fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'),
+        );
         const { users = [] } = db;
 
         const userFromBd = users.find(
@@ -48,6 +50,6 @@ server.use((req, res, next) => {
 
 server.use(router);
 
-server.listen(8000, () => {
-    console.log('server is running on 8000 port');
+server.listen(80, () => {
+    console.log('server is running on 80 port');
 });
