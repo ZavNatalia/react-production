@@ -1,6 +1,7 @@
 FROM node:alpine
 WORKDIR /server
 COPY ./json-server /server
+RUN npm ci
 
 EXPOSE 80 443
 CMD ["node", "./index.js"]
