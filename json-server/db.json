@@ -1029,7 +1029,7 @@
       "currency": "EUR",
       "country": "Kyrgyzstan",
       "city": "Bishkek",
-      "username": "Petya I",
+      "username": "Petr II",
       "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
     },
     {
@@ -1145,6 +1145,12 @@
       "rate": 3,
       "feedback": "feedback about the article",
       "id": "hlIHZF2"
+    },
+    {
+      "userId": "3",
+      "articleId": "6",
+      "rate": 3,
+      "id": "6oIn84x"
     }
   ],
   "profile-ratings": [
