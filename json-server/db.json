@@ -556,7 +556,7 @@
       "id": "11",
       "title": "Разбираем useId( ) хук под микроскопом",
       "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "img": "https://www.xcodecreative.web.id/wp-content/uploads/2023/09/wp4923981-react-js-wallpapers-1.jpg",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/b3e/8c5/698/b3e8c569883798e0da35a62098362b83.png",
       "views": "2918",
       "createdAt": "09.02.2023",
       "userId": "1",
@@ -818,6 +818,46 @@
           "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
         }
       ]
+    },
+    {
+      "id": "16",
+      "title": "Top 10 React Grid components and libraries for 2023",
+      "subtitle": "This article was last updated by Fimber Elemuwa on 24 April 2023 to include information about the React Virtualized, Griddle, and React Data Grid libraries. For more React articles, check out How to build a tree grid component in React, or The top React table libraries.\n\n",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2023/04/top-10-react-grid-components-libraries-2023.png",
+      "views": "1918",
+      "createdAt": "24.04.2023",
+      "userId": "3",
+      "type": [
+        "FRONTEND"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "paragraphs": [
+            "Most developers today use React grid libraries and components to effectively create responsive grid layouts in their React applications. That’s because most React grid libraries have pre-built sets of components and utilities, such as customizable grid layouts, responsive design, pagination, sorting, filtering, etc., that provide a way to efficiently display and organize large sets of data in a tabular format."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "title": "React-grid-layout",
+          "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-grid-layout.png"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "React Data Grid",
+          "paragraphs": [
+            "React Data Grid is one of the most powerful React grid components in the world, with over 7K people using it to create high-performance, customizable grids in React applications. Designed to work seamlessly with other React components and libraries, React Data Grid provides a variety of features, such as sorting, filtering, grouping, virtual scrolling, cell editing, and more."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-data-grid.png"
+        }
+      ]
     }
   ],
   "comments": [
@@ -958,6 +998,18 @@
       "userId": "2",
       "text": "<label>   <span>Some label</span>   <input name=\"some-input\" /> </label>",
       "id": "cGrZYrh"
+    },
+    {
+      "articleId": "16",
+      "userId": "1",
+      "text": "React Grid Data was built with performance in mind, and it uses techniques such as virtual scrolling and cell buffering to efficiently handle large amounts of data without impacting performance. It is actively developed and supported by Adazzle, a company that specializes in building data-driven web applications, so there are regular updates and bug fixes.",
+      "id": "qksFfyM"
+    },
+    {
+      "articleId": "16",
+      "userId": "1",
+      "text": "Griddle is an incredibly powerful open source React library that provides users with a set of customizable and high-performance components for building flexible data tables and grids. It allows users to easily filter, sort, and paginate large datasets and it goes one step further to provide several built-in themes for styling the table.  One key feature that gets Griddle on this list is that it is designed to be highly flexible and extensible. Developers can use the library’s API to create their own custom components and add new functionality to their tables. For example, you can add new filtering or sorting options, or create custom cell renderers to display data in a specific way.  Griddle is optimized for rendering large datasets and provides features such as virtual scrolling to ensure the table remains responsive even when working with thousands of rows of data. While Griddle might not be the most popular React grid library in the world, it still has an impressive 2.5K stars on GitHub.",
+      "id": "8jEzwNQ"
     }
   ],
   "users": [
@@ -1151,6 +1203,18 @@
       "articleId": "6",
       "rate": 3,
       "id": "6oIn84x"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 4,
+      "id": "1_h42Y3"
+    },
+    {
+      "userId": "1",
+      "articleId": "16",
+      "rate": 5,
+      "id": "6L2QSfM"
     }
   ],
   "profile-ratings": [

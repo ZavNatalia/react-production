@@ -56,6 +56,10 @@ const ProfileRating = memo(({ className, profileId }: ProfileRatingProps) => {
         return <Skeleton width="100%" height="120px" border="12px" />;
     }
 
+    if (!data) {
+        return null;
+    }
+
     const rating = data?.[0];
 
     return (

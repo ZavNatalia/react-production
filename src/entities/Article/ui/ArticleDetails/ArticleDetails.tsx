@@ -49,27 +49,15 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         switch (block.type) {
             case ArticleBlockType.TEXT:
                 return (
-                    <ArticleTextBlockComponent
-                        className={cls.block}
-                        key={block.id}
-                        block={block}
-                    />
+                    <ArticleTextBlockComponent key={block.id} block={block} />
                 );
             case ArticleBlockType.IMAGE:
                 return (
-                    <ArticleImageBlockComponent
-                        className={cls.block}
-                        key={block.id}
-                        block={block}
-                    />
+                    <ArticleImageBlockComponent key={block.id} block={block} />
                 );
             case ArticleBlockType.CODE:
                 return (
-                    <ArticleCodeBlockComponent
-                        className={cls.block}
-                        key={block.id}
-                        block={block}
-                    />
+                    <ArticleCodeBlockComponent key={block.id} block={block} />
                 );
             default:
                 return null;
@@ -145,7 +133,6 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         <DynamicModuleLoader reducers={reducers}>
             <VStack
                 gap="16"
-                max
                 className={classNames(cls.ArticleDetails, {}, [className])}
             >
                 {content}
