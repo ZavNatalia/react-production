@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArticleDetails } from '@/entities/Article';
 import {
     DynamicModuleLoader,
@@ -12,7 +13,8 @@ import { ArticleDetailsPageHeader } from '../../ui/ArticleDetailsPageHeader/Arti
 import { articleDetailsPageReducer } from '../../model/slices/index';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { getFeatureFlag } from '@/shared/lib/features';
+import { toggleFeatures } from '@/shared/lib/features';
+import { Card, CardTheme } from '@/shared/ui/Card';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -24,11 +26,21 @@ const reducers: ReducersList = {
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { id } = useParams<{ id: string }>();
-    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
+    const { t } = useTranslation('article-details');
 
     if (!id) {
         return null;
     }
+
+    const articleRatingCard = toggleFeatures({
+        name: 'isArticleRatingEnabled',
+        on: () => <ArticleRating articleId={id} />,
+        off: () => (
+            <Card theme={CardTheme.OUTLINED} style={{ margin: '0 auto' }}>
+                {t('Article ratings coming soon')}
+            </Card>
+        ),
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers}>
@@ -36,7 +48,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    {isArticleRatingEnabled && <ArticleRating articleId={id} />}
+                    {articleRatingCard}
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

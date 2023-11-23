@@ -132,6 +132,26 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 ----
 
+### Работа с feature-flags
+
+Разрешено использование feature flags только с помощью хелпера toggleFeatures
+
+в него передается объект с опциями
+
+{
+   name: название feature flag, 
+   on: функция, которая отработает  после ВКЛючения фичи
+   off: функция, которая отработает после ВЫКЛючения фичи
+}
+
+Для автоматического удаления фичи использовать скрипт remove-feature.ts, который принимает 2 аргемента
+1. Название удаляемого feature flag
+2. Состояние (on/off)
+
+пример скрипта:
+
+`$ npx ts-node ./scripts/remove-feature.ts isCounterEnabled on`
+
 
 ## Сущности (entities)
 
