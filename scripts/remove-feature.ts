@@ -62,8 +62,7 @@ const replaceToggleFunction = (node: Node) => {
     );
     const featureName = featureNameProperty
         ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
-        ?.getText()
-        .slice(1, -1);
+        ?.getLiteralValue();
 
     if (featureName !== removedFeatureName) return;
 
@@ -102,8 +101,7 @@ const replaceComponent = (node: Node) => {
     const featureNameAttribute = getAttributeNodeByName(attributes, 'feature');
     const featureName = featureNameAttribute
         ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
-        ?.getText()
-        ?.slice(1, -1);
+        ?.getLiteralValue();
 
     if (featureName !== removedFeatureName) return;
 
@@ -119,15 +117,16 @@ const replaceComponent = (node: Node) => {
 };
 
 files.forEach((sourceFile) => {
+    // eslint-disable-next-line consistent-return
     sourceFile.forEachDescendant((node) => {
         if (node.isKind(SyntaxKind.CallExpression) && isToggleFunction(node)) {
-            replaceToggleFunction(node);
+            return replaceToggleFunction(node);
         }
         if (
             node.isKind(SyntaxKind.JsxSelfClosingElement) &&
             isToggleComponent(node)
         ) {
-            replaceComponent(node);
+            return replaceComponent(node);
         }
     });
 });
