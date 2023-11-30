@@ -14,6 +14,14 @@ body {
     background: var(--bg-color);
 }
 
+.app-v2 {
+    background: var(--bg-v2);
+    min-height: 100vh;
+    font: var(--font-m-v2);
+    color: var(--text-v2);
+    padding: 0 20px;
+}
+
 .content-page {
     display: flex;
 }

@@ -1,5 +1,7 @@
 :root {
     --font-family-main: "DejaVu Sans Mono", "Times New Roman", serif;
+    --font-family-text-v2: "Nunito Sans", sans-serif;
+    --font-family-title-v2: "Roboto", sans-serif;
 
     // xs
     --font-size-xs: 12px;
@@ -28,7 +30,7 @@
 
     // Sizes
     --navbar-height: 50px;
-    --sidebar-width: 300px;
+    --sidebar-width: 284px;
     --sidebar-width-collapsed: 80px;
 
     // z - index
@@ -43,4 +45,21 @@
     // Radius
     --radius-m: 4px;
     --radius-l: 12px;
+
+    // redesigned
+
+    // xs
+    --font-xs-v2: var(--font-size-xs) / var(--font-line-xs) var(--font-family-text-v2);
+
+    // s
+    --font-s-v2: var(--font-size-s) / var(--font-line-s) var(--font-family-text-v2);
+
+    // m
+    --font-m-v2: var(--font-size-m) / var(--font-line-m) var(--font-family-text-v2);
+
+    // l
+    --font-l-v2: var(--font-size-l) / var(--font-line-l) var(--font-family-title-v2);
+
+    // xl
+    --font-xl-v2: var(--font-size-xl) / var(--font-line-xl) var(--font-family-title-v2);
 }

@@ -12,6 +12,7 @@ import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/shared/const/router';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 interface NavbarProps {
     className?: string;
@@ -32,26 +33,44 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if (autData) {
         return (
-            <header className={classNames(cls.Navbar, {}, [className])}>
-                <Text
-                    className={cls.appName}
-                    theme={TextTheme.INVERTED}
-                    title={t('Open source')}
-                />
-                <HStack gap="32" className={cls.actions}>
-                    <AppLink
-                        theme={AppLinkTheme.SECONDARY}
-                        to={getRouteArticleCreate()}
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                off={
+                    <header className={classNames(cls.Navbar, {}, [className])}>
+                        <Text
+                            className={cls.appName}
+                            theme={TextTheme.INVERTED}
+                            title={t('Open source')}
+                        />
+                        <HStack gap="32" className={cls.actions}>
+                            <AppLink
+                                theme={AppLinkTheme.SECONDARY}
+                                to={getRouteArticleCreate()}
+                            >
+                                {t('Create article')}
+                            </AppLink>
+                            <NotificationButton />
+                            <AvatarDropdown />
+                        </HStack>
+                        {isAuthModal && (
+                            <LoginModal
+                                isOpen={isAuthModal}
+                                onClose={onCloseModal}
+                            />
+                        )}
+                    </header>
+                }
+                on={
+                    <header
+                        className={classNames(cls.NavbarV2, {}, [className])}
                     >
-                        {t('Create article')}
-                    </AppLink>
-                    <NotificationButton />
-                    <AvatarDropdown />
-                </HStack>
-                {isAuthModal && (
-                    <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-                )}
-            </header>
+                        <HStack gap="32" className={cls.actions}>
+                            <NotificationButton />
+                            <AvatarDropdown />
+                        </HStack>
+                    </header>
+                }
+            />
         );
     }
 
