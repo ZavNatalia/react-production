@@ -6,36 +6,36 @@
     transition: width 0.3s;
     display: flex;
     flex-direction: column;
-}
 
-.switchers {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.lang {
-    color: var(--inverted-secondary-color);
-}
+    .switchers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
-.collapseBtn {
-    position: absolute;
-    right: -32px;
-    bottom: 32px;
-    border-radius: 0 8px 8px 0;
-    padding-right: 12px;
-    padding-left: 8px;
-    outline-color: transparent;
-}
+    .lang {
+        color: var(--inverted-secondary-color);
+    }
 
-.items {
-    margin-top: 20px;
-    margin-left: 20px;
-    display: flex;
-    flex: 1;
-}
+    .collapseBtn {
+        position: absolute;
+        right: -32px;
+        bottom: 32px;
+        border-radius: 0 8px 8px 0;
+        padding-right: 12px;
+        padding-left: 8px;
+        outline-color: transparent;
+    }
 
+    .items {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex: 1;
+    }
+}
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
@@ -52,7 +52,7 @@
     width: var(--sidebar-width);
     border-radius: 32px;
     position: relative;
-    padding: 26px;
+    padding: 26px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -62,5 +62,56 @@
         margin: 0;
         display: flex;
         flex: 1;
+    }
+
+    .appLogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .switchers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .collapseBtn {
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: rotate(90deg);
+    }
+
+}
+
+.itemV2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.collapsedV2 {
+    width: var(--sidebar-width-collapsed);
+    justify-content: center;
+    padding: 20px 0;
+
+    .items {
+        gap: 16px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collapseBtn {
+        transform: rotate(-90deg);
+        right: 0;
     }
 }

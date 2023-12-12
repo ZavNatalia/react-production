@@ -1,0 +1,79 @@
+.Button {
+    cursor: pointer;
+    padding: 6px 15px;
+    border-radius: var(--radius-m);
+    color: var(--text-v2);
+
+    &:hover {
+        color: var(--accent-v2);
+    }
+}
+
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline-color: transparent;
+}
+
+.outline {
+    border: 1px solid var(--card-border);
+    color: var(--primary-color);
+    background: var(--card-bg);
+}
+
+.outlineRed {
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
+.background {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+
+.square {
+    padding: 0;
+}
+
+.square.m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+    font: var(--font-m-v2);
+}
+
+.square.l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+    font: var(--font-l-v2);
+}
+
+.square.xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+    font: var(--font-xl-v2);
+}
+
+.m {
+    font: var(--font-m-v2);
+}
+
+.l {
+    font: var(--font-l-v2);
+}
+
+.xl {
+    font: var(--font-xl-v2);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.fullwidth {
+    width: 100%;
+}

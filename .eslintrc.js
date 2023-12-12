@@ -61,6 +61,8 @@ module.exports = {
                     'refName',
                     'border',
                     'feature',
+                    'color',
+                    'variant',
                 ],
             },
         ],

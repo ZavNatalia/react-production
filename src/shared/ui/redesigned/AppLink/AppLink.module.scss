@@ -1,0 +1,17 @@
+.primary {
+    color: var(--text-v2);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent-v2);
+    }
+}
+
+.red {
+    color: var(--cancel-v2);
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
