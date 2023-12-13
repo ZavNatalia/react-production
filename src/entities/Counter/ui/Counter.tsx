@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/shared/ui/deprecated/Button';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { useCounterActions } from '../model/slice/counterSlice';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Input } from '@/shared/ui/deprecated/Input';
 import { Card } from '@/shared/ui/deprecated/Card';
 

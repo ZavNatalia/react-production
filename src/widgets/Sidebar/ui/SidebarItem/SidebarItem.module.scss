@@ -46,7 +46,7 @@
 }
 
 .active {
-    background: linear-gradient(90deg, rgba(58,95,255,0.5886729691876751) 0%, rgba(95,123,246,0.48783263305322133) 6%, rgba(135,155,241,0.1292892156862745) 14%, rgba(199,208,249,0.06486344537815125) 51%, rgba(236,239,253,0.04245448179271705) 80%, rgba(255,255,255,0) 100%);
+    background-color: var(--accent-bg-v2);
     position: relative;
-    border-left: 2px solid var(--accent-v2);
+    border-left: 3px solid var(--accent-v2);
 }

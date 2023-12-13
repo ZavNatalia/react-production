@@ -18,7 +18,7 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleCodeBlockComponent } from '../../ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../../ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
