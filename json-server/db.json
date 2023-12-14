@@ -1026,7 +1026,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1064,7 +1064,7 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_green_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1146,14 +1146,14 @@
     {
       "id": "2",
       "title": "Notification 12",
-      "description": "Event 456",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut deserunt exercitationem illum impedit labore minima voluptates. Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
       "userId": "1",
       "href": "http://localhost:3000/admin"
     },
     {
       "id": "3",
       "title": "Notification 13",
-      "description": "Event 678",
+      "description": "Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
       "userId": "2",
       "href": "http://localhost:3000/profile"
     },

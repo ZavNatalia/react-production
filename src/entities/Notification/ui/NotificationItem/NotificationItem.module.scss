@@ -2,3 +2,7 @@
 .link {
     width: 100%;
 }
+
+.link .NotificationItem:hover {
+    background-color: var(--light-bg-v2);
+}

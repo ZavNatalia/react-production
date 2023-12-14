@@ -13,7 +13,7 @@ import {
     TextSize,
     TextTheme,
 } from '@/shared/ui/deprecated/Text';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/deprecated/Icon';

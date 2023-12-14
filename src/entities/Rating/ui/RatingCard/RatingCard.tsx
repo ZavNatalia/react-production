@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { Card } from '@/shared/ui/deprecated/Card';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';

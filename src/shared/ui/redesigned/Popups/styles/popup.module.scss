@@ -1,0 +1,58 @@
+.popup {
+    position: relative;
+    width: fit-content;
+}
+
+.menu {
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: var(--dark-bg-v2);
+    box-shadow: 0 0 8px 0 var(--box-shadow-v2);
+}
+
+.active {
+    background-color: var(--light-bg-v2);
+    color: var(--text-v2);
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    bottom: 100%;
+    right: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.readonly {
+    .label {
+        opacity: 0.8;
+    }
+}
+
+.trigger {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}

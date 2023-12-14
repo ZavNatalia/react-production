@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { profileActions } from '../../model/slice/profileSlice';

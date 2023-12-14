@@ -1,0 +1,45 @@
+.label {
+    color: var(--text-v2);
+}
+
+.trigger {
+    background: var(--dark-bg-v2);
+    border-radius: 18px;
+    border: none;
+    outline-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    button {
+        padding: 8px 12px;
+        border-color: var(--light-bg-v2);
+        border-radius: 18px;
+    }
+}
+
+.options {
+    position: absolute;
+    z-index: 1000;
+    color: var(--text-v2);
+    background: var(--dark-bg-v2);
+    border: 1px solid var(--light-bg-v2);
+    min-width: 120px;
+    width: fit-content;
+    max-width: 300px;
+}
+
+.item {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--light-bg-v2);
+    color: var(--accent-v2);
+}
+
+.readonly {
+    .label {
+        opacity: 0.8;
+    }
+}

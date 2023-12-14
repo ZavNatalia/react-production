@@ -17,9 +17,9 @@
 }
 
 .outline {
-    border: 1px solid var(--card-border);
-    color: var(--primary-color);
-    background: var(--card-bg);
+    border: 1px solid var(--light-bg-v2);
+    color: var(--text-v2);
+    background: var(--light-bg-v2);
 }
 
 .outlineRed {
@@ -29,11 +29,10 @@
 }
 
 .background {
-    background: var(--bg-color);
-    color: var(--primary-color);
+    background: var(--light-bg-v2);
+    color: var(--text-v2);
     border: none;
 }
-
 
 .square {
     padding: 0;

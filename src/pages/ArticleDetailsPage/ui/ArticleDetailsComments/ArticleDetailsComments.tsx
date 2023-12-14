@@ -8,7 +8,7 @@ import { CommentList } from '@/entities/Comment';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentSlice';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';

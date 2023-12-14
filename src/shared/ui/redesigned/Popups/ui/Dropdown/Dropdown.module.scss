@@ -1,0 +1,34 @@
+.trigger {
+    background: none;
+    outline-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.item {
+    background: var(--dark-bg-v2);
+    padding: 10px 25px;
+    width: 100%;
+    border: none;
+    color: var(--text-v2);
+    outline-color: transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0;
+}
+
+.item:hover {
+    background: var(--light-bg-v2);
+}
