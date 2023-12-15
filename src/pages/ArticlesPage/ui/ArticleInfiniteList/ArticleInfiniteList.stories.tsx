@@ -147,7 +147,7 @@ const articles: Article[] = [
 ];
 
 export default {
-    title: 'shared/ArticleInfiniteList',
+    title: 'pages/ArticlesPage/ArticleInfiniteList',
     component: ArticleInfiniteList,
     argTypes: {
         backgroundColor: { control: 'color' },

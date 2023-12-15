@@ -1,17 +1,21 @@
-.Card {
-    border-radius: 28px;
-}
-
 .withoutPaddings {
     padding: 0;
 }
 
 .normal {
-    background: var(--bg-v2);
+    background: var(--dark-bg-v2);
 }
 
 .outlined {
     border: 1px solid var(--accent-v2);
+}
+
+.normalBorder {
+    border-radius: 12px;
+}
+
+.roundBorder {
+    border-radius: 40px;
 }
 
 .max {

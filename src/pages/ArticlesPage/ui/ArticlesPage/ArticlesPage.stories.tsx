@@ -6,7 +6,7 @@ import ArticlesPage from './ArticlesPage';
 import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'pages/ArticlesPage',
+    title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
     argTypes: {
         backgroundColor: { control: 'color' },

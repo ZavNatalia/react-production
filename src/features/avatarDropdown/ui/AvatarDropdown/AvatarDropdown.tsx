@@ -84,7 +84,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
                     items={items}
                     trigger={
                         autData?.avatar ? (
-                            <Avatar size={48} src={autData?.avatar} />
+                            <Avatar size={40} src={autData?.avatar} />
                         ) : (
                             <ProfileIcon className={cls.menuIcon} />
                         )
