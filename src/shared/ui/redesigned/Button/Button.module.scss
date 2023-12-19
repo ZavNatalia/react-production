@@ -6,6 +6,7 @@
 
     &:hover {
         color: var(--accent-v2);
+        background-color: var(--accent-bg-v2);
     }
 }
 
@@ -28,11 +29,20 @@
     background: none;
 }
 
-.background {
+.filled {
     background: var(--light-bg-v2);
     color: var(--text-v2);
     border: none;
+    outline: none;
+    border-radius: 34px;
+    padding: 8px 16px;
 }
+
+//.background {
+//    background: var(--light-bg-v2);
+//    color: var(--text-v2);
+//    border: none;
+//}
 
 .square {
     padding: 0;

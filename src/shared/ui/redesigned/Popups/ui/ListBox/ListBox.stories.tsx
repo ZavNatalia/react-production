@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { ListBox, ListBoxItem } from './ListBox';
+import { ListBox } from './ListBox';
 import { Theme } from '@/shared/const/theme';
 
 export default {
@@ -19,7 +19,7 @@ export default {
     ],
 } as ComponentMeta<typeof ListBox>;
 
-const people: ListBoxItem[] = [
+const people: any = [
     { value: 'Durward', content: <div>Durward Reynolds</div> },
     { value: 'Kenton', content: <div>Kenton Towne</div> },
     { value: 'Therese', content: <div>Therese Wunsch</div> },

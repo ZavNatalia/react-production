@@ -3,7 +3,7 @@ import { Button } from '@/shared/ui/deprecated/Button';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { useCounterActions } from '../model/slice/counterSlice';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Input } from '@/shared/ui/deprecated/Input';
+import { Input } from '@/shared/ui/redesigned/Input';
 import { Card } from '@/shared/ui/deprecated/Card';
 
 export const Counter = () => {

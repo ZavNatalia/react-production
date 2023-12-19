@@ -12,7 +12,7 @@
 
 .active {
     background-color: var(--light-bg-v2);
-    color: var(--text-v2);
+    color: var(--accent-v2);
 }
 
 .optionsBottomLeft {
@@ -43,6 +43,11 @@
     .label {
         opacity: 0.8;
     }
+}
+
+.selected {
+    color: var(--accent-v2);
+    background-color: var(--accent-bg-v2);
 }
 
 .trigger {

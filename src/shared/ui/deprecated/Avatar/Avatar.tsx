@@ -1,6 +1,6 @@
 import { CSSProperties, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import UserIcon from '@/shared/assets/icons/user-32-32.png';
+import UserIcon from '@/shared/assets/icons/user-32-32.svg';
 import cls from './Avatar.module.scss';
 import { Icon } from '../Icon';
 import { Skeleton } from '../Skeleton';

@@ -858,6 +858,126 @@
           "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-data-grid.png"
         }
       ]
+    },
+    {
+      "id": "17",
+      "title": "REST API на Go на примере сокращателя ссылок",
+      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2023/01/repack-large-scale-react-native-apps.png",
+      "views": "4817",
+      "createdAt": "09.02.2020",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое useId( ) ?",
+          "paragraphs": [
+            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "TEXT",
+          "title": "Зачем нужен такой невнятный id?",
+          "paragraphs": [
+            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+          ]
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+        },
+        {
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
+      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+      "img": "https://blog.logrocket.com/wp-content/uploads/2018/06/5-things-not-do-building-react-applications.png",
+      "views": "4817",
+      "createdAt": "09.02.2020",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое useId( ) ?",
+          "paragraphs": [
+            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "TEXT",
+          "title": "Зачем нужен такой невнятный id?",
+          "paragraphs": [
+            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+          ]
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+        },
+        {
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Last item",
+      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+      "img": "https://blog.castle.io/content/images/2021/03/blog-thumb-1.png",
+      "views": "4817",
+      "createdAt": "09.02.2020",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое useId( ) ?",
+          "paragraphs": [
+            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "TEXT",
+          "title": "Зачем нужен такой невнятный id?",
+          "paragraphs": [
+            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+          ]
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+        },
+        {
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+        }
+      ]
     }
   ],
   "comments": [
@@ -1026,12 +1146,12 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
       },
-      "avatar": "https://cdn1.vectorstock.com/i/1000x1000/11/10/admin-icon-male-person-profile-avatar-with-gear-vector-25811110.jpg"
+      "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
     },
     {
       "id": "2",
@@ -1100,7 +1220,7 @@
       "country": "Kazakhstan",
       "city": "Almaty",
       "username": "Admin Jane",
-      "avatar": "https://www.svgrepo.com/show/382112/female-avatar-girl-face-woman-user-8.svg"
+      "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
     },
     {
       "id": "2",
