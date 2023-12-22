@@ -2,7 +2,7 @@
 
 ```
 npm install - устанавливаем зависимости
-npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+npm run start:dev - запуск сервера + frontend проекта в dev режиме
 ```
 
 ----
@@ -10,9 +10,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 ## Скрипты
 
 - `npm run start` - Запуск frontend проекта на webpack dev server
-- `npm run start:vite` - Запуск frontend проекта на vite
 - `npm run start:dev` - Запуск frontend проекта на webpack dev server + backend
-- `npm run start:dev:vite` - Запуск frontend проекта на vite + backend
 - `npm run start:dev:server` - Запуск backend сервера
 - `npm run build:prod` - Сборка в prod режиме
 - `npm run build:dev` - Сборка в dev режиме (не минимизирован)
@@ -95,11 +93,8 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 ## Конфигурация проекта
 
-Для разработки проект содержит 2 конфига:
-1. Webpack - ./config/build
-2. vite - vite.config.ts
-
-Оба сборщика адаптированы под основные фичи приложения.
+Для разработки проект использует Webpack конфиг:
+Webpack - ./config/build
 
 Вся конфигурация хранится в /config
 - /config/babel - babel
