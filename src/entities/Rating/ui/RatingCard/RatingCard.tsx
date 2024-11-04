@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
-import { Card } from '@/shared/ui/deprecated/Card';
+import { Card } from '@/shared/ui/redesigned/Card';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Modal } from '@/shared/ui/deprecated/Modal';
 import { Input } from '@/shared/ui/redesigned/Input';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
 import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import cls from './RatingCard.module.scss';
@@ -95,7 +95,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <Button
                             fullwidth
-                            theme={ButtonTheme.OUTLINE_RED}
+                            variant="outline"
                             onClick={cancelHandler}
                         >
                             {t('Send')}
@@ -108,13 +108,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
-                                theme={ButtonTheme.OUTLINE_RED}
+                                variant="filled"
                                 data-testid="RatingCard.Close"
                                 onClick={cancelHandler}
                             >
                                 {t('Close')}
                             </Button>
                             <Button
+                                variant="outline"
                                 data-testid="RatingCard.Send"
                                 onClick={acceptHandler}
                             >

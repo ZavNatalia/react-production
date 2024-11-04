@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Loader } from '@/shared/ui/deprecated/Loader';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
@@ -71,10 +71,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 justify="center"
             >
                 <Text
-                    theme={TextTheme.ERROR}
+                    variant="error"
                     title={t('An error occurred while loading the profile')}
                     text={t('Try to reload the page')}
-                    align={TextAlign.CENTER}
+                    align="center"
                 />
             </HStack>
         );

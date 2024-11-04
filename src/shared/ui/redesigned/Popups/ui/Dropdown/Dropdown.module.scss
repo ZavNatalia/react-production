@@ -18,7 +18,7 @@
 }
 
 .item {
-    background: var(--dark-bg-v2);
+    background: var(--light-bg-v2);
     padding: 10px 25px;
     width: 100%;
     border: none;
@@ -30,5 +30,5 @@
 }
 
 .item:hover {
-    background: var(--light-bg-v2);
+    background: var(--bg-v2);
 }

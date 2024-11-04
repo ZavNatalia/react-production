@@ -17,15 +17,11 @@ import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
 
-interface ArticlesPageProps {
-    className?: string;
-}
-
 const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
 };
 
-const ArticlesPage = ({ className }: ArticlesPageProps) => {
+const ArticlesPage = ({ className }: { className?: string }) => {
     const dispatch = useAppDispatch();
 
     const onLoadNextPart = useCallback(() => {

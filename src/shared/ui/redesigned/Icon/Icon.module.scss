@@ -1,15 +1,23 @@
 .Icon {
     fill: var(--icon-v2);
     color: var(--icon-v2);
+    border-radius: 50%;
 }
 
-.button {
+button {
     margin: 0;
     padding: 0;
     border: none;
-    outline: none;
     background: none;
     cursor: pointer;
+
+    &:focus {
+        outline: 2px solid var(--accent-v2);
+    }
+
+    &:active {
+        outline: 2px solid var(--accent-v2);
+    }
 }
 
 .button:hover .Icon {

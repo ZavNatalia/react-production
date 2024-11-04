@@ -11,6 +11,12 @@
 }
 
 .ArticleViewSelectorV2 {
+    width: fit-content;
+    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    .selected {
+        fill: var(--selector-bg);
+
+    }
     .notSelected {
         fill: var(--hint-v2);
     }

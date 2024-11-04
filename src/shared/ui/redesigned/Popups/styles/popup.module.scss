@@ -7,7 +7,7 @@
     border-radius: 18px;
     overflow: hidden;
     background-color: var(--dark-bg-v2);
-    box-shadow: 0 0 8px 0 var(--box-shadow-v2);
+    box-shadow: 0 0 10px 0 var(--box-shadow-v2);
 }
 
 .active {
@@ -58,6 +58,3 @@
     cursor: pointer;
 }
 
-button:focus {
-    outline: none;
-}

@@ -1,21 +1,22 @@
 .MainLayout {
     min-height: 100vh;
+    max-width: 1460px;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: "sidebar content rightbar";
-    grid-template-columns: min-content 1fr 175px;
+    grid-template-columns: var(--sidebar-width) 1fr 120px;
+    gap: 24px;
 }
 
 .sidebar {
     grid-area: sidebar;
-    padding: 32px;
-    max-width: 284px;
+    padding: 16px 0;
 }
 
 .content {
     grid-area: content;
-    max-width: 1200px;
     justify-self: center;
-    padding: 32px;
+    padding: 16px 0;
     width: 100%;
 }
 
@@ -37,4 +38,5 @@
     height: 100%;
     background-color: var(--dark-bg-v2);
     padding: 8px;
+    display: none;
 }

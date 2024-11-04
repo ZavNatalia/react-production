@@ -1,13 +1,13 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
-import { Icon } from '@/shared/ui/deprecated/Icon';
+import { Text } from '@/shared/ui/redesigned/Text';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import { Card } from '@/shared/ui/deprecated/Card';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { AppLink } from '@/shared/ui/deprecated/AppLink';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -30,7 +30,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const types = <Text className={cls.types} text={article.type.join(', ')} />;
     const views = (
         <div className={cls.views}>
-            <Icon Svg={EyeIcon} />
+            <Icon Svg={EyeIcon} clickable={false} width="20px" height="20px" />
             <Text text={String(article.views)} />
         </div>
     );
@@ -58,7 +58,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <Text
                         className={cls.title}
-                        size={TextSize.L}
+                        size="l"
                         title={article.title}
                     />
                     {types}
@@ -87,9 +87,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             to={getRouteArticleDetails(article.id)}
                             target={target}
                         >
-                            <Button theme={ButtonTheme.OUTLINE}>
-                                {t('Read more')}
-                            </Button>
+                            <Button variant="outline">{t('Read more')}</Button>
                         </AppLink>
 
                         {views}

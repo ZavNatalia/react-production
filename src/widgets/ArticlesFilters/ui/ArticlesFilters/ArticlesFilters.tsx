@@ -38,9 +38,9 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
     return (
         <Card
             className={classNames(cls.ArticlesFilters, {}, [className])}
-            padding="24"
+            padding="16"
         >
-            <VStack gap="16">
+            <VStack gap="8">
                 <Input
                     placeholder={t('Search')}
                     value={searchQuery}

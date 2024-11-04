@@ -17,7 +17,7 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ArticleView) =>
-    new Array(view === ArticleView.PLATE ? 9 : 3)
+    new Array(view === ArticleView.PLATE ? 3 : 1)
         .fill(0)
         .map((item, index) => (
             <ArticleListItemSkeleton key={index} view={view} />
@@ -45,7 +45,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     if (!isLoading && !articles.length) {
         return (
-            <div className={classNames('', {}, [className, cls[view]])}>
+            <div
+                className={classNames('', {}, [
+                    className,
+                    cls[view],
+                    cls.notFound,
+                ])}
+            >
                 <Text title={t('Articles not found')} />
             </div>
         );

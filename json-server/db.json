@@ -1130,6 +1130,12 @@
       "userId": "1",
       "text": "Griddle is an incredibly powerful open source React library that provides users with a set of customizable and high-performance components for building flexible data tables and grids. It allows users to easily filter, sort, and paginate large datasets and it goes one step further to provide several built-in themes for styling the table.  One key feature that gets Griddle on this list is that it is designed to be highly flexible and extensible. Developers can use the library’s API to create their own custom components and add new functionality to their tables. For example, you can add new filtering or sorting options, or create custom cell renderers to display data in a specific way.  Griddle is optimized for rendering large datasets and provides features such as virtual scrolling to ensure the table remains responsive even when working with thousands of rows of data. While Griddle might not be the most popular React grid library in the world, it still has an impressive 2.5K stars on GitHub.",
       "id": "8jEzwNQ"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "ET /comments?articleId=2&_expand=user 200 804.625 ms - -",
+      "id": "b6OsBME"
     }
   ],
   "users": [
@@ -1146,7 +1152,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_green_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1335,6 +1341,12 @@
       "articleId": "2",
       "rate": 4,
       "id": "8aB6jTx"
+    },
+    {
+      "userId": "1",
+      "articleId": "18",
+      "rate": 4,
+      "id": "J3AJwKe"
     }
   ],
   "profile-ratings": [
@@ -1363,6 +1375,12 @@
       "profileId": "2",
       "rate": 5,
       "id": "uw-Dy46"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 4,
+      "id": "dw5U80X"
     }
   ]
 }

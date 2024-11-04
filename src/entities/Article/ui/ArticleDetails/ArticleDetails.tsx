@@ -7,16 +7,11 @@ import {
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    Text,
-    TextAlign,
-    TextSize,
-    TextTheme,
-} from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
-import { Icon } from '@/shared/ui/deprecated/Icon';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleBlockType } from '../../model/consts/consts';
@@ -43,7 +38,7 @@ const reducers: ReducersList = {
 };
 
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('article-details');
 
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
@@ -87,7 +82,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                 </HStack>
                 <VStack gap="4">
                     <Skeleton className={cls.title} width={300} height={32} />
-                    <Skeleton width={600} height={24} />
+                    <Skeleton width={500} height={24} />
                     <Skeleton width={150} height={24} />
                     <Skeleton width={200} height={24} />
                 </VStack>
@@ -98,8 +93,8 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     } else if (error) {
         content = (
             <Text
-                theme={TextTheme.ERROR}
-                align={TextAlign.CENTER}
+                variant="error"
+                align="center"
                 title={t('An error occurred while loading the article')}
             />
         );
@@ -118,7 +113,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         className={cls.title}
                         title={article?.title}
                         text={article?.subtitle}
-                        size={TextSize.L}
+                        size="l"
                     />
                     <HStack gap="8" className={cls.articleInfo}>
                         <Icon Svg={EyeIcon} />

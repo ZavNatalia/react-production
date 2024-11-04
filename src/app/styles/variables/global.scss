@@ -14,23 +14,23 @@
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
 
     // m
-    --font-size-m: 16px;
-    --font-line-m: 24px;
+    --font-size-m: 18px;
+    --font-line-m: 26px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
     // l
     --font-size-l: 22px;
-    --font-line-l: 30px;
+    --font-line-l: 34px;
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
     // xl
     --font-size-xl: 30px;
-    --font-line-xl: 38px;
+    --font-line-xl: 42px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // Sizes
     --navbar-height: 50px;
-    --sidebar-width: 264px;
+    --sidebar-width: 186px;
     --sidebar-width-collapsed: 80px;
 
     // z - index
@@ -45,6 +45,7 @@
     // Radius
     --radius-m: 4px;
     --radius-l: 12px;
+    --radius-xl: 24px;
 
     // redesigned
 

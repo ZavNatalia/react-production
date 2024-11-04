@@ -1,5 +1,21 @@
 .ArticleImageBlockComponent {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 auto;
+    border-radius: var(--radius-l);
+    box-shadow: 0 2px 10px 0 var(--box-shadow);
+
     .img {
-        max-width: 800px;
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        max-height: 500px;
+        object-fit: cover;
     }
 }

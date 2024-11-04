@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas: 'left content right';
   grid-template-columns: min-content 1fr min-content;
+  gap: 12px;
 }
 
 .left {
@@ -9,10 +10,7 @@
 }
 .content {
   grid-area: content;
-  max-width: 1200px;
-  justify-self: center;
-  gap: 16px;
-  width: 100%;
+  margin-top: 16px;
 }
 .right {
   grid-area: right;
@@ -21,7 +19,6 @@
 .left,
 .right {
   position: sticky;
-  top: 32px;
+  top: 16px;
   height: fit-content;
-  padding: 0 12px;
 }

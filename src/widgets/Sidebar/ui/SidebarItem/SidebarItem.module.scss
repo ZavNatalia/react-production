@@ -32,16 +32,18 @@
     .link {
         margin-left: 12px;
         white-space: nowrap;
-        opacity: 1;
+        display: inline-block;
+
+        &:focus {
+            outline: 2px solid var(--accent-v2);
+        }
     }
 }
 .collapsedV2 {
     padding: 0 8px;
     justify-content: center;
     .link {
-        opacity: 0;
-        width: 0;
-        margin: 0;
+        display: none;
     }
 }
 

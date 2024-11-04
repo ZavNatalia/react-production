@@ -6,7 +6,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { profileActions } from '../../model/slice/profileSlice';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
@@ -49,7 +49,7 @@ export const EditableProfilePageHeader = memo(
                     <div>
                         {readonly ? (
                             <Button
-                                theme={ButtonTheme.OUTLINE}
+                                variant="outline"
                                 disabled={!!error}
                                 data-testid="EditableProfilePageHeader.EditButton"
                                 onClick={onEdit}
@@ -59,14 +59,14 @@ export const EditableProfilePageHeader = memo(
                         ) : (
                             <HStack gap="8">
                                 <Button
-                                    theme={ButtonTheme.OUTLINE_RED}
+                                    variant="filled"
                                     data-testid="EditableProfilePageHeader.CancelButton"
                                     onClick={onCancelEdit}
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
-                                    theme={ButtonTheme.OUTLINE}
+                                    variant="outline"
                                     data-testid="EditableProfilePageHeader.SaveButton"
                                     onClick={onSave}
                                 >

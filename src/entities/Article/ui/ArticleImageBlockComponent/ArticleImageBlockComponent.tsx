@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import cls from './ArticleImageBlockComponent.module.scss';
 import { ArticleImageBlock } from '../../model/types/article';
 
@@ -19,7 +19,11 @@ export const ArticleImageBlockComponent = memo(
             >
                 <img className={cls.img} src={block.src} alt="" />
                 {block.title && (
-                    <Text text={block.src} align={TextAlign.CENTER} />
+                    <Text
+                        text={`${block.src.slice(0, 60)}...`}
+                        align="center"
+                        size="s"
+                    />
                 )}
             </div>
         );

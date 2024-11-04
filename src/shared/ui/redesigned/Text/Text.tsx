@@ -6,6 +6,8 @@ export type TextVariant = 'primary' | 'error' | 'accent';
 
 export type TextAlign = 'right' | 'left' | 'center';
 
+export type TextWeight = 'normal' | 'bold';
+
 export type TextSize = 's' | 'm' | 'l';
 
 interface TextProps {
@@ -14,6 +16,7 @@ interface TextProps {
     text?: string;
     variant?: TextVariant;
     align?: TextAlign;
+    weight?: TextWeight;
     size?: TextSize;
     'data-testid'?: string;
 }
@@ -39,6 +42,7 @@ export const Text = memo((props: TextProps) => {
         text,
         variant = 'primary',
         align = 'left',
+        weight = 'normal',
         size = 'm',
         'data-testid': dataTestId = 'Text',
     } = props;
@@ -46,7 +50,13 @@ export const Text = memo((props: TextProps) => {
     const HeaderTag = mapSizeToHeaderTag[size];
     const sizeClass = mapSizeToClass[size];
 
-    const additionalClasses = [className, cls[variant], cls[align], sizeClass];
+    const additionalClasses = [
+        className,
+        cls[variant],
+        cls[align],
+        cls[weight],
+        sizeClass,
+    ];
 
     return (
         <div className={classNames(cls.Text, {}, additionalClasses)}>
