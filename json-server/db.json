@@ -1136,6 +1136,12 @@
       "userId": "1",
       "text": "ET /comments?articleId=2&_expand=user 200 804.625 ms - -",
       "id": "b6OsBME"
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "article-ratings?userId=1&articleId=15",
+      "id": "0tcIPPC"
     }
   ],
   "users": [
@@ -1297,56 +1303,6 @@
       "feedback": "Не хватило примеров в статье",
       "userId": "3",
       "articleId": "3"
-    },
-    {
-      "userId": "3",
-      "articleId": "2",
-      "rate": 5,
-      "feedback": "",
-      "id": "jBXLG2S"
-    },
-    {
-      "userId": "3",
-      "articleId": "8",
-      "rate": 4,
-      "feedback": "",
-      "id": "YwEWrUb"
-    },
-    {
-      "userId": "3",
-      "articleId": "15",
-      "rate": 3,
-      "id": "LoSrLmF"
-    },
-    {
-      "userId": "3",
-      "articleId": "6",
-      "rate": 3,
-      "id": "6oIn84x"
-    },
-    {
-      "userId": "1",
-      "articleId": "3",
-      "rate": 4,
-      "id": "1_h42Y3"
-    },
-    {
-      "userId": "1",
-      "articleId": "16",
-      "rate": 5,
-      "id": "6L2QSfM"
-    },
-    {
-      "userId": "1",
-      "articleId": "2",
-      "rate": 4,
-      "id": "8aB6jTx"
-    },
-    {
-      "userId": "1",
-      "articleId": "18",
-      "rate": 4,
-      "id": "J3AJwKe"
     }
   ],
   "profile-ratings": [
@@ -1356,31 +1312,6 @@
       "feedback": "Хорошие статьи у автора",
       "userId": "1",
       "profileId": "2"
-    },
-    {
-      "id": "2",
-      "rate": 1,
-      "feedback": "Ничего не понятно",
-      "userId": "1",
-      "profileId": "2"
-    },
-    {
-      "userId": "3",
-      "profileId": "3",
-      "rate": 3,
-      "id": "qmGx10a"
-    },
-    {
-      "userId": "2",
-      "profileId": "2",
-      "rate": 5,
-      "id": "uw-Dy46"
-    },
-    {
-      "userId": "1",
-      "profileId": "1",
-      "rate": 4,
-      "id": "dw5U80X"
     }
   ]
 }
