@@ -1,7 +1,4 @@
 .LIST {
-    .card {
-        padding: 20px;
-    }
     .header {
         display: flex;
         align-items: center;
@@ -61,11 +58,6 @@
     cursor: pointer;
     transition: 0.2s ease-in;
     position: relative;
-
-    .card {
-        border-radius: var(--radius-xl);
-        padding: 16px;
-    }
 
     .date {
         opacity: 0;
@@ -135,7 +127,7 @@
             line-clamp: 2;
             -webkit-box-orient: vertical;
             width: 200px;
-            font: var(--font-s);
+            font: var(--font-s-v2);
         }
     }
 }

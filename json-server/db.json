@@ -1,1317 +1,1269 @@
 {
-  "articles": [
-    {
-      "id": "1",
-      "title": "TypeScript news",
-      "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2020/08/8-ways-deploy-react-app-free.png",
-      "views": "1022",
-      "createdAt": "12.02.2023",
-      "userId": "1",
-      "type": [
-        "FRONTEND"
-      ],
-      "blocks": [
+    "articles": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Новый оператор satisfies",
-          "paragraphs": [
-            "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
-            "Рассмотрим на примере:"
-          ]
+            "id": "1",
+            "title": "TypeScript news",
+            "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2020/08/8-ways-deploy-react-app-free.png",
+            "views": "1022",
+            "createdAt": "12.02.2023",
+            "userId": "1",
+            "type": ["FRONTEND"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Новый оператор satisfies",
+                    "paragraphs": [
+                        "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "title": "",
+                    "paragraphs": [
+                        "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "CODE",
+                    "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+                },
+                {
+                    "id": "5",
+                    "type": "TEXT",
+                    "title": "Оптимизация TypeScript",
+                    "paragraphs": [
+                        "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
+                },
+                {
+                    "id": "7",
+                    "type": "TEXT",
+                    "title": "Функции-декораторы",
+                    "paragraphs": [
+                        "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+                        "Пример класса без декоратора:"
+                    ]
+                },
+                {
+                    "id": "8",
+                    "type": "CODE",
+                    "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
+                },
+                {
+                    "id": "9",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+                        "Пример декоратора:"
+                    ]
+                },
+                {
+                    "id": "10",
+                    "type": "CODE",
+                    "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
+                }
+            ]
         },
         {
-          "id": "2",
-          "type": "CODE",
-          "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
+            "id": "2",
+            "title": "Как настроить Node.js Express сервер для React",
+            "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
+            "views": "722",
+            "createdAt": "01.03.2023",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Необходимые условия",
+                    "paragraphs": [
+                        "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+                        "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+                        "2) Установленный Node.js.",
+                        "3) Текстовый редактор",
+                        "4) Веб-браузер, в данном случае Google Chrome."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "IMAGE",
+                    "title": "Настройка структуры папок",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+                        "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+                        "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "title": "Создание React приложения",
+                    "paragraphs": [
+                        "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "$cd express-react-app\n$npx create-react-app client"
+                }
+            ]
         },
         {
-          "id": "3",
-          "type": "TEXT",
-          "title": "",
-          "paragraphs": [
-            "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
-          ]
+            "id": "3",
+            "title": "Supercharge Your React Projects with Custom Hooks",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2021/01/react-native-navigation-tutorial.png",
+            "views": "192",
+            "createdAt": "10.07.2023",
+            "userId": "3",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "useClickOutside",
+                    "paragraphs": [
+                        "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+                        "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+                }
+            ]
         },
         {
-          "id": "4",
-          "type": "CODE",
-          "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+            "id": "4",
+            "title": "Разбираем useId( ) хук под микроскопом",
+            "img": "https://miro.medium.com/v2/resize:fit:512/1*jA5lTgPRbyimsFNod7SlFQ.png",
+            "views": "321",
+            "createdAt": "09.08.2018",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
         },
         {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Оптимизация TypeScript",
-          "paragraphs": [
-            "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
-            "Рассмотрим на примере:"
-          ]
+            "id": "5",
+            "title": "TypeScript and React news",
+            "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
+            "img": "https://lh3.googleusercontent.com/00hjufFKhWveAIuUfk5CfBL4FI0I4TdFMJ0KunpCPr1SMFDcAYM8q6g3vrW27DNVhCHyiDyXcjifJN2XTGwdNNWs7n0QAR8zePHALaRTQ9d7qBIL7lBGtw5XeEvbvbN_s7r1oMaY",
+            "views": "1002",
+            "createdAt": "12.02.2023",
+            "userId": "1",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Новый оператор satisfies",
+                    "paragraphs": [
+                        "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "title": "",
+                    "paragraphs": [
+                        "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "CODE",
+                    "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+                },
+                {
+                    "id": "5",
+                    "type": "TEXT",
+                    "title": "Оптимизация TypeScript",
+                    "paragraphs": [
+                        "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
+                },
+                {
+                    "id": "7",
+                    "type": "TEXT",
+                    "title": "Функции-декораторы",
+                    "paragraphs": [
+                        "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+                        "Пример класса без декоратора:"
+                    ]
+                },
+                {
+                    "id": "8",
+                    "type": "CODE",
+                    "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
+                },
+                {
+                    "id": "9",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+                        "Пример декоратора:"
+                    ]
+                },
+                {
+                    "id": "10",
+                    "type": "CODE",
+                    "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
+                }
+            ]
         },
         {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
+            "id": "6",
+            "title": "Космический сервер уже на орбите: как принять с него сигнал",
+            "subtitle": "Как же следить за нашим спутником и получать с него данные?",
+            "img": "https://www.rentallscript.com/resources/content/images/2021/09/React--1-.gif",
+            "views": "491",
+            "createdAt": "27.06.2023",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Необходимые условия",
+                    "paragraphs": [
+                        "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+                        "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+                        "2) Установленный Node.js.",
+                        "3) Текстовый редактор",
+                        "4) Веб-браузер, в данном случае Google Chrome."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "IMAGE",
+                    "title": "Настройка структуры папок",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+                        "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+                        "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "title": "Создание React приложения",
+                    "paragraphs": [
+                        "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "$cd express-react-app\n$npx create-react-app client"
+                }
+            ]
         },
         {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Функции-декораторы",
-          "paragraphs": [
-            "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
-            "Пример класса без декоратора:"
-          ]
+            "id": "7",
+            "title": "Supercharge Your React Projects with Custom Hooks",
+            "img": "https://www.bigscal.com/wp-content/uploads/2022/03/RTK-Query-Redux-toolkit.jpg",
+            "views": "587",
+            "createdAt": "10.07.2023",
+            "userId": "3",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "useClickOutside",
+                    "paragraphs": [
+                        "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+                        "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+                }
+            ]
         },
         {
-          "id": "8",
-          "type": "CODE",
-          "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
+            "id": "8",
+            "title": "Разбираем useId( ) хук под микроскопом",
+            "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+            "img": "https://miro.medium.com/v2/resize:fit:1400/1*-U4maCVfQf5Du120SDuqSw.jpeg",
+            "views": "421",
+            "createdAt": "09.02.2023",
+            "userId": "1",
+            "type": ["FRONTEND"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
         },
         {
-          "id": "9",
-          "type": "TEXT",
-          "paragraphs": [
-            "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
-            "Пример декоратора:"
-          ]
+            "id": "9",
+            "title": "Node.js Express сервер для React",
+            "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
+            "img": "https://miro.medium.com/v2/resize:fit:1024/0*LBJqrDLFVBMXVTnk.png",
+            "views": "539",
+            "createdAt": "12.08.2023",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Необходимые условия",
+                    "paragraphs": [
+                        "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+                        "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+                        "2) Установленный Node.js.",
+                        "3) Текстовый редактор",
+                        "4) Веб-браузер, в данном случае Google Chrome."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "IMAGE",
+                    "title": "Настройка структуры папок",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+                        "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+                        "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "title": "Создание React приложения",
+                    "paragraphs": [
+                        "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "$cd express-react-app\n$npx create-react-app client"
+                }
+            ]
         },
         {
-          "id": "10",
-          "type": "CODE",
-          "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
+            "id": "10",
+            "title": "Supercharge Your React Projects with Custom Hooks",
+            "img": "https://procoders.tech/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/01/How_to_Outsource_ReactJS_Development_Services_to_Grow_Your_Company.png.webp",
+            "views": "937",
+            "createdAt": "10.07.2023",
+            "userId": "3",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "useClickOutside",
+                    "paragraphs": [
+                        "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+                        "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "title": "Разбираем useId( ) хук под микроскопом",
+            "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+            "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/b3e/8c5/698/b3e8c569883798e0da35a62098362b83.png",
+            "views": "2918",
+            "createdAt": "09.02.2023",
+            "userId": "1",
+            "type": ["FRONTEND"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "title": "TypeScript and React news",
+            "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
+            "img": "https://miro.medium.com/v2/resize:fit:1000/1*e9zrFUT29KkMFf0-Jlb4FQ.jpeg",
+            "views": "1001",
+            "createdAt": "12.02.2023",
+            "userId": "1",
+            "type": ["IT", "SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Новый оператор satisfies",
+                    "paragraphs": [
+                        "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "title": "",
+                    "paragraphs": [
+                        "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "CODE",
+                    "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+                },
+                {
+                    "id": "5",
+                    "type": "TEXT",
+                    "title": "Оптимизация TypeScript",
+                    "paragraphs": [
+                        "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
+                        "Рассмотрим на примере:"
+                    ]
+                },
+                {
+                    "id": "6",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
+                },
+                {
+                    "id": "7",
+                    "type": "TEXT",
+                    "title": "Функции-декораторы",
+                    "paragraphs": [
+                        "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+                        "Пример класса без декоратора:"
+                    ]
+                },
+                {
+                    "id": "8",
+                    "type": "CODE",
+                    "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
+                },
+                {
+                    "id": "9",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+                        "Пример декоратора:"
+                    ]
+                },
+                {
+                    "id": "10",
+                    "type": "CODE",
+                    "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "title": "Экстренное шифрование данных",
+            "subtitle": "Представим такую ситуацию: на вашем компьютере хранятся очень важные или компрометирующие вас данные, а в вашу дверь кто-то ломится. Ваша задача заключается в том, что бы быстро и незаметно зашифровать всю важную информацию на своём компьютере. Как это сделать?",
+            "img": "https://www.syntonize.com/wp-content/uploads/2021/02/React-Syntonize.png",
+            "views": "4883",
+            "createdAt": "12.08.2022",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Необходимые условия",
+                    "paragraphs": [
+                        "Для успешного выполнения данного гайда будет полезно иметь следующее:",
+                        "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
+                        "2) Установленный Node.js.",
+                        "3) Текстовый редактор",
+                        "4) Веб-браузер, в данном случае Google Chrome."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "IMAGE",
+                    "title": "Настройка структуры папок",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
+                        "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+                        "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "title": "Создание React приложения",
+                    "paragraphs": [
+                        "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "$cd express-react-app\n$npx create-react-app client"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "title": "Supercharge Your React Projects with Custom Hooks",
+            "img": "https://miro.medium.com/v2/resize:fit:1200/1*odW0CyTVxMVt5s3yhjjOhw.png",
+            "views": "2957",
+            "createdAt": "10.07.2023",
+            "userId": "3",
+            "type": ["IT", "SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "useClickOutside",
+                    "paragraphs": [
+                        "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+                        "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+                },
+                {
+                    "id": "4",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
+                        "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
+                    ]
+                },
+                {
+                    "id": "5",
+                    "type": "CODE",
+                    "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
+            "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+            "img": "https://systango-website.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2017/05/React-Js.jpg",
+            "views": "4817",
+            "createdAt": "09.02.2020",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "4",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "title": "Top 10 React Grid components and libraries for 2023",
+            "subtitle": "This article was last updated by Fimber Elemuwa on 24 April 2023 to include information about the React Virtualized, Griddle, and React Data Grid libraries. For more React articles, check out How to build a tree grid component in React, or The top React table libraries.\n\n",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2023/04/top-10-react-grid-components-libraries-2023.png",
+            "views": "1918",
+            "createdAt": "24.04.2023",
+            "userId": "3",
+            "type": ["FRONTEND"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "paragraphs": [
+                        "Most developers today use React grid libraries and components to effectively create responsive grid layouts in their React applications. That’s because most React grid libraries have pre-built sets of components and utilities, such as customizable grid layouts, responsive design, pagination, sorting, filtering, etc., that provide a way to efficiently display and organize large sets of data in a tabular format."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "IMAGE",
+                    "title": "React-grid-layout",
+                    "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-grid-layout.png"
+                },
+                {
+                    "id": "3",
+                    "type": "TEXT",
+                    "title": "React Data Grid",
+                    "paragraphs": [
+                        "React Data Grid is one of the most powerful React grid components in the world, with over 7K people using it to create high-performance, customizable grids in React applications. Designed to work seamlessly with other React components and libraries, React Data Grid provides a variety of features, such as sorting, filtering, grouping, virtual scrolling, cell editing, and more."
+                    ]
+                },
+                {
+                    "id": "4",
+                    "type": "IMAGE",
+                    "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-data-grid.png"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "title": "REST API на Go на примере сокращателя ссылок",
+            "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2023/01/repack-large-scale-react-native-apps.png",
+            "views": "4817",
+            "createdAt": "09.02.2020",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "4",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
+            "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+            "img": "https://blog.logrocket.com/wp-content/uploads/2018/06/5-things-not-do-building-react-applications.png",
+            "views": "4817",
+            "createdAt": "09.02.2020",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "4",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "title": "Last item",
+            "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
+            "img": "https://blog.castle.io/content/images/2021/03/blog-thumb-1.png",
+            "views": "4817",
+            "createdAt": "09.02.2020",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Что такое useId( ) ?",
+                    "paragraphs": [
+                        "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "TEXT",
+                    "title": "Зачем нужен такой невнятный id?",
+                    "paragraphs": [
+                        "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
+                    ]
+                },
+                {
+                    "id": "3",
+                    "type": "CODE",
+                    "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+                },
+                {
+                    "id": "4",
+                    "type": "IMAGE",
+                    "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Как настроить Node.js Express сервер для React",
-      "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2022/08/Guide-adding-Google-login-React-app.png",
-      "views": "722",
-      "createdAt": "01.03.2023",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+    ],
+    "comments": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Необходимые условия",
-          "paragraphs": [
-            "Для успешного выполнения данного гайда будет полезно иметь следующее:",
-            "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
-            "2) Установленный Node.js.",
-            "3) Текстовый редактор",
-            "4) Веб-браузер, в данном случае Google Chrome."
-          ]
+            "id": "1",
+            "text": "some comment",
+            "articleId": "1",
+            "userId": "1"
         },
         {
-          "id": "2",
-          "type": "IMAGE",
-          "title": "Настройка структуры папок",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
+            "id": "2",
+            "text": "content",
+            "articleId": "1",
+            "userId": "2"
         },
         {
-          "id": "3",
-          "type": "TEXT",
-          "paragraphs": [
-            "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
-            "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-            "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
-          ]
+            "id": "3",
+            "text": "more comment",
+            "articleId": "1",
+            "userId": "3"
         },
         {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Создание React приложения",
-          "paragraphs": [
-            "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
-          ]
+            "articleId": "1",
+            "userId": "1",
+            "text": "asddadasd",
+            "id": "FRmZJ0e"
         },
         {
-          "id": "5",
-          "type": "CODE",
-          "code": "$cd express-react-app\n$npx create-react-app client"
+            "articleId": "1",
+            "userId": "3",
+            "text": "lasdb kjasdkagd",
+            "id": "7troKyl"
+        },
+        {
+            "articleId": "1",
+            "userId": "3",
+            "text": "This, Args extends number[]",
+            "id": "QytKwF7"
+        },
+        {
+            "articleId": "1",
+            "userId": "3",
+            "text": "return function(this: This, ...args: Args) {}",
+            "id": "13PvoZ9"
+        },
+        {
+            "articleId": "2",
+            "userId": "3",
+            "text": "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
+            "id": "omopkzJ"
+        },
+        {
+            "articleId": "2",
+            "userId": "3",
+            "text": "target: (this: This, ...args: Args) => Return",
+            "id": "kYIaXaA"
+        },
+        {
+            "articleId": "3",
+            "userId": "3",
+            "text": "Функции-декораторы",
+            "id": "L4rTk5k"
+        },
+        {
+            "articleId": "3",
+            "userId": "3",
+            "text": "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+            "id": "Brlr57a"
+        },
+        {
+            "articleId": "2",
+            "userId": "2",
+            "text": "оцениваем и сравниваем изменения",
+            "id": "kGnYUnf"
+        },
+        {
+            "articleId": "4",
+            "userId": "2",
+            "text": "Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице.",
+            "id": "-sPP4fS"
+        },
+        {
+            "articleId": "9",
+            "userId": "2",
+            "text": "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
+            "id": "d8xs8kG"
+        },
+        {
+            "articleId": "3",
+            "userId": "3",
+            "text": "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
+            "id": "CgXVS4P"
+        },
+        {
+            "articleId": "11",
+            "userId": "3",
+            "text": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
+            "id": "1Rm3LuP"
+        },
+        {
+            "articleId": "9",
+            "userId": "3",
+            "text": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png",
+            "id": "VzP3xem"
+        },
+        {
+            "articleId": "5",
+            "userId": "3",
+            "text": "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
+            "id": "U2mrmob"
+        },
+        {
+            "articleId": "7",
+            "userId": "3",
+            "text": " When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility.",
+            "id": "Zy9Phjw"
+        },
+        {
+            "articleId": "7",
+            "userId": "3",
+            "text": "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.  To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility.",
+            "id": "FmJyhJK"
+        },
+        {
+            "articleId": "1",
+            "userId": "3",
+            "text": "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
+            "id": "JL0IcJl"
+        },
+        {
+            "articleId": "2",
+            "userId": "2",
+            "text": "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.  Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.  Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y.",
+            "id": "T8ddHsb"
+        },
+        {
+            "articleId": "15",
+            "userId": "2",
+            "text": "<label>   <span>Some label</span>   <input name=\"some-input\" /> </label>",
+            "id": "cGrZYrh"
+        },
+        {
+            "articleId": "16",
+            "userId": "1",
+            "text": "React Grid Data was built with performance in mind, and it uses techniques such as virtual scrolling and cell buffering to efficiently handle large amounts of data without impacting performance. It is actively developed and supported by Adazzle, a company that specializes in building data-driven web applications, so there are regular updates and bug fixes.",
+            "id": "qksFfyM"
+        },
+        {
+            "articleId": "16",
+            "userId": "1",
+            "text": "Griddle is an incredibly powerful open source React library that provides users with a set of customizable and high-performance components for building flexible data tables and grids. It allows users to easily filter, sort, and paginate large datasets and it goes one step further to provide several built-in themes for styling the table.  One key feature that gets Griddle on this list is that it is designed to be highly flexible and extensible. Developers can use the library’s API to create their own custom components and add new functionality to their tables. For example, you can add new filtering or sorting options, or create custom cell renderers to display data in a specific way.  Griddle is optimized for rendering large datasets and provides features such as virtual scrolling to ensure the table remains responsive even when working with thousands of rows of data. While Griddle might not be the most popular React grid library in the world, it still has an impressive 2.5K stars on GitHub.",
+            "id": "8jEzwNQ"
+        },
+        {
+            "articleId": "2",
+            "userId": "1",
+            "text": "ET /comments?articleId=2&_expand=user 200 804.625 ms - -",
+            "id": "b6OsBME"
+        },
+        {
+            "articleId": "15",
+            "userId": "1",
+            "text": "article-ratings?userId=1&articleId=15",
+            "id": "0tcIPPC"
         }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2021/01/react-native-navigation-tutorial.png",
-      "views": "192",
-      "createdAt": "10.07.2023",
-      "userId": "3",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+    ],
+    "users": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "paragraphs": [
-            "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
-          ]
+            "id": "1",
+            "username": "admin",
+            "password": "123",
+            "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true,
+                "isAppRedesigned": true
+            },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true,
+                "settingsPageHasBeenOpen": false,
+                "isArticlesPageWasOpened": true
+            },
+            "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
         },
         {
-          "id": "2",
-          "type": "TEXT",
-          "title": "useClickOutside",
-          "paragraphs": [
-            "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
-            "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
+            "id": "2",
+            "username": "Vasya",
+            "password": "456",
+            "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
+            "jsonSettings": {
+                "theme": "app_light_theme",
+                "isFirstVisit": false,
+                "settingsPageHasBeenOpen": true,
+                "isArticlesPageWasOpened": true
+            },
+            "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
         },
         {
-          "id": "3",
-          "type": "CODE",
-          "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
+            "id": "3",
+            "username": "Petya",
+            "password": "654",
+            "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true,
+                "settingsPageHasBeenOpen": false,
+                "isArticlesPageWasOpened": true
+            },
+            "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
         },
         {
-          "id": "4",
-          "type": "TEXT",
-          "paragraphs": [
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+            "id": "4",
+            "username": "John",
+            "password": "qwerty",
+            "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true,
+                "settingsPageHasBeenOpen": false
+            },
+            "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
         }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Разбираем useId( ) хук под микроскопом",
-      "img": "https://miro.medium.com/v2/resize:fit:512/1*jA5lTgPRbyimsFNod7SlFQ.png",
-      "views": "321",
-      "createdAt": "09.08.2018",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+    ],
+    "profile": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
+            "id": "1",
+            "firstname": "Jane",
+            "lastname": "Doe",
+            "age": 30,
+            "currency": "KZT",
+            "country": "Kazakhstan",
+            "city": "Almaty",
+            "username": "Admin Jane",
+            "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
         },
         {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
+            "id": "2",
+            "firstname": "Vasya",
+            "lastname": "Petrov",
+            "age": 26,
+            "currency": "KZT",
+            "country": "Kazakhstan",
+            "city": "Astana",
+            "username": "Vasya I",
+            "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
         },
         {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
+            "id": "3",
+            "firstname": "Petya",
+            "lastname": "Ivanov",
+            "age": 30,
+            "currency": "EUR",
+            "country": "Kyrgyzstan",
+            "city": "Bishkek",
+            "username": "Petr II",
+            "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
         },
         {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
+            "id": "4",
+            "firstname": "test",
+            "lastname": "user",
+            "age": 20,
+            "currency": "EUR",
+            "country": "Kyrgyzstan",
+            "city": "Bishkek",
+            "username": "test IX",
+            "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
         }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "TypeScript and React news",
-      "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://lh3.googleusercontent.com/00hjufFKhWveAIuUfk5CfBL4FI0I4TdFMJ0KunpCPr1SMFDcAYM8q6g3vrW27DNVhCHyiDyXcjifJN2XTGwdNNWs7n0QAR8zePHALaRTQ9d7qBIL7lBGtw5XeEvbvbN_s7r1oMaY",
-      "views": "1002",
-      "createdAt": "12.02.2023",
-      "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+    ],
+    "notifications": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Новый оператор satisfies",
-          "paragraphs": [
-            "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
-            "Рассмотрим на примере:"
-          ]
+            "id": "1",
+            "title": "Notification 1",
+            "description": "Event 123",
+            "userId": "1"
         },
         {
-          "id": "2",
-          "type": "CODE",
-          "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
+            "id": "2",
+            "title": "Notification 12",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut deserunt exercitationem illum impedit labore minima voluptates. Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
+            "userId": "1",
+            "href": "http://localhost:3000/admin"
         },
         {
-          "id": "3",
-          "type": "TEXT",
-          "title": "",
-          "paragraphs": [
-            "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
-          ]
+            "id": "3",
+            "title": "Notification 13",
+            "description": "Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
+            "userId": "2",
+            "href": "http://localhost:3000/profile"
         },
         {
-          "id": "4",
-          "type": "CODE",
-          "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Оптимизация TypeScript",
-          "paragraphs": [
-            "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
-            "Рассмотрим на примере:"
-          ]
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Функции-декораторы",
-          "paragraphs": [
-            "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
-            "Пример класса без декоратора:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "CODE",
-          "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "paragraphs": [
-            "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
-            "Пример декоратора:"
-          ]
-        },
-        {
-          "id": "10",
-          "type": "CODE",
-          "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
+            "id": "4",
+            "title": "Notification 14",
+            "description": "Event 901",
+            "userId": "3"
         }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Космический сервер уже на орбите: как принять с него сигнал",
-      "subtitle": "Как же следить за нашим спутником и получать с него данные?",
-      "img": "https://www.rentallscript.com/resources/content/images/2021/09/React--1-.gif",
-      "views": "491",
-      "createdAt": "27.06.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+    ],
+    "article-ratings": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Необходимые условия",
-          "paragraphs": [
-            "Для успешного выполнения данного гайда будет полезно иметь следующее:",
-            "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
-            "2) Установленный Node.js.",
-            "3) Текстовый редактор",
-            "4) Веб-браузер, в данном случае Google Chrome."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "title": "Настройка структуры папок",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "paragraphs": [
-            "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
-            "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-            "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Создание React приложения",
-          "paragraphs": [
-            "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "$cd express-react-app\n$npx create-react-app client"
+            "id": "3",
+            "rate": 3,
+            "feedback": "Не хватило примеров в статье",
+            "userId": "3",
+            "articleId": "3"
         }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://www.bigscal.com/wp-content/uploads/2022/03/RTK-Query-Redux-toolkit.jpg",
-      "views": "587",
-      "createdAt": "10.07.2023",
-      "userId": "3",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+    ],
+    "profile-ratings": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "paragraphs": [
-            "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "useClickOutside",
-          "paragraphs": [
-            "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
-            "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "paragraphs": [
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
+            "id": "1",
+            "rate": 4,
+            "feedback": "Хорошие статьи у автора",
+            "userId": "1",
+            "profileId": "2"
         }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "img": "https://miro.medium.com/v2/resize:fit:1400/1*-U4maCVfQf5Du120SDuqSw.jpeg",
-      "views": "421",
-      "createdAt": "09.02.2023",
-      "userId": "1",
-      "type": [
-        "FRONTEND"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Node.js Express сервер для React",
-      "subtitle": "Руководство поможет вам разработать простое приложение на React и подключить его к серверу, созданному с использованием Node.js.",
-      "img": "https://miro.medium.com/v2/resize:fit:1024/0*LBJqrDLFVBMXVTnk.png",
-      "views": "539",
-      "createdAt": "12.08.2023",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Необходимые условия",
-          "paragraphs": [
-            "Для успешного выполнения данного гайда будет полезно иметь следующее:",
-            "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
-            "2) Установленный Node.js.",
-            "3) Текстовый редактор",
-            "4) Веб-браузер, в данном случае Google Chrome."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "title": "Настройка структуры папок",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "paragraphs": [
-            "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
-            "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-            "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Создание React приложения",
-          "paragraphs": [
-            "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "$cd express-react-app\n$npx create-react-app client"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://procoders.tech/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/01/How_to_Outsource_ReactJS_Development_Services_to_Grow_Your_Company.png.webp",
-      "views": "937",
-      "createdAt": "10.07.2023",
-      "userId": "3",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "paragraphs": [
-            "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "useClickOutside",
-          "paragraphs": [
-            "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
-            "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "paragraphs": [
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "Разбираем useId( ) хук под микроскопом",
-      "subtitle": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/b3e/8c5/698/b3e8c569883798e0da35a62098362b83.png",
-      "views": "2918",
-      "createdAt": "09.02.2023",
-      "userId": "1",
-      "type": [
-        "FRONTEND"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "title": "TypeScript and React news",
-      "subtitle": "TypeScript 5.0 и 4.9: оцениваем и сравниваем изменения.",
-      "img": "https://miro.medium.com/v2/resize:fit:1000/1*e9zrFUT29KkMFf0-Jlb4FQ.jpeg",
-      "views": "1001",
-      "createdAt": "12.02.2023",
-      "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Новый оператор satisfies",
-          "paragraphs": [
-            "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
-            "Рассмотрим на примере:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "type FormFields = \"name\" | \"surname\" | \"age\";\n\nconst data: Record<FormFields, number | string> = {\n    name: \"name\",\n    surname: \"surname\",\n    age: 21,\n}\n\nconst newAge = data.age * 2;\nconst nameUpperCase = data.name.toUpperCase();"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "",
-          "paragraphs": [
-            "Объект data имеет как числовые, так и строковые значения, поэтому при работе с этим объектом мы получаем следующие ошибки:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Оптимизация TypeScript",
-          "paragraphs": [
-            "TypeScript версии 5.0 добавляет множество изменений в структуре кода, структуре данных и алгоритмических реализациях. Это позволяет ускорить не только работу TypeScript, но даже и его установку.",
-            "Рассмотрим на примере:"
-          ]
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f69/cf0/dd9/f69cf0dd9982290b34166bd88d239d8a.png"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Функции-декораторы",
-          "paragraphs": [
-            "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
-            "Пример класса без декоратора:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "CODE",
-          "code": "class Person {\n  age: number = 0\n\n  changeAge() {\n    console.log(\"Logger: Func start\")\n    console.log(\"changing age...\")\n    console.log(\"Logger: Func end\")\n  }\n}\n\nconst person = new Person();\nperson.changeAge()"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "paragraphs": [
-            "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
-            "Пример декоратора:"
-          ]
-        },
-        {
-          "id": "10",
-          "type": "CODE",
-          "code": "function Logger<This, Args extends number[], Return>(\n    target: (this: This, ...args: Args) => Return, \n    context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>\n) {\n  return function(this: This, ...args: Args) {\n    console.log(\"Logger: Func start\")\n    const result = target.call(this, ...args)\n    console.log(\"Logger: Func end\")\n\n    return result\n  }\n}"
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "title": "Экстренное шифрование данных",
-      "subtitle": "Представим такую ситуацию: на вашем компьютере хранятся очень важные или компрометирующие вас данные, а в вашу дверь кто-то ломится. Ваша задача заключается в том, что бы быстро и незаметно зашифровать всю важную информацию на своём компьютере. Как это сделать?",
-      "img": "https://www.syntonize.com/wp-content/uploads/2021/02/React-Syntonize.png",
-      "views": "4883",
-      "createdAt": "12.08.2022",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Необходимые условия",
-          "paragraphs": [
-            "Для успешного выполнения данного гайда будет полезно иметь следующее:",
-            "1) Предварительный опыт работы с Node.js, Express, npm и React.js.",
-            "2) Установленный Node.js.",
-            "3) Текстовый редактор",
-            "4) Веб-браузер, в данном случае Google Chrome."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "title": "Настройка структуры папок",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "paragraphs": [
-            "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.",
-            "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-            "Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Создание React приложения",
-          "paragraphs": [
-            "Из терминала перейдите в корневую директорию с помощью команды cd и выполните следующие команды:"
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "$cd express-react-app\n$npx create-react-app client"
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "title": "Supercharge Your React Projects with Custom Hooks",
-      "img": "https://miro.medium.com/v2/resize:fit:1200/1*odW0CyTVxMVt5s3yhjjOhw.png",
-      "views": "2957",
-      "createdAt": "10.07.2023",
-      "userId": "3",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "paragraphs": [
-            "In this article, we dive into the world of custom React hooks and explore the incredible potential they hold for supercharging your work projects. With over 20 carefully crafted hooks at your disposal, I personally utilize these hooks in my own work projects, and now I'm excited to share them with you. From enhancing functionality to streamlining workflows, these custom hooks are designed to empower developers and deliver user-friendly experiences. Join us on this journey as we unleash the power of these 20+ hooks and unlock new levels of productivity and innovation in your React projects."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "useClickOutside",
-          "paragraphs": [
-            "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
-            "One of the main advantages of useClickOutside is its ease of use. Simply import the hook into your component and pass the desired component's reference and a callback function. The hook takes care of the event listener setup and cleanup, saving you time and effort. Plus, it works seamlessly with functional components using the useState and useRef hooks.",
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "import useEventListener from \"../useEventListener/useEventListener\"\n\nexport default function useClickOutside(ref, cb) {\n    useEventListener(\"click\", e => {\n        if (ref.current == null || ref.current.contains(e.target)) return\n        cb(e)\n    }, document)\n}"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "paragraphs": [
-            "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.",
-            "To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "import { useRef, useState } from \"react\"\nimport useClickOutside from \"./useClickOutside\"\n\nexport default function ClickOutsideComponent() {\n    const [open, setOpen] = useState(false)\n    const modalRef = useRef()\n\n    useClickOutside(modalRef, () => {\n        if (open) setOpen(false)\n    })\n\n    return (\n        <>\n            <button onClick={() => setOpen(true)}>Open</button>\n            <div\n                ref={modalRef}\n                style={{\n                    display: open ? \"block\" : \"none\",\n                    backgroundColor: \"blue\",\n                    color: \"white\",\n                    width: \"100px\",\n                    height: \"100px\",\n                    position: \"absolute\",\n                    top: \"calc(50% - 50px)\",\n                    left: \"calc(50% - 50px)\",\n                }}\n            >\n                <span>Modal</span>\n            </div>\n        </>\n    )\n}"
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
-      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
-      "img": "https://systango-website.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2017/05/React-Js.jpg",
-      "views": "4817",
-      "createdAt": "09.02.2020",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "title": "Top 10 React Grid components and libraries for 2023",
-      "subtitle": "This article was last updated by Fimber Elemuwa on 24 April 2023 to include information about the React Virtualized, Griddle, and React Data Grid libraries. For more React articles, check out How to build a tree grid component in React, or The top React table libraries.\n\n",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2023/04/top-10-react-grid-components-libraries-2023.png",
-      "views": "1918",
-      "createdAt": "24.04.2023",
-      "userId": "3",
-      "type": [
-        "FRONTEND"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "paragraphs": [
-            "Most developers today use React grid libraries and components to effectively create responsive grid layouts in their React applications. That’s because most React grid libraries have pre-built sets of components and utilities, such as customizable grid layouts, responsive design, pagination, sorting, filtering, etc., that provide a way to efficiently display and organize large sets of data in a tabular format."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "title": "React-grid-layout",
-          "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-grid-layout.png"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "React Data Grid",
-          "paragraphs": [
-            "React Data Grid is one of the most powerful React grid components in the world, with over 7K people using it to create high-performance, customizable grids in React applications. Designed to work seamlessly with other React components and libraries, React Data Grid provides a variety of features, such as sorting, filtering, grouping, virtual scrolling, cell editing, and more."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://blog.logrocket.com/wp-content/uploads/2021/03/react-data-grid.png"
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "title": "REST API на Go на примере сокращателя ссылок",
-      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2023/01/repack-large-scale-react-native-apps.png",
-      "views": "4817",
-      "createdAt": "09.02.2020",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "title": "Учимся разрабатывать REST API на Go на примере сокращателя ссылок",
-      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2018/06/5-things-not-do-building-react-applications.png",
-      "views": "4817",
-      "createdAt": "09.02.2020",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "title": "Last item",
-      "subtitle": "В этой статье мы напишем полноценный REST API сервис — URL Shortener — и задеплоим его на виртуальный сервер с помощью GitHub Actions.",
-      "img": "https://blog.castle.io/content/images/2021/03/blog-thumb-1.png",
-      "views": "4817",
-      "createdAt": "09.02.2020",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Что такое useId( ) ?",
-          "paragraphs": [
-            "И так, что же делает хук useId()? Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Зачем нужен такой невнятный id?",
-          "paragraphs": [
-            "Чтобы ответить на этот вопрос давайте рассмотрим следующий код:\n\n"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "<label>\n  <span>Some label</span>\n  <input name=\"some-input\" />\n</label>"
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/9a2/d27/42f/9a2d2742fdbdbd52662ef0325bcc6eff.jpg"
-        }
-      ]
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "some comment",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "text": "content",
-      "articleId": "1",
-      "userId": "2"
-    },
-    {
-      "id": "3",
-      "text": "more comment",
-      "articleId": "1",
-      "userId": "3"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "asddadasd",
-      "id": "FRmZJ0e"
-    },
-    {
-      "articleId": "1",
-      "userId": "3",
-      "text": "lasdb kjasdkagd",
-      "id": "7troKyl"
-    },
-    {
-      "articleId": "1",
-      "userId": "3",
-      "text": "This, Args extends number[]",
-      "id": "QytKwF7"
-    },
-    {
-      "articleId": "1",
-      "userId": "3",
-      "text": "return function(this: This, ...args: Args) {}",
-      "id": "13PvoZ9"
-    },
-    {
-      "articleId": "2",
-      "userId": "3",
-      "text": "Позволяет нам проверить соответствие выражения некоторому типу, не меняя сам тип. Это помогает при работе с объектами со смешанными типами данных.",
-      "id": "omopkzJ"
-    },
-    {
-      "articleId": "2",
-      "userId": "3",
-      "text": "target: (this: This, ...args: Args) => Return",
-      "id": "kYIaXaA"
-    },
-    {
-      "articleId": "3",
-      "userId": "3",
-      "text": "Функции-декораторы",
-      "id": "L4rTk5k"
-    },
-    {
-      "articleId": "3",
-      "userId": "3",
-      "text": "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
-      "id": "Brlr57a"
-    },
-    {
-      "articleId": "2",
-      "userId": "2",
-      "text": "оцениваем и сравниваем изменения",
-      "id": "kGnYUnf"
-    },
-    {
-      "articleId": "4",
-      "userId": "2",
-      "text": "Он возвращает нам уникальный id, который выглядит следующим образом: :r1:, :r2:, :r3: Странность данного формата id думаю и помогает быть ему более уникальным на странице.",
-      "id": "-sPP4fS"
-    },
-    {
-      "articleId": "9",
-      "userId": "2",
-      "text": "Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.",
-      "id": "d8xs8kG"
-    },
-    {
-      "articleId": "3",
-      "userId": "3",
-      "text": "The useClickOutside hook is designed to simplify the process of detecting clicks outside a specified component. By utilizing the useEventListener hook, it listens for click events on the document level, allowing you to trigger a callback function when a click occurs outside the provided component's reference.",
-      "id": "CgXVS4P"
-    },
-    {
-      "articleId": "11",
-      "userId": "3",
-      "text": "Уже давно я заприметил относительно новый хук useId, с которым давно хотел разобраться для чего он нужен, как он работает и конечно же обязательно нужно заглянуть в исходники.",
-      "id": "1Rm3LuP"
-    },
-    {
-      "articleId": "9",
-      "userId": "3",
-      "text": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d98/db3/c16/d98db3c1630fbb5f82949e79b75226a2.png",
-      "id": "VzP3xem"
-    },
-    {
-      "articleId": "5",
-      "userId": "3",
-      "text": "Это обыкновенные функции, которые позволяют добавить дополнительное поведение классу, методу, свойству.",
-      "id": "U2mrmob"
-    },
-    {
-      "articleId": "7",
-      "userId": "3",
-      "text": " When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility.",
-      "id": "Zy9Phjw"
-    },
-    {
-      "articleId": "7",
-      "userId": "3",
-      "text": "The potential applications for useClickOutside are endless. It is particularly useful when implementing modal windows, dropdown menus, or any element that should be closed when a user interacts with anything outside of it. By incorporating useClickOutside, you can enhance the user experience by providing intuitive and efficient interactions.  To see useClickOutside in action, take a look at the example above. In this case, the ClickOutsideComponent utilizes the hook to toggle the visibility of a modal window. When the user clicks outside the modal, the provided callback function sets the open state to false, closing the modal. This way, the component offers a sleek and user-friendly way to manage the modal's visibility.",
-      "id": "FmJyhJK"
-    },
-    {
-      "articleId": "1",
-      "userId": "3",
-      "text": "Мы видим, что нам необходимо добавить логирование для метода, чтобы отследить его работу. В этом случае к нам на помощь приходят декораторы.",
-      "id": "JL0IcJl"
-    },
-    {
-      "articleId": "2",
-      "userId": "2",
-      "text": "Первым шагом будет создание корневой папки для нашего приложения с именем express-react-app, в котором будут содержаться все файлы приложения. Затем мы создадим папку client, которая будет содержать все файлы React приложения.  Папка node_modules будет содержать все пакеты NPM для файла server.js. Папка node_modules будет автоматически создана при установке пакетов NPM.  Далее нам потребуется создать файл server.js. В этом файле будет размещен сервер Express, который будет выступать в качестве нашего бэкенда. Файл package.json будет автоматически сгенерирован, когда в терминале будет выполнена команда npm init -y.",
-      "id": "T8ddHsb"
-    },
-    {
-      "articleId": "15",
-      "userId": "2",
-      "text": "<label>   <span>Some label</span>   <input name=\"some-input\" /> </label>",
-      "id": "cGrZYrh"
-    },
-    {
-      "articleId": "16",
-      "userId": "1",
-      "text": "React Grid Data was built with performance in mind, and it uses techniques such as virtual scrolling and cell buffering to efficiently handle large amounts of data without impacting performance. It is actively developed and supported by Adazzle, a company that specializes in building data-driven web applications, so there are regular updates and bug fixes.",
-      "id": "qksFfyM"
-    },
-    {
-      "articleId": "16",
-      "userId": "1",
-      "text": "Griddle is an incredibly powerful open source React library that provides users with a set of customizable and high-performance components for building flexible data tables and grids. It allows users to easily filter, sort, and paginate large datasets and it goes one step further to provide several built-in themes for styling the table.  One key feature that gets Griddle on this list is that it is designed to be highly flexible and extensible. Developers can use the library’s API to create their own custom components and add new functionality to their tables. For example, you can add new filtering or sorting options, or create custom cell renderers to display data in a specific way.  Griddle is optimized for rendering large datasets and provides features such as virtual scrolling to ensure the table remains responsive even when working with thousands of rows of data. While Griddle might not be the most popular React grid library in the world, it still has an impressive 2.5K stars on GitHub.",
-      "id": "8jEzwNQ"
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "text": "ET /comments?articleId=2&_expand=user 200 804.625 ms - -",
-      "id": "b6OsBME"
-    },
-    {
-      "articleId": "15",
-      "userId": "1",
-      "text": "article-ratings?userId=1&articleId=15",
-      "id": "0tcIPPC"
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
-      "features": {
-        "isArticleRatingEnabled": true,
-        "isCounterEnabled": true,
-        "isAppRedesigned": true
-      },
-      "jsonSettings": {
-        "theme": "app_dark_theme",
-        "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false,
-        "isArticlesPageWasOpened": true
-      },
-      "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
-    },
-    {
-      "id": "2",
-      "username": "Vasya",
-      "password": "456",
-      "roles": [
-        "USER"
-      ],
-      "features": {
-        "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
-      },
-      "jsonSettings": {
-        "theme": "app_light_theme",
-        "isFirstVisit": false,
-        "settingsPageHasBeenOpen": true,
-        "isArticlesPageWasOpened": true
-      },
-      "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
-    },
-    {
-      "id": "3",
-      "username": "Petya",
-      "password": "654",
-      "roles": [
-        "USER"
-      ],
-      "features": {
-        "isArticleRatingEnabled": false,
-        "isCounterEnabled": true
-      },
-      "jsonSettings": {
-        "theme": "app_dark_theme",
-        "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false,
-        "isArticlesPageWasOpened": true
-      },
-      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
-    },
-    {
-      "id": "4",
-      "username": "John",
-      "password": "qwerty",
-      "roles": [
-        "USER"
-      ],
-      "features": {
-        "isArticleRatingEnabled": true,
-        "isCounterEnabled": false
-      },
-      "jsonSettings": {
-        "theme": "app_dark_theme",
-        "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
-      },
-      "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
-    }
-  ],
-  "profile": [
-    {
-      "id": "1",
-      "firstname": "Jane",
-      "lastname": "Doe",
-      "age": 30,
-      "currency": "KZT",
-      "country": "Kazakhstan",
-      "city": "Almaty",
-      "username": "Admin Jane",
-      "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
-    },
-    {
-      "id": "2",
-      "firstname": "Vasya",
-      "lastname": "Petrov",
-      "age": 26,
-      "currency": "KZT",
-      "country": "Kazakhstan",
-      "city": "Astana",
-      "username": "Vasya I",
-      "avatar": "https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg"
-    },
-    {
-      "id": "3",
-      "firstname": "Petya",
-      "lastname": "Ivanov",
-      "age": 30,
-      "currency": "EUR",
-      "country": "Kyrgyzstan",
-      "city": "Bishkek",
-      "username": "Petr II",
-      "avatar": "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png"
-    },
-    {
-      "id": "4",
-      "firstname": "test",
-      "lastname": "user",
-      "age": 20,
-      "currency": "EUR",
-      "country": "Kyrgyzstan",
-      "city": "Bishkek",
-      "username": "test IX",
-      "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
-    }
-  ],
-  "notifications": [
-    {
-      "id": "1",
-      "title": "Notification 1",
-      "description": "Event 123",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "title": "Notification 12",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut deserunt exercitationem illum impedit labore minima voluptates. Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
-      "userId": "1",
-      "href": "http://localhost:3000/admin"
-    },
-    {
-      "id": "3",
-      "title": "Notification 13",
-      "description": "Accusamus asperiores, deleniti harum laboriosam laudantium, nesciunt quae quas repudiandae saepe sint tenetur?",
-      "userId": "2",
-      "href": "http://localhost:3000/profile"
-    },
-    {
-      "id": "4",
-      "title": "Notification 14",
-      "description": "Event 901",
-      "userId": "3"
-    }
-  ],
-  "article-ratings": [
-    {
-      "id": "3",
-      "rate": 3,
-      "feedback": "Не хватило примеров в статье",
-      "userId": "3",
-      "articleId": "3"
-    }
-  ],
-  "profile-ratings": [
-    {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошие статьи у автора",
-      "userId": "1",
-      "profileId": "2"
-    }
-  ]
+    ]
 }

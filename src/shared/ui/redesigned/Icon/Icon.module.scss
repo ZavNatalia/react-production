@@ -2,6 +2,10 @@
     fill: var(--icon-v2);
     color: var(--icon-v2);
     border-radius: 50%;
+
+    &:hover {
+    color: var(--accent-v2);
+}
 }
 
 button {
@@ -10,6 +14,11 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+        color: var(--accent-v2);
+    }
 
     &:focus {
         outline: 2px solid var(--accent-v2);
@@ -18,9 +27,4 @@ button {
     &:active {
         outline: 2px solid var(--accent-v2);
     }
-}
-
-.button:hover .Icon {
-    color: var(--accent-v2);
-    fill: var(--accent-v2);
 }

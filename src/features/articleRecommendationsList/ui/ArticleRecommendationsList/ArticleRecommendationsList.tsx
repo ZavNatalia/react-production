@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleList } from '@/entities/Article';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { useArticlesRecommendationsList } from '../../api/articleRecommendationsApi';
@@ -34,7 +34,7 @@ export const ArticleRecommendationsList = memo(
             >
                 <Text
                     className={cls.title}
-                    size={TextSize.L}
+                    size="l"
                     title={t('Recommendations')}
                 />
                 <ArticleList

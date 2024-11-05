@@ -38,13 +38,6 @@ OutlineSizeL.args = {
     size: 'l',
 };
 
-export const OutlineSizeXL = Template.bind({});
-OutlineSizeXL.args = {
-    children: 'Text',
-    variant: 'outline',
-    size: 'xl',
-};
-
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
@@ -65,14 +58,6 @@ SquareSizeL.args = {
     variant: 'outline',
     square: true,
     size: 'l',
-};
-
-export const SquareSizeXl = Template.bind({});
-SquareSizeXl.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-    size: 'xl',
 };
 
 export const Disabled = Template.bind({});

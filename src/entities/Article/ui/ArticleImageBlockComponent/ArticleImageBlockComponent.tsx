@@ -19,11 +19,7 @@ export const ArticleImageBlockComponent = memo(
             >
                 <img className={cls.img} src={block.src} alt="" />
                 {block.title && (
-                    <Text
-                        text={`${block.src.slice(0, 60)}...`}
-                        align="center"
-                        size="s"
-                    />
+                    <Text text={`${block.src.slice(0, 50)}...`} size="s" />
                 )}
             </div>
         );

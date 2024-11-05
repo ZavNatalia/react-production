@@ -4,7 +4,7 @@ import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled';
 
-export type ButtonSize = 'm' | 'l' | 'xl';
+export type ButtonSize = 's' | 'm' | 'l';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
@@ -15,6 +15,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
     fullwidth?: boolean;
 }
+
+const mapSizeToClass: Record<ButtonSize, string> = {
+    s: 'size_s',
+    m: 'size_m',
+    l: 'size_l',
+};
 
 export const Button = memo((props: ButtonProps) => {
     const {
@@ -34,13 +40,15 @@ export const Button = memo((props: ButtonProps) => {
         [cls.fullwidth]: fullwidth,
     };
 
+    const sizeClass = mapSizeToClass[size];
+
     return (
         <button
             type="button"
             className={classNames(cls.Button, mods, [
                 className,
                 cls[variant],
-                cls[size],
+                cls[sizeClass],
             ])}
             disabled={disabled}
             {...otherProps}
