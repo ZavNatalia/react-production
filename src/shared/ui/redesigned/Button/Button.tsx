@@ -26,7 +26,7 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        variant = 'outline',
+        variant = 'clear',
         square,
         disabled,
         size = 'm',

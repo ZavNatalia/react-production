@@ -1,16 +1,17 @@
 .MainLayout {
+  width: 100%;
   display: grid;
   grid-template-areas: 'left content right';
-  grid-template-columns: min-content 1fr min-content;
-  gap: 12px;
+  grid-template-columns: 96px 1fr 200px;
+  gap: 16px;
 }
 
 .left {
   grid-area: left;
 }
 .content {
+  width: 100%;
   grid-area: content;
-  margin-top: 16px;
 }
 .right {
   grid-area: right;

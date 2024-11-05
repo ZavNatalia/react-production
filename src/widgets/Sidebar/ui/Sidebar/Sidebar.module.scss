@@ -46,7 +46,7 @@
 // redesigned
 
 .SidebarV2 {
-    background: var(--light-bg-v2);
+    background: var(--dark-bg-v2);
     height: calc(100vh - 40px);
     width: var(--sidebar-width);
     border-radius: 12px;
@@ -84,7 +84,7 @@
 
         &:hover {
             color: var(--accent-v2);
-            background: var(--dark-bg-v2);
+            background: var(--bg-v2);
         }
     }
 

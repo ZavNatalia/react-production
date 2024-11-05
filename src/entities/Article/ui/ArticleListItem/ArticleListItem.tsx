@@ -27,11 +27,13 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
     const { t } = useTranslation();
 
-    const types = <Text className={cls.types} text={article.type.join(', ')} />;
+    const types = (
+        <Text className={cls.types} text={article.type.join(', ')} size="s" />
+    );
     const views = (
         <div className={cls.views}>
             <Icon Svg={EyeIcon} clickable={false} width="20px" height="20px" />
-            <Text text={String(article.views)} />
+            <Text text={String(article.views)} size="s" />
         </div>
     );
     if (view === ArticleView.LIST) {
@@ -47,21 +49,36 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 ])}
                 data-testid="ArticleListItem"
             >
-                <Card variant="light" border="roundBorder" padding="24">
+                <Card
+                    className={cls.card}
+                    variant="light"
+                    border="roundBorder"
+                    padding="24"
+                >
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user?.avatar} />
                         <Text
                             className={cls.username}
-                            text={article.user?.username}
+                            title={article.user?.username}
+                            size="s"
                         />
-                        <Text className={cls.date} text={article.createdAt} />
+                        <Text
+                            className={cls.date}
+                            text={article.createdAt}
+                            size="s"
+                        />
                     </div>
+
                     <Text
                         className={cls.title}
                         size="l"
                         title={article.title}
                     />
-                    {types}
+                    <div className={cls.infoWrapper}>
+                        {views}
+                        {types}
+                    </div>
+
                     <div className={cls.imgWrapper}>
                         <AppImage
                             className={cls.img}
@@ -87,10 +104,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             to={getRouteArticleDetails(article.id)}
                             target={target}
                         >
-                            <Button variant="outline">{t('Read more')}</Button>
+                            <Button variant="filled">{t('Read more')}</Button>
                         </AppLink>
-
-                        {views}
                     </div>
                 </Card>
             </div>

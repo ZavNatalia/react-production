@@ -27,6 +27,7 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { ArticleBlock } from '../../model/types/article';
 import cls from './ArticleDetails.module.scss';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -76,13 +77,13 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                 <HStack className={cls.headerImgWrapper}>
                     <Skeleton
                         className={cls.headerImg}
-                        width={600}
-                        height={400}
+                        width={500}
+                        height={300}
                     />
                 </HStack>
                 <VStack gap="4">
-                    <Skeleton className={cls.title} width={300} height={32} />
-                    <Skeleton width={500} height={24} />
+                    <Skeleton width={400} height={32} />
+                    <Skeleton width={600} height={24} />
                     <Skeleton width={150} height={24} />
                     <Skeleton width={200} height={24} />
                 </VStack>
@@ -101,13 +102,20 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     } else {
         content = (
             <>
-                <HStack className={cls.headerImgWrapper}>
-                    <img
+                <div className={cls.headerImgWrapper}>
+                    <AppImage
                         className={cls.headerImg}
                         src={article?.img}
                         alt={article?.title}
+                        fallback={
+                            <Skeleton
+                                className={cls.img}
+                                width="500px"
+                                height="300px"
+                            />
+                        }
                     />
-                </HStack>
+                </div>
                 <VStack gap="4" max data-testid="ArticleDetails.Info">
                     <Text
                         className={cls.title}
@@ -116,12 +124,12 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         size="l"
                     />
                     <HStack gap="8" className={cls.articleInfo}>
-                        <Icon Svg={EyeIcon} />
-                        <Text text={String(article?.views)} />
+                        <Icon Svg={EyeIcon} width={28} height={28} />
+                        <Text text={String(article?.views)} size="s" />
                     </HStack>
                     <HStack gap="8" className={cls.articleInfo}>
-                        <Icon Svg={CalendarIcon} />
-                        <Text text={article?.createdAt} />
+                        <Icon Svg={CalendarIcon} width={28} height={28} />
+                        <Text text={article?.createdAt} size="s" />
                     </HStack>
                 </VStack>
                 {article?.blocks.map(renderBlock)}

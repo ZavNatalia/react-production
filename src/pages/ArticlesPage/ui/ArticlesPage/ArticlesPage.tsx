@@ -55,7 +55,6 @@ const ArticlesPage = ({ className }: { className?: string }) => {
                             data-testid="ArticlesPage"
                         >
                             <ArticleInfiniteList className={cls.list} />
-                            <ArticlePageGreeting />
                         </Page>
                     }
                 />

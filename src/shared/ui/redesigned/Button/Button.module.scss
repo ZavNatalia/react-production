@@ -1,6 +1,6 @@
 .Button {
     cursor: pointer;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-l);
     color: var(--text-v2);
     background-color: var(--dark-bg-v2);
     border: 1px solid var(--dark-bg-v2);
@@ -24,7 +24,7 @@
 .outline {
     border: 1px solid var(--accent-v2);
     color: var(--accent-v2);
-    background: none;
+    background: var(--light-bg-v2);
 
     &:hover {
         color: #fff;

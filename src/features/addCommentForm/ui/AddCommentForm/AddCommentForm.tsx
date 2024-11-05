@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Input } from '@/shared/ui/redesigned/Input';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
@@ -53,19 +53,20 @@ const AddCommentForm = memo(
                 <HStack
                     className={classNames(cls.AddCommentForm, {}, [className])}
                     justify="between"
+                    gap="8"
                     max
                     data-testid="AddCommentForm"
                 >
                     <Input
                         className={cls.input}
-                        label={t('Enter the comment text')}
+                        placeholder={t('Enter the comment text')}
                         value={text}
                         data-testid="AddCommentForm.Input"
                         onChange={onCommentTextChange}
                     />
                     <Button
-                        className={cls.sendBtn}
-                        theme={ButtonTheme.BACKGROUND}
+                        disabled={!text}
+                        variant="outline"
                         data-testid="AddCommentForm.Button"
                         onClick={onSendHandler}
                     >

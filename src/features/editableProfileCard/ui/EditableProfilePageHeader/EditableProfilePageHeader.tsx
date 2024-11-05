@@ -59,14 +59,14 @@ export const EditableProfilePageHeader = memo(
                         ) : (
                             <HStack gap="8">
                                 <Button
-                                    variant="filled"
+                                    variant="clear"
                                     data-testid="EditableProfilePageHeader.CancelButton"
                                     onClick={onCancelEdit}
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
-                                    variant="outline"
+                                    variant="filled"
                                     data-testid="EditableProfilePageHeader.SaveButton"
                                     onClick={onSave}
                                 >

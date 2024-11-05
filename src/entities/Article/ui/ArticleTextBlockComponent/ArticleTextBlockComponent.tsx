@@ -23,6 +23,7 @@ export const ArticleTextBlockComponent = memo(
                     className={cls.paragraph}
                     key={paragraph}
                     text={paragraph}
+                    size="m"
                 />
             ))}
         </div>
