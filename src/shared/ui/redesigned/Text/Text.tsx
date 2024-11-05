@@ -6,9 +6,7 @@ export type TextVariant = 'primary' | 'error' | 'accent';
 
 export type TextAlign = 'right' | 'left' | 'center';
 
-export type TextWeight = 'normal' | 'bold';
-
-export type TextSize = 's' | 'm' | 'l';
+export type TextSize = 's' | 'm' | 'l' | 'xl';
 
 interface TextProps {
     className?: string;
@@ -16,23 +14,24 @@ interface TextProps {
     text?: string;
     variant?: TextVariant;
     align?: TextAlign;
-    weight?: TextWeight;
     size?: TextSize;
     'data-testid'?: string;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
 
 const mapSizeToClass: Record<TextSize, string> = {
     s: 'size_s',
     m: 'size_m',
     l: 'size_l',
+    xl: 'size_xl',
 };
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-    s: 'h3',
-    m: 'h2',
-    l: 'h1',
+    s: 'h4',
+    m: 'h3',
+    l: 'h2',
+    xl: 'h1',
 };
 
 export const Text = memo((props: TextProps) => {
@@ -42,7 +41,6 @@ export const Text = memo((props: TextProps) => {
         text,
         variant = 'primary',
         align = 'left',
-        weight = 'normal',
         size = 'm',
         'data-testid': dataTestId = 'Text',
     } = props;
@@ -54,8 +52,7 @@ export const Text = memo((props: TextProps) => {
         className,
         cls[variant],
         cls[align],
-        cls[weight],
-        sizeClass,
+        cls[sizeClass],
     ];
 
     return (

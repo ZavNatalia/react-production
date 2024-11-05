@@ -47,7 +47,7 @@
 
 .SidebarV2 {
     background: var(--light-bg-v2);
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - 40px);
     width: var(--sidebar-width);
     border-radius: 12px;
     position: relative;
@@ -73,7 +73,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 8px;
     }
 
     .collapseBtn {
@@ -81,6 +81,11 @@
         right: 6px;
         top: 50%;
         transform: rotate(90deg);
+
+        &:hover {
+            color: var(--accent-v2);
+            background: var(--dark-bg-v2);
+        }
     }
 
 }

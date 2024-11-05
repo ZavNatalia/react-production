@@ -39,7 +39,7 @@ export const ArticleDetailsPageHeader = memo(
             >
                 <Button onClick={onBackToList}>{t('Back to the list')}</Button>
                 {canEdit && (
-                    <Button onClick={onEditArticle}>
+                    <Button variant="filled" onClick={onEditArticle}>
                         {t('Edit the article')}
                     </Button>
                 )}

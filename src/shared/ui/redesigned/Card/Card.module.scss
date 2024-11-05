@@ -1,3 +1,7 @@
+.Card {
+    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+}
+
 .withoutPaddings {
     padding: 0;
 }
@@ -11,7 +15,12 @@
 }
 
 .light {
-    background-color: var(--bg-v2);
+    background-color: var(--light-bg-v2);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 4px 12px 0 var(--box-dark-shadow-v2);
+    }
 }
 
 .normalBorder {
@@ -19,25 +28,25 @@
 }
 
 .roundBorder {
-    border-radius: 40px;
+    border-radius: 24px;
 }
 
 .max {
     width: 100%;
 }
 
-.gap_0 {
+.padding_0 {
     padding: 0;
 }
 
-.gap_8 {
+.padding_8 {
     padding: 8px 12px;
 }
 
-.gap_16 {
+.padding_16 {
     padding: 16px 20px;
 }
 
-.gap_24 {
+.padding_24 {
     padding: 24px 28px;
 }

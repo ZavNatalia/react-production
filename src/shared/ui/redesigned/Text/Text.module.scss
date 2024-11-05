@@ -1,11 +1,14 @@
-.title {
-    font: var(--font-l-v2);
-    color: var(--text-v2);
+.primary {
+    .title {
+        font: var(--font-l-v2);
+        color: var(--text-v2);
+    }
+
+    .text {
+        color: var(--text-v2);
+    }
 }
 
-.text {
-    color: var(--text-v2);
-}
 
 .error {
     .title {
@@ -39,17 +42,9 @@
     text-align: right;
 }
 
-.normal {
-    font-weight: normal;
-}
-
-.bold {
-    font-weight: bold;
-}
-
 .size_s {
     .title {
-        font: var(--font-m-v2);
+        font: var(--font-m-bold-v2);
     }
 
     .text {
@@ -59,7 +54,7 @@
 
 .size_m {
     .title {
-        font: var(--font-l-v2);
+        font: var(--font-l-bold-v2);
     }
 
     .text {
@@ -69,7 +64,7 @@
 
 .size_l {
     .title {
-        font: var(--font-xl-v2);
+        font: var(--font-xl-bold-v2);
     }
 
     .text {

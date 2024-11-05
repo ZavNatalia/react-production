@@ -6,12 +6,6 @@
   border-radius: var(--radius-xl);
   padding: 26px;
 
-  h2 {
-    color: var(--accent-v2);
-    font: var(--font-xl-v2);
-    font-weight: bold;
-  }
-
   li {
     list-style-type: circle;
     margin-left: 28px;
@@ -20,9 +14,5 @@
     span {
       font-weight: bold;
     }
-  }
-
-  p {
-    font: var(--font-l-v2);
   }
 }

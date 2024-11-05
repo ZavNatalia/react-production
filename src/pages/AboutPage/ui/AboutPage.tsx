@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Page } from '@/widgets/Page';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/redesigned/Text';
 import cls from './AboutPage.module.scss';
 
 const AboutPage = ({ className }: { className?: string }) => {
@@ -11,8 +12,8 @@ const AboutPage = ({ className }: { className?: string }) => {
             data-testid="AboutPage"
             className={classNames(cls.AboutPage, {}, [className])}
         >
-            <h2>{t('About us')}</h2>
-            <p>{t('The project employs')}</p>
+            <Text variant="accent" size="l" title={t('About us')} />
+            <Text text={t('The project employs')} size="l" />
             <ul>
                 <li>
                     <span>{t('React')}</span>&nbsp;
@@ -63,11 +64,12 @@ const AboutPage = ({ className }: { className?: string }) => {
                     {t('for unit testing')}
                 </li>
             </ul>
-            <p>
-                {t(
+            <Text
+                text={t(
                     'This structure provides a comprehensive approach to developing, testing, and deploying the application',
                 )}
-            </p>
+                size="m"
+            />
         </Page>
     );
 };

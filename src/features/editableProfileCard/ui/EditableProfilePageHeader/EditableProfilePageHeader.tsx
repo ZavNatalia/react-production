@@ -44,12 +44,12 @@ export const EditableProfilePageHeader = memo(
                 justify="between"
                 max
             >
-                <Text title={t('Profile')} />
+                <Text title={t('Profile')} size="l" variant="accent" />
                 {canEdit && (
                     <div>
                         {readonly ? (
                             <Button
-                                variant="outline"
+                                variant="filled"
                                 disabled={!!error}
                                 data-testid="EditableProfilePageHeader.EditButton"
                                 onClick={onEdit}
