@@ -59,7 +59,7 @@ export const EditableProfilePageHeader = memo(
                         ) : (
                             <HStack gap="8">
                                 <Button
-                                    variant="clear"
+                                    variant="outlineRed"
                                     data-testid="EditableProfilePageHeader.CancelButton"
                                     onClick={onCancelEdit}
                                 >

@@ -8,6 +8,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 4px 12px;
+    border-radius: var(--radius-xl);
+
+    &:hover {
+        background-color: var(--bg-v2);
+        box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    }
 }
 
 .loading {

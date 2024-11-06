@@ -6,7 +6,6 @@ import { Icon } from '@/shared/ui/redesigned/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
-import { Button } from '@/shared/ui/redesigned/Button';
 import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { Article, ArticleTextBlock } from '../../model/types/article';
@@ -49,12 +48,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 ])}
                 data-testid="ArticleListItem"
             >
-                <Card
-                    className={cls.card}
-                    variant="light"
-                    border="roundBorder"
-                    padding="24"
-                >
+                <Card variant="light" border="roundBorder" padding="24">
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user?.avatar} />
                         <Text
@@ -103,8 +97,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         <AppLink
                             to={getRouteArticleDetails(article.id)}
                             target={target}
+                            variant="filled"
                         >
-                            <Button variant="filled">{t('Read more')}</Button>
+                            {t('Read more')}
                         </AppLink>
                     </div>
                 </Card>

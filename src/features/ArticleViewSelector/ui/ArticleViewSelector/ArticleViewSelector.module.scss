@@ -14,10 +14,15 @@
     width: fit-content;
     box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
     .selected {
-        fill: var(--selector-bg);
+        fill: var(--accent-v2);
 
     }
     .notSelected {
         fill: var(--hint-v2);
+        &:hover {
+            fill: var(--accent-v2);
+        }
     }
+
+
 }

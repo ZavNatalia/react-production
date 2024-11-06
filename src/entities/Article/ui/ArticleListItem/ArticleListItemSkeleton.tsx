@@ -29,12 +29,12 @@ export const ArticleListItemSkeleton = memo(
                                 <Skeleton border="50%" width={30} height={30} />
                                 <Skeleton
                                     className={cls.username}
-                                    width={150}
+                                    width={130}
                                     height={20}
                                 />
                                 <Skeleton
                                     className={cls.date}
-                                    width={150}
+                                    width={90}
                                     height={20}
                                 />
                             </div>
@@ -49,14 +49,14 @@ export const ArticleListItemSkeleton = memo(
                                 height={20}
                             />
                             <div className={cls.imgWrapper}>
-                                <Skeleton className={cls.img} height={200} />
+                                <Skeleton
+                                    className={cls.img}
+                                    width={300}
+                                    height={300}
+                                />
                             </div>
                             <div className={cls.footer}>
-                                <Skeleton
-                                    className={cls.moreBtn}
-                                    width={200}
-                                    height={36}
-                                />
+                                <Skeleton width={112} height={42} />
                             </div>
                         </VStack>
                     </Card>

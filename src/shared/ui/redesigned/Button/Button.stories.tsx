@@ -45,21 +45,6 @@ OutlineDark.args = {
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const Square = Template.bind({});
-Square.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-};
-
-export const SquareSizeL = Template.bind({});
-SquareSizeL.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-    size: 'l',
-};
-
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: '>',

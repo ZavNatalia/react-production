@@ -21,13 +21,19 @@
     flex: 1;
     width: 100%;
     color: var(--text-v2);
-    background: var(--bg-v2);
+    background-color: var(--bg-v2);
     padding: 8px 14px;
     border: 1px solid var(--accent-bg-v2);
-    border-radius: 8px;
+    border-radius: var(--radius-l);
+    outline: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--light-bg-v2);
+    }
 
     &:focus {
-        outline: 2px solid var(--accent-v2);
+        box-shadow: 0 0 0 2px var(--box-accent-shadow-v2);
     }
 }
 

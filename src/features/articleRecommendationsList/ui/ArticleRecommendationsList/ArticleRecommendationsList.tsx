@@ -28,9 +28,11 @@ export const ArticleRecommendationsList = memo(
         return (
             <VStack
                 data-testid="ArticleRecommendationsList"
-                gap="16"
+                gap="8"
                 max
-                className={classNames('', {}, [className])}
+                className={classNames(cls.ArticleRecommendationsList, {}, [
+                    className,
+                ])}
             >
                 <Text
                     className={cls.title}
