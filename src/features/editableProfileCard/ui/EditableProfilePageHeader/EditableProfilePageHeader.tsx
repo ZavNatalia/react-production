@@ -66,7 +66,7 @@ export const EditableProfilePageHeader = memo(
                                     {t('Cancel')}
                                 </Button>
                                 <Button
-                                    variant="filled"
+                                    variant="outlineGreen"
                                     data-testid="EditableProfilePageHeader.SaveButton"
                                     onClick={onSave}
                                 >

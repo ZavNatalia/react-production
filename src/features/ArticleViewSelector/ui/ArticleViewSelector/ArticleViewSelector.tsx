@@ -82,6 +82,7 @@ export const ArticleViewSelector = ({
                         className,
                     ])}
                     border="roundBorder"
+                    variant="dark"
                 >
                     <HStack gap="8">
                         {viewTypes.map((viewType) => (

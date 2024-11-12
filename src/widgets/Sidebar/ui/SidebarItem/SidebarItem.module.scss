@@ -28,27 +28,30 @@
     text-decoration: none;
     padding-left: 16px;
     width: 100%;
+    border-left: 3px solid transparent;
 
     .link {
-        margin-left: 12px;
+        margin-left: 10px;
         white-space: nowrap;
         display: inline-block;
 
-        &:focus {
-            outline: 2px solid var(--accent-v2);
-        }
+        //&:focus {
+        //    background-color: var(--color-bg-default);
+        //}
     }
 }
 .collapsedV2 {
     padding: 0 8px;
     justify-content: center;
+
     .link {
         display: none;
     }
 }
 
 .active {
-    background-color: var(--dark-bg-v2);
+    background-color: var(--color-bg-light);
+    color: var(--color-state-accent);
     position: relative;
-    border-left: 3px solid var(--accent-v2);
+    border-left: 3px solid var(--color-state-accent);
 }

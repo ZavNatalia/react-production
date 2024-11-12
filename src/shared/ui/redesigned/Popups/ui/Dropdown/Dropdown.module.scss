@@ -18,17 +18,22 @@
 }
 
 .item {
-    background: var(--light-bg-v2);
+    background: var(--color-bg-dark);
     padding: 10px 25px;
     width: 100%;
     border: none;
-    color: var(--text-v2);
-    outline-color: transparent;
+    color: var(--color-text-primary);
     cursor: pointer;
     white-space: nowrap;
     border-radius: 0;
-}
+    box-shadow: none;
 
-.item:hover {
-    background: var(--bg-v2);
+    &:hover {
+        border: none;
+        background: var(--color-state-accent);
+    }
+    &:focus,
+    &:active {
+        color: var(--color-state-accent);
+    }
 }

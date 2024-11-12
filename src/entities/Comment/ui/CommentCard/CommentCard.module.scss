@@ -1,7 +1,7 @@
 .CommentCard {
     padding: 14px 18px;
     border-radius: var(--radius-l);
-    background-color: var(--light-bg-v2);
+    background-color: var(--color-bg-light);
 }
 
 .header {
@@ -12,8 +12,8 @@
     border-radius: var(--radius-xl);
 
     &:hover {
-        background-color: var(--bg-v2);
-        box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+        background-color: var(--color-bg-default);
+        box-shadow: 0 2px 10px 0 var(--shadow-default);
     }
 }
 

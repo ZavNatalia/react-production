@@ -4,15 +4,15 @@
 }
 
 .menu {
-    border-radius: 18px;
+    border-radius: var(--radius-l);
     overflow: hidden;
-    background-color: var(--dark-bg-v2);
-    box-shadow: 0 0 10px 0 var(--box-shadow-v2);
+    background-color: var(--color-bg-dark);
+    box-shadow: 0 0 10px 0 var(--shadow-dark);
 }
 
 .active {
-    background-color: var(--light-bg-v2);
-    color: var(--accent-v2);
+    color: var(--color-state-accent);
+    background-color: var(--color-bg-default);
 }
 
 .optionsBottomLeft {
@@ -46,8 +46,8 @@
 }
 
 .selected {
-    color: var(--accent-v2);
-    background-color: var(--accent-bg-v2);
+    color: var(--color-state-accent);
+    background-color: var(--color-bg-dark);
 }
 
 .trigger {

@@ -8,18 +8,31 @@
     --box-shadow: rgb(255 255 255 / 20%);
 
     // redesigned
-    --dark-bg-v2: #1b2130;
-    --bg-v2: #202839;
-    --light-bg-v2: #36415c;
-    --text-v2: #dbdbdb;
-    --hint-v2: #72747e;
-    --cancel-v2: #d95757;
-    --save-v2: #6cd98b;
-    --icon-v2: #78a3e7;
-    --accent-v2: #5a86ca;
-    --accent-bg-v2: #3d5c8c;
-    --box-shadow-v2: rgba(0, 0, 0, 0.3);
-    --box-dark-shadow-v2: rgba(0, 0, 0, 0.7);
+
+    /* Background colors */
+    --color-bg-dark: #1c253c;
+    --color-bg-default: #293349;
+    --color-bg-light: #3d4b6a;
+    --color-bg-accent: #224cac;
+
+    /* Text colors */
+    --color-text-primary: #dbdbdb;
+    --color-text-inverted: #2b344d;
+    --color-text-hint: #9a9ca5;
+
+    /* State colors */
+    --color-state-cancel: #c45a5a;
+    --color-state-save: #3ebf87;
+    --color-state-accent: #7fa4f5;
+
+    /* Special colors */
+    --color-icon: #a0c2f8;
+
+    /* Shadows */
+    --shadow-default: rgba(0, 0, 0, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-accent: rgba(39, 68, 132, 0.7);
+
 
     // skeleton
     --skeleton-bg: #1c1d1e;
@@ -47,6 +60,6 @@
 
     // star
     --star-normal: #6a6a72;
-    --star-selected: rgb(39 155 239 / 90%);
+    --star-selected: #224cac;
     --star-border: rgba(0 0 0 / 30%);
 }

@@ -1,19 +1,25 @@
-.primary {
-    color: var(--text-v2);
+.AppLink {
     text-decoration: none;
     outline: none;
+    cursor: pointer;
+}
+
+.primary {
+    color: var(--color-text-primary);
 
     &:hover {
-        color: var(--accent-v2);
+        color: var(--color-state-accent);
     }
-    &:focus,
     &:active {
-        box-shadow: 0 0 0 2px var(--box-accent-shadow-v2);
+        background-color: var(--color-bg-default);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px var(--shadow-accent);
     }
 }
 
 .red {
-    color: var(--cancel-v2);
+    color: var(--color-state-cancel);
     text-decoration: none;
     outline: none;
 
@@ -22,29 +28,28 @@
     }
     &:focus,
     &:active {
-        box-shadow: 0 4px 12px 0 var(--cancel-v2);
+        box-shadow: 0 4px 12px 0 var(--color-state-cancel);
     }
 }
 
-.filled {
-    cursor: pointer;
+.filledBtn {
+    font: bold var(--font-m-v2);
+    background-color: var(--color-bg-accent);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-bg-accent);
     border-radius: var(--radius-l);
-    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    box-shadow: 0 2px 10px 0 var(--shadow-default);
     transition: all 0.3s ease;
     padding: 8px 16px;
-    outline: none;
-    background-color: var(--accent-bg-v2);
-    color: var(--text-v2);
-    border: 1px solid var(--accent-bg-v2);
-
-    &:hover {
-        background-color: var(--accent-v2);
-        border: 1px solid var(--accent-v2);
-        color: var(--text-iverted-v2);
-    }
 
     &:focus,
     &:active {
-        box-shadow: 0 0 0 2px var(--box-accent-shadow-v2);
+        box-shadow: 0 0 0 2px var(--shadow-accent);
+    }
+
+    &:hover {
+        background-color: var(--color-state-accent);
+        border: 1px solid var(--color-state-accent);
+        color: var(--color-text-inverted);
     }
 }

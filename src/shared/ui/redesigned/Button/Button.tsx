@@ -6,6 +6,7 @@ export type ButtonVariant =
     | 'clear'
     | 'outline'
     | 'filled'
+    | 'outlineGreen'
     | 'outlineRed'
     | 'transparent';
 

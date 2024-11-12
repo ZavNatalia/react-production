@@ -1,9 +1,9 @@
 .label {
-    color: var(--text-v2);
+    color: var(--color-text-primary);
 }
 
 .trigger {
-    //background: var(--dark-bg-v2);
+    //background: var(--color-bg-dark);
     //border-radius: 18px;
     //border: none;
     //outline-color: transparent;
@@ -12,7 +12,7 @@
 
     //button {
     //    padding: 8px 12px;
-    //    border-color: var(--light-bg-v2);
+    //    border-color: var(--color-bg-light);
     //    border-radius: 18px;
     //}
 }
@@ -20,12 +20,12 @@
 .options {
     position: absolute;
     z-index: 1000;
-    color: var(--text-v2);
-    background: var(--light-bg-v2);
+    color: var(--color-text-primary);
+    background: var(--color-bg-light);
     min-width: 120px;
     width: fit-content;
     max-width: 300px;
-    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    box-shadow: 0 2px 10px 0 var(--shadow-dark);
 }
 
 .item {
@@ -34,12 +34,17 @@
 }
 
 .active {
-    background-color: var(--light-bg-v2);
-    color: var(--accent-v2);
+    background-color: var(--color-bg-default);
+    color: var(--color-text-inverted);
 }
 
 .readonly {
     .label {
         opacity: 0.8;
     }
+}
+
+
+.selected {
+    color: red;
 }

@@ -37,7 +37,7 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
                         className,
                     ])}
                     padding="16"
-                    variant="light"
+                    variant="normal"
                 >
                     <Text
                         title={item?.title}

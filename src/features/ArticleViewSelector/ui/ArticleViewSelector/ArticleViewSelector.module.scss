@@ -12,15 +12,15 @@
 
 .ArticleViewSelectorV2 {
     width: fit-content;
-    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    box-shadow: 0 2px 10px 0 var(--shadow-default);
     .selected {
-        fill: var(--accent-v2);
+        fill: var(--color-state-accent);
 
     }
     .notSelected {
-        fill: var(--hint-v2);
+        fill: var(--color-text-hint);
         &:hover {
-            fill: var(--accent-v2);
+            fill: var(--color-state-accent);
         }
     }
 

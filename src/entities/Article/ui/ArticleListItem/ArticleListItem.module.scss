@@ -41,7 +41,7 @@
     align-items: center;
     padding: 8px 20px;
     gap: 16px;
-    background-color: var(--bg-v2);
+    background-color: var(--color-bg-default);
     border-radius: var(--radius-xl);
 
 
@@ -73,7 +73,7 @@
     position: absolute;
     right: 12px;
     top: 12px;
-    background-color: var(--bg-v2);
+    background-color: var(--color-bg-default);
     padding: 2px 6px;
     border-radius: var(--radius-l);
   }

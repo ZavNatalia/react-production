@@ -8,20 +8,31 @@
     --box-shadow: rgba(0 0 0 / 20%);
 
     // redesigned
-    --dark-bg-v2: #c7e5eb;
-    --bg-v2: #e7f2f4;
-    --light-bg-v2: #fff;
-    --text-v2: #141e22;
-    --text-iverted-v2: #fff;
-    --hint-v2: #a1adb1;
-    --cancel-v2: #f77;
-    --save-v2: #62de85;
-    --icon-v2: #42a1ba;
-    --accent-v2: #137190;
-    --accent-bg-v2: rgb(147, 199, 217);
-    --box-shadow-v2: rgba(173, 188, 192, 0.3);
-    --box-dark-shadow-v2: rgba(149, 162, 165, 0.5);
-    --box-accent-shadow-v2: rgba(19, 113, 144, 0.75);
+
+    /* Background colors */
+    --color-bg-dark: #caeaf1;
+    --color-bg-default: #e4f0f2;
+    --color-bg-light: #ffffff;
+    --color-bg-accent: #93c7d9;
+
+    /* Text colors */
+    --color-text-primary: #1a282e;
+    --color-text-inverted: #ffffff;
+    --color-text-hint: #a1adb1;
+
+    /* State colors */
+    --color-state-cancel: #c05959;
+    --color-state-save: #40ac5f;
+    --color-state-accent: #2d7b95;
+
+    /* Special colors */
+    --color-icon: #42a1ba;
+
+    /* Shadows */
+    --shadow-default: rgba(173, 188, 192, 0.4);
+    --shadow-dark: rgba(149, 162, 165, 0.5);
+    --shadow-accent: rgba(19, 113, 144, 0.45);
+
 
     // skeleton
     --skeleton-bg: #f1f1f6;

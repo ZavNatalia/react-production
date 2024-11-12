@@ -1,97 +1,113 @@
 .Button {
     cursor: pointer;
     border-radius: var(--radius-l);
-    box-shadow: 0 2px 10px 0 var(--box-shadow-v2);
+    box-shadow: 0 2px 10px 0 var(--shadow-default);
     transition: all 0.3s ease;
     padding: 8px 16px;
     outline: none;
 
     &:focus,
     &:active {
-        box-shadow: 0 0 0 2px var(--box-accent-shadow-v2);
+        box-shadow: 0 0 0 2px var(--shadow-accent);
     }
 }
 
 .clear {
-    color: var(--text-v2);
-    background-color: var(--light-bg-v2);
-    border: 1px solid var(--light-bg-v2);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-bg-light);
     outline: none;
 
     &:hover {
         color: #fff;
-        background-color: var(--accent-v2);
-        border: 1px solid var(--accent-v2);
-        box-shadow: 0 4px 12px 0 var(--box-dark-shadow-v2);
+        background-color: var(--color-state-accent);
+        border: 1px solid var(--color-state-accent);
+        box-shadow: 0 4px 12px 0 var(--shadow-dark);
     }
 }
 
 .transparent {
-    color: var(--text-v2);
+    color: var(--color-text-primary);
     background: none;
     border: 1px solid transparent;
     outline: none;
     box-shadow: none;
 
     &:hover {
-        color: var(--text-iverted-v2);
-        background-color: var(--accent-v2);
-        box-shadow: 0 4px 12px 0 var(--box-dark-shadow-v2);
+        color: var(--color-text-inverted);
+        background-color: var(--color-state-accent);
+        box-shadow: 0 4px 12px 0 var(--shadow-dark);
     }
 }
 
 .outline {
-    border: 1px solid var(--accent-v2);
-    color: var(--accent-v2);
-    background: var(--light-bg-v2);
+    border: 1px solid var(--color-state-accent);
+    color: var(--color-state-accent);
+    background: var(--color-bg-light);
 
     &:hover {
         color: #fff;
-        background-color: var(--accent-v2);
-        box-shadow: 0 4px 12px 0 var(--box-dark-shadow-v2);
+        background-color: var(--color-state-accent);
+        box-shadow: 0 4px 12px 0 var(--shadow-dark);
     }
 }
 
 .outlineRed {
-    border: 1px solid var(--cancel-v2);
-    color: var(--cancel-v2);
-    background: var(--light-bg-v2);
+    border: 1px solid var(--color-state-cancel);
+    color: var(--color-state-cancel);
+    background: var(--color-bg-light);
     outline: none;
 
     &:hover {
-        background-color: var(--cancel-v2);
-        color: var(--text-iverted-v2);
+        background-color: var(--color-state-cancel);
+        color: var(--color-text-inverted);
     }
     &:focus,
     &:active {
-        box-shadow: 0 0 0 2px var(--cancel-v2);
+        box-shadow: 0 0 0 2px var(--color-state-cancel);
+    }
+}
+
+.outlineGreen {
+    border: 1px solid var(--color-state-save);
+    color: var(--color-state-save);
+    background: var(--color-bg-light);
+    outline: none;
+
+    &:hover {
+        background-color: var(--color-state-save);
+        color: var(--color-text-inverted);
+    }
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 2px var(--color-state-save);
     }
 }
 
 .filled {
-    background-color: var(--accent-bg-v2);
-    color: var(--text-v2);
-    border: 1px solid var(--accent-bg-v2);
+    background-color: var(--color-bg-accent);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-bg-accent);
     outline: none;
 
     &:hover {
-        background-color: var(--accent-v2);
-        border: 1px solid var(--accent-v2);
-        color: var(--text-iverted-v2);
+        background-color: var(--color-state-accent);
+        border: 1px solid var(--color-state-accent);
+        color: var(--color-text-inverted);
     }
 }
 
 .size_s {
-    font: var(--font-s-v2);
+    font: bold var(--font-s-v2);
     padding: 4px 12px;
 }
 
 .size_m {
-    font: var(--font-m-v2);
+    font: bold var(--font-m-v2);
 }
 
 .size_l {
-    font: var(--font-l-v2);
+    font: bold var(--font-l-v2);
 }
 
 

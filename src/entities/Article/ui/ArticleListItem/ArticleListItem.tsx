@@ -97,7 +97,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         <AppLink
                             to={getRouteArticleDetails(article.id)}
                             target={target}
-                            variant="filled"
+                            variant="filledBtn"
                         >
                             {t('Read more')}
                         </AppLink>

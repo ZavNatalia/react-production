@@ -1,11 +1,11 @@
 .primary {
     .title {
         font: var(--font-l-v2);
-        color: var(--text-v2);
+        color: var(--color-text-primary);
     }
 
     .text {
-        color: var(--text-v2);
+        color: var(--color-text-primary);
     }
 }
 
@@ -22,11 +22,11 @@
 
 .accent {
     .title {
-        color: var(--accent-v2);
+        color: var(--color-state-accent);
     }
 
     .text {
-        color: var(--accent-v2);
+        color: var(--color-state-accent);
     }
 }
 
