@@ -79,7 +79,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
             }
             on={
                 <VStack gap="8" className={classNames('', {}, [className])}>
-                    <Text title={t('Sort by')} size="s" />
+                    <Text variant="accent" title={t('Sort by')} size="s" />
                     <ListBox
                         items={sortFieldOptions}
                         value={sort}

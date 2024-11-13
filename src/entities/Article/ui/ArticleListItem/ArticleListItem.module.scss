@@ -68,6 +68,14 @@
   position: relative;
   border-radius: var(--radius-xl);
 
+  .card {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 4px 12px 0 var(--shadow-dark);
+    }
+  }
+
   .date {
     opacity: 0;
     position: absolute;

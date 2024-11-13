@@ -117,7 +117,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             target={target}
             data-testid="ArticleListItem"
         >
-            <Card padding="16" border="roundBorder" variant="light">
+            <Card
+                className={cls.card}
+                padding="16"
+                border="roundBorder"
+                variant="light"
+            >
                 <div className={cls.imgWrapper}>
                     <AppImage
                         className={cls.img}

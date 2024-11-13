@@ -20,11 +20,6 @@
 
 .light {
     background-color: var(--color-bg-light);
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        box-shadow: 0 4px 12px 0 var(--shadow-dark);
-    }
 }
 
 .normalBorder {

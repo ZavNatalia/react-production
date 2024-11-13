@@ -12,13 +12,13 @@
     /* Background colors */
     --color-bg-dark: #d5e9ee;
     --color-bg-default: #ebf8fb;
-    --color-bg-light: #ffffff;
+    --color-bg-light: #f6fbfc;
     --color-bg-accent: #94d3e2;
 
     /* Text colors */
     --color-text-primary: #1a282e;
     --color-text-inverted: #ffffff;
-    --color-text-hint: #c0cdd1;
+    --color-text-hint: #828e93;
 
     /* State colors */
     --color-state-cancel: #c05959;
@@ -31,8 +31,7 @@
     /* Shadows */
     --shadow-default: rgba(173, 188, 192, 0.6);
     --shadow-dark: rgba(77, 87, 90, 0.5);
-    --shadow-accent: rgba(19, 113, 144, 0.4);
-
+    --shadow-accent: rgba(8, 95, 123, 0.6);
 
     // skeleton
     --skeleton-bg: #d6f1f8;
@@ -51,9 +50,9 @@
     --popover-border: #9c9ca6;
 
     // scrollbar
-    --scroll-track: #d2d2da;
-    --scroll-thumb: #aaaab6;
-    --scroll-thumb-hover: #8686a8;
+    --scroll-track: #ebf8fb;
+    --scroll-thumb: #9cc6d1;
+    --scroll-thumb-hover: #7bc2d4;
 
     // view selector
     --selector-bg: #385681;

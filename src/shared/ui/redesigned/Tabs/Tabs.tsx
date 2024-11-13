@@ -30,16 +30,15 @@ export const Tabs = memo((props: TabsProps) => {
             className={classNames('', {}, [className])}
             direction={direction}
             align="start"
-            gap="8"
+            gap="4"
         >
             {tabs.map((tab) => {
+                const isSelected = tab.value === value;
                 return (
                     <Button
                         key={tab.value}
                         size="s"
-                        variant={
-                            tab.value === value ? 'outline' : 'transparent'
-                        }
+                        variant={isSelected ? 'outline' : 'transparent'}
                         onClick={onClickHandle(tab)}
                     >
                         {tab.content}

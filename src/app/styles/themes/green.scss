@@ -11,18 +11,18 @@
     /* Background colors */
     --color-bg-dark: #cceae7;
     --color-bg-default: #e9fbf9;
-    --color-bg-light: #ffffff;
-    --color-bg-accent: #82c0b6;
+    --color-bg-light: #f6fefd;
+    --color-bg-accent: #78cbbe;
 
     /* Text colors */
     --color-text-primary: #0e1810;
     --color-text-inverted: #ffffff;
-    --color-text-hint: #b1c1be;
+    --color-text-hint: #86a09b;
 
     /* State colors */
     --color-state-cancel: #7a4244;
-    --color-state-save: #107162;
-    --color-state-accent: #1e8776;
+    --color-state-save: #108c3b;
+    --color-state-accent: #1b7768;
 
     /* Special colors */
     --color-icon: #49998d;
@@ -30,7 +30,7 @@
     /* Shadows */
     --shadow-default: rgba(0, 0, 0, 0.1);
     --shadow-dark: rgba(0, 0, 0, 0.2);
-    --shadow-accent: rgba(20, 74, 67, 0.3);
+    --shadow-accent: rgba(19, 85, 78, 0.6);
 
 
     // skeleton
@@ -50,9 +50,9 @@
     --popover-border: #849894;
 
     // scrollbar
-    --scroll-track: #bdded9;
-    --scroll-thumb: #93b2ae;
-    --scroll-thumb-hover: #678682;
+    --scroll-track: #e9fbf9;
+    --scroll-thumb: #acd2cf;
+    --scroll-thumb-hover: #7e9d99;
 
     // view selector
     --selector-bg: #168573;
