@@ -3,7 +3,7 @@
     height: 50px;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-bg-default);
+    background-color: var(--skeleton-bg);
     border-radius: var(--radius-l);
 
     &::before {
@@ -14,14 +14,14 @@
         top: 0;
         height: 100%;
         width: 80%;
-        background: linear-gradient(to right, transparent 0%, var(--color-bg-dark) 50%, transparent 100%);
-        animation: load 3s cubic-bezier(0.2, 0, 0.4, 1) infinite;
+        background: linear-gradient(to right, transparent 0%, var(--skeleton-color) 50%, transparent 100%);
+        animation: load 2s cubic-bezier(0.2, 0, 0.4, 1) infinite;
     }
 }
 
 @keyframes load {
     from {
-        left: -300px;
+        left: -340px;
     }
 
     to {

@@ -6,7 +6,7 @@ import { ArticleList } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
@@ -36,10 +36,10 @@ export const ArticleInfiniteList = memo(
         const errorMsg = (
             <div className={classNames('', {}, [className])}>
                 <Text
-                    theme={TextTheme.ERROR}
+                    variant="error"
                     title={t('An error occurred while loading articles')}
                     text={t('Try to reload the page')}
-                    align={TextAlign.CENTER}
+                    align="center"
                 />
             </div>
         );

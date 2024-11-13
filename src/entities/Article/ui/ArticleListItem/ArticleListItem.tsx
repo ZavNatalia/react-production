@@ -126,8 +126,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         fallback={
                             <Skeleton
                                 className={cls.img}
-                                width="210px"
-                                height="210px"
+                                width="200px"
+                                height="200px"
                             />
                         }
                     />

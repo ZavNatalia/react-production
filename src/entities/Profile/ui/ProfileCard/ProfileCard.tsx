@@ -3,7 +3,7 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Loader } from '@/shared/ui/deprecated/Loader';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';

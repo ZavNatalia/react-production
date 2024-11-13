@@ -6,23 +6,25 @@
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+
+
+    .links,
+    .actions {
+        margin-left: auto;
+    }
+
+    .mainLink {
+        padding-right: 15px;
+    }
+
+    .appName {
+        font: var(--font-xl-v2);
+        text-transform: uppercase;
+        margin-left: 16px;
+        flex: 1;
+    }
 }
 
-.links,
-.actions {
-    margin-left: auto;
-}
-
-.mainLink {
-    padding-right: 15px;
-}
-
-.appName {
-    font: var(--font-xl-v2);
-    text-transform: uppercase;
-    margin-left: 16px;
-    flex: 1;
-}
 
 // redesigned
 

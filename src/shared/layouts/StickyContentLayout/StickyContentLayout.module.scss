@@ -1,8 +1,8 @@
-.MainLayout {
+.StickyMainLayout {
   width: 100%;
   display: grid;
   grid-template-areas: 'left content right';
-  grid-template-columns: 96px 1fr 200px;
+  grid-template-columns: min-content 1fr 180px;
   gap: 16px;
 }
 

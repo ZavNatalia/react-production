@@ -13,7 +13,7 @@ import cls from './ArticleViewSelector.module.scss';
 import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Card } from '@/shared/ui/redesigned/Card';
-import { HStack } from '@/shared/ui/redesigned/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -84,7 +84,7 @@ export const ArticleViewSelector = ({
                     border="roundBorder"
                     variant="dark"
                 >
-                    <HStack gap="8">
+                    <VStack gap="8">
                         {viewTypes.map((viewType) => (
                             <Icon
                                 className={classNames('', {
@@ -96,7 +96,7 @@ export const ArticleViewSelector = ({
                                 onClick={onClick(viewType.view)}
                             />
                         ))}
-                    </HStack>
+                    </VStack>
                 </Card>
             }
         />

@@ -81,7 +81,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         height={300}
                     />
                 </HStack>
-                <VStack gap="4">
+                <VStack gap="8">
                     <Skeleton width={400} height={32} />
                     <Skeleton width={600} height={24} />
                     <Skeleton width={150} height={24} />
@@ -123,12 +123,12 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         text={article?.subtitle}
                         size="l"
                     />
-                    <HStack gap="8" className={cls.articleInfo}>
-                        <Icon Svg={EyeIcon} width={28} height={28} />
+                    <HStack gap="8" align="end">
+                        <Icon Svg={EyeIcon} width={26} height={26} />
                         <Text text={String(article?.views)} size="s" />
                     </HStack>
-                    <HStack gap="8" className={cls.articleInfo}>
-                        <Icon Svg={CalendarIcon} width={28} height={28} />
+                    <HStack gap="8" align="end">
+                        <Icon Svg={CalendarIcon} width={26} height={26} />
                         <Text text={article?.createdAt} size="s" />
                     </HStack>
                 </VStack>

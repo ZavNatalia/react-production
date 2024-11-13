@@ -13,7 +13,7 @@ export const StickyContentLayout = memo((props: StickyContentLayoutProps) => {
     const { className, left, content, right } = props;
 
     return (
-        <div className={classNames(cls.MainLayout, {}, [className])}>
+        <div className={classNames(cls.StickyMainLayout, {}, [className])}>
             {left && <div className={classNames(cls.left)}>{left}</div>}
             <div className={cls.content}>{content}</div>
             {right && <div className={classNames(cls.right)}>{right}</div>}
