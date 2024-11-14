@@ -73,7 +73,7 @@ export const ArticleListItemSkeleton = memo(
             >
                 <Card padding="16" border="roundBorder" variant="light">
                     <VStack gap="8">
-                        <Skeleton width={200} height={200} />
+                        <Skeleton width={200} height={200} border="12px" />
                         <Skeleton width={120} height={20} />
                         <Skeleton width={180} height={18} />
                         <Skeleton width={180} height={18} />

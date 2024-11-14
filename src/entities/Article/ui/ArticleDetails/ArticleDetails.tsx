@@ -79,6 +79,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         className={cls.headerImg}
                         width={500}
                         height={300}
+                        border="12px"
                     />
                 </HStack>
                 <VStack gap="8">
@@ -112,6 +113,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                                 className={cls.img}
                                 width="500px"
                                 height="300px"
+                                border="12px"
                             />
                         }
                     />

@@ -133,6 +133,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                                 className={cls.img}
                                 width="200px"
                                 height="200px"
+                                border="12px"
                             />
                         }
                     />
