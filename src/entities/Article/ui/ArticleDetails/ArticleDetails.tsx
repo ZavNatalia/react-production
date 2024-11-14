@@ -127,7 +127,12 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                     />
                     <HStack gap="8" align="end">
                         <Icon Svg={EyeIcon} width={26} height={26} />
-                        <Text text={String(article?.views)} size="s" />
+                        <Text
+                            text={t('views', {
+                                count: Number(article?.views),
+                            })}
+                            size="s"
+                        />
                     </HStack>
                     <HStack gap="8" align="end">
                         <Icon Svg={CalendarIcon} width={26} height={26} />

@@ -5,11 +5,11 @@ import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Modal } from '@/shared/ui/deprecated/Modal';
+import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import cls from './RatingCard.module.scss';
 
 interface RatingCardProps {

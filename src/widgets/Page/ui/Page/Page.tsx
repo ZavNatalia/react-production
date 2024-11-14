@@ -39,7 +39,7 @@ export const Page = (props: PageProps) => {
         wrapperRef: toggleFeatures({
             name: 'isAppRedesigned',
             off: () => wrapperRef,
-            on: () => undefined,
+            on: () => wrapperRef,
         }),
         callback: onScrollEnd,
     });
