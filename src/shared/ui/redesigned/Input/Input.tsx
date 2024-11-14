@@ -68,30 +68,38 @@ export const Input = memo((props: InputProps) => {
         [cls.withAddonRight]: Boolean(addonRight),
     };
 
-    return (
-        <HStack gap="8" max>
-            {label && <div className={cls.label}>{label}</div>}
-            <div
-                className={classNames(cls.InputWrapper, mods, [
-                    className,
-                    cls[direction],
-                ])}
-            >
-                <div className={cls.addonLeft}>{addonLeft}</div>
-                <input
-                    ref={ref}
-                    type={type}
-                    value={value}
-                    className={cls.input}
-                    readOnly={readonly}
-                    placeholder={placeholder}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleInputChange}
-                    {...otherProps}
-                />
-                <div className={cls.addonRight}>{addonRight}</div>
-            </div>
-        </HStack>
+    const input = (
+        <div
+            className={classNames(cls.InputWrapper, mods, [
+                className,
+                cls[direction],
+            ])}
+        >
+            <div className={cls.addonLeft}>{addonLeft}</div>
+            <input
+                ref={ref}
+                type={type}
+                value={value}
+                className={cls.input}
+                readOnly={readonly}
+                placeholder={placeholder}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onChange={handleInputChange}
+                {...otherProps}
+            />
+            <div className={cls.addonRight}>{addonRight}</div>
+        </div>
     );
+
+    if (label) {
+        return (
+            <HStack gap="8" max>
+                {label && <div className={cls.label}>{label}</div>}
+                {input}
+            </HStack>
+        );
+    }
+
+    return input;
 });

@@ -75,10 +75,10 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     return (
         <Card
-            className={classNames('', {}, [className])}
-            max
+            className={classNames(cls.RatingCard, {}, [className])}
+            border="roundBorder"
             data-testid="RatingCard"
-            variant="light"
+            variant="dark"
             padding="24"
         >
             <VStack align="center" gap="16" max>

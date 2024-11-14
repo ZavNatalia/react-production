@@ -1127,7 +1127,7 @@
                 "isAppRedesigned": true
             },
             "jsonSettings": {
-                "theme": "app_green_theme",
+                "theme": "app_dark_theme",
                 "isFirstVisit": true,
                 "settingsPageHasBeenOpen": false,
                 "isArticlesPageWasOpened": true
@@ -1188,8 +1188,8 @@
             "firstname": "Jane",
             "lastname": "Doe",
             "age": 30,
-            "currency": "KZT",
-            "country": "Kazakhstan",
+            "currency": "USD",
+            "country": "Kyrgyzstan",
             "city": "Almaty",
             "username": "Admin Jane",
             "avatar": "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"

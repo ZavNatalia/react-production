@@ -1,15 +1,23 @@
-.ProfileCard {
-    padding: 20px 40px;
-    background-color: var(--color-bg-light);
-    border-radius: var(--radius-xl);
-    box-shadow: 0 2px 10px 0 var(--shadow-default);
-}
-
 .loading,
 .error {
-    height: 300px;
+    min-height: 456px;
 }
 
 .input {
     width: 100%;
+}
+
+.select {
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .ProfileCard {
+        padding: 16px;
+    }
+
+    .inputsWrapper {
+        flex-direction: column;
+    }
 }

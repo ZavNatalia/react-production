@@ -1,5 +1,7 @@
 .Card {
     box-shadow: 0 2px 10px 0 var(--shadow-default);
+    display: flex;
+    flex-direction: column;
 }
 
 .withoutPaddings {
@@ -48,4 +50,21 @@
 
 .padding_24 {
     padding: 24px 28px;
+}
+
+
+.gap_0 {
+    gap: 0;
+}
+
+.gap_8 {
+    gap: 8px;
+}
+
+.gap_16 {
+    gap: 16px;
+}
+
+.gap_24 {
+    gap: 24px;
 }

@@ -39,12 +39,6 @@
     opacity: 0.5;
 }
 
-.readonly {
-    .label {
-        opacity: 0.8;
-    }
-}
-
 .selected {
     color: var(--color-state-accent);
     background-color: var(--color-bg-dark);
