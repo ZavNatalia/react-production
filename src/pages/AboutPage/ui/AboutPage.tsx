@@ -10,11 +10,12 @@ const AboutPage = ({ className }: { className?: string }) => {
     return (
         <Page
             data-testid="AboutPage"
+            variant="filled"
             className={classNames(cls.AboutPage, {}, [className])}
         >
             <Text variant="accent" size="l" title={t('About us')} />
             <Text text={t('The project employs')} size="l" />
-            <ul>
+            <ul className={cls.list}>
                 <li>
                     <span>{t('React')}</span>&nbsp;
                     {t('for building the user interface')}

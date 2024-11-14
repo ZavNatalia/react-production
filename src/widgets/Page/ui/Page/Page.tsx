@@ -15,14 +15,17 @@ import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
 import { toggleFeatures } from '@/shared/lib/features';
 
+export type PageVariant = 'transparent' | 'filled';
+
 interface PageProps extends TestProps {
-    className?: string;
     children: ReactNode;
+    className?: string;
+    variant?: PageVariant;
     onScrollEnd?: () => void;
 }
 
 export const Page = (props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const { className, children, variant = 'transparent', onScrollEnd } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -63,7 +66,7 @@ export const Page = (props: PageProps) => {
                     off: () => cls.Page,
                 }),
                 {},
-                [className],
+                [className, cls[variant]],
             )}
             ref={wrapperRef}
             onScroll={onScroll}

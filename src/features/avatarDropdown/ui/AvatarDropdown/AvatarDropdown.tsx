@@ -12,7 +12,11 @@ import {
     userActions,
 } from '@/entities/User';
 import cls from './AvatarDropdown.module.scss';
-import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
+import {
+    getRouteAdmin,
+    getRouteProfile,
+    getRouteSettings,
+} from '@/shared/const/router';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
@@ -50,6 +54,10 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
         {
             content: t('Profile'),
             href: getRouteProfile(autData.id),
+        },
+        {
+            content: t('Settings'),
+            href: getRouteSettings(),
         },
         {
             content: t('Log out'),
