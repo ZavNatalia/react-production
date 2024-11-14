@@ -21,12 +21,14 @@
 }
 
 .accent {
-    .title {
+    .title, .text {
         color: var(--color-state-accent);
     }
+}
 
-    .text {
-        color: var(--color-state-accent);
+.hint {
+    .title, .text {
+        color: var(--color-text-hint);
     }
 }
 

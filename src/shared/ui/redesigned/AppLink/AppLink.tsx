@@ -19,6 +19,7 @@ export const AppLink = forwardRef(
             className,
             children,
             variant = 'primary',
+            target = '_self',
             activeClassName = '',
             ...otherProps
         } = props;
@@ -27,6 +28,7 @@ export const AppLink = forwardRef(
             <NavLink
                 ref={ref}
                 to={to}
+                target={target}
                 className={({ isActive }) =>
                     classNames(cls.AppLink, { [activeClassName]: isActive }, [
                         className,

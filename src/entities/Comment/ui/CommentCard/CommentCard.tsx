@@ -56,6 +56,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
             <AppLink
                 className={cls.header}
                 to={getRouteProfile(comment.user.id)}
+                target="_blank"
             >
                 {comment.user?.avatar ? (
                     <Avatar size={30} src={comment.user?.avatar} />

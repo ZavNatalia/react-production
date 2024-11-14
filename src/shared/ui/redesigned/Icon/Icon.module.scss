@@ -1,10 +1,20 @@
 .Icon {
+  border-radius: 50%;
+}
+
+.normal {
   fill: var(--color-icon);
   color: var(--color-icon);
-  border-radius: 50%;
-
   &:hover {
     color: var(--color-state-accent);
+  }
+}
+
+.hint {
+  fill: var(--color-text-hint);
+  color: var(--color-text-hint);
+  &:hover {
+    color: var(--color-icon);
   }
 }
 

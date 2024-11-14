@@ -27,12 +27,23 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const { t } = useTranslation();
 
     const types = (
-        <Text className={cls.types} text={article.type.join(', ')} size="s" />
+        <Text
+            className={cls.types}
+            text={article.type.join(', ')}
+            size="s"
+            variant="hint"
+        />
     );
     const views = (
         <div className={cls.views}>
-            <Icon Svg={EyeIcon} clickable={false} width="20px" height="20px" />
-            <Text text={String(article.views)} size="s" />
+            <Icon
+                Svg={EyeIcon}
+                clickable={false}
+                width="20px"
+                height="20px"
+                variant="hint"
+            />
+            <Text text={String(article.views)} size="s" variant="hint" />
         </div>
     );
     if (view === ArticleView.LIST) {
