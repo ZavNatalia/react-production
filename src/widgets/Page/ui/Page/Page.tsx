@@ -13,7 +13,6 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
-import { toggleFeatures } from '@/shared/lib/features';
 
 export type PageVariant = 'transparent' | 'filled';
 
@@ -36,11 +35,7 @@ export const Page = (props: PageProps) => {
 
     useInfiniteScroll({
         triggerRef,
-        wrapperRef: toggleFeatures({
-            name: 'isAppRedesigned',
-            off: () => wrapperRef,
-            on: () => wrapperRef,
-        }),
+        wrapperRef,
         callback: onScrollEnd,
     });
 
@@ -59,15 +54,7 @@ export const Page = (props: PageProps) => {
 
     return (
         <main
-            className={classNames(
-                toggleFeatures({
-                    name: 'isAppRedesigned',
-                    on: () => cls.PageV2,
-                    off: () => cls.Page,
-                }),
-                {},
-                [className, cls[variant]],
-            )}
+            className={classNames(cls.PageV2, {}, [className, cls[variant]])}
             ref={wrapperRef}
             onScroll={onScroll}
             data-testid={props['data-testid'] ?? 'Page'}

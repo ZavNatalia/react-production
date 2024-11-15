@@ -14,7 +14,7 @@ import { articleDetailsPageReducer } from '../../model/slices/index';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { Card, CardTheme } from '@/shared/ui/deprecated/Card';
+import { Card } from '@/shared/ui/redesigned/Card';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -43,7 +43,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                         on={<ArticleRating articleId={id} />}
                         off={
                             <Card
-                                theme={CardTheme.OUTLINED}
+                                variant="outlined"
                                 style={{ margin: '0 auto' }}
                             >
                                 {t('Article ratings coming soon')}

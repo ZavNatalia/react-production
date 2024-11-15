@@ -1,6 +1,6 @@
 .primary {
     .title {
-        font: var(--font-l-v2);
+        font: var(--font-l);
         color: var(--color-text-primary);
     }
 
@@ -46,30 +46,30 @@
 
 .size_s {
     .title {
-        font: bold var(--font-m-v2);
+        font: bold var(--font-m);
     }
 
     .text {
-        font: var(--font-s-v2);
+        font: var(--font-s);
     }
 }
 
 .size_m {
     .title {
-        font: bold var(--font-l-v2);
+        font: bold var(--font-l);
     }
 
     .text {
-        font: var(--font-m-v2);
+        font: var(--font-m);
     }
 }
 
 .size_l {
     .title {
-        font: bold var(--font-xl-v2);
+        font: bold var(--font-xl);
     }
 
     .text {
-        font: var(--font-l-v2);
+        font: var(--font-l);
     }
 }

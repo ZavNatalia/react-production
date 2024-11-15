@@ -2,9 +2,7 @@ import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import ProfileIcon from '@/shared/assets/icons/profile-20-20.svg';
-import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
 import {
     getUserAuthData,
     isUserAdmin,
@@ -17,7 +15,6 @@ import {
     getRouteProfile,
     getRouteSettings,
 } from '@/shared/const/router';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 
@@ -66,40 +63,17 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
     ];
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            off={
-                <DropdownDeprecated
-                    className={classNames('', {}, [className])}
-                    items={items}
-                    trigger={
-                        autData?.avatar ? (
-                            <AvatarDeprecated
-                                size={30}
-                                src={autData?.avatar}
-                                fallbackInverted
-                            />
-                        ) : (
-                            <ProfileIcon className={cls.menuIcon} />
-                        )
-                    }
-                    direction="bottom left"
-                />
+        <Dropdown
+            className={classNames('', {}, [className])}
+            items={items}
+            trigger={
+                autData?.avatar ? (
+                    <Avatar size={40} src={autData?.avatar} />
+                ) : (
+                    <ProfileIcon className={cls.menuIcon} />
+                )
             }
-            on={
-                <Dropdown
-                    className={classNames('', {}, [className])}
-                    items={items}
-                    trigger={
-                        autData?.avatar ? (
-                            <Avatar size={40} src={autData?.avatar} />
-                        ) : (
-                            <ProfileIcon className={cls.menuIcon} />
-                        )
-                    }
-                    direction="bottom left"
-                />
-            }
+            direction="bottom left"
         />
     );
 });

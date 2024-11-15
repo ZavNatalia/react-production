@@ -2,30 +2,6 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-
-    .link {
-        margin-left: 10px;
-        white-space: nowrap;
-        opacity: 1;
-    }
-
-    .icon {
-        fill: var(--inverted-primary-color);
-    }
-}
-
-.collapsed {
-    .link {
-        opacity: 0;
-        transition: opacity 0.2s ease;
-    }
-}
-
-
-.itemV2 {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
     padding-left: 16px;
     width: 100%;
     border-left: 3px solid transparent;
@@ -34,13 +10,9 @@
         margin-left: 10px;
         white-space: nowrap;
         display: inline-block;
-
-        //&:focus {
-        //    background-color: var(--color-bg-default);
-        //}
     }
 }
-.collapsedV2 {
+.collapsed {
     padding: 0 8px;
     justify-content: center;
 

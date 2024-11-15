@@ -46,18 +46,17 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
     }, [items, value]);
 
     return (
-        <HStack
-            className={classNames(cls.ListBox, { [cls.readonly]: readonly }, [
-                className,
-                popupCls.popup,
-            ])}
-            gap="8"
-        >
+        <HStack gap="8">
             {label && <span className={cls.label}>{label}</span>}
 
             <HListBox
                 disabled={readonly}
                 as="div"
+                className={classNames(
+                    cls.ListBox,
+                    { [cls.readonly]: readonly },
+                    [className, popupCls.popup],
+                )}
                 value={value}
                 onChange={onChange}
             >

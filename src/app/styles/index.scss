@@ -9,27 +9,18 @@ html {
 }
 
 body {
-    font: var(--font-m-v2);
+    font: var(--font-m);
     color: var(--primary-color);
     background-color: var(--color-bg-default);
 }
 
 .app {
-    min-height: 100vh;
-    background: var(--bg-color);
-}
-
-.app-v2 {
     background-color: var(--color-bg-default);
     height: 100vh;
-    font: var(--font-m-v2);
+    font: var(--font-m);
     color: var(--color-text-primary);
     padding: 0;
     width: 100%;
-}
-
-.content-page {
-    display: flex;
 }
 
 /* width */
