@@ -30,7 +30,12 @@ Outline.args = {
     children: 'Text',
     variant: 'outline',
 };
-
+export const OutlineSuccess = Template.bind({});
+OutlineSuccess.args = {
+    children: 'Success',
+    variant: 'outline',
+    color: 'success',
+};
 export const OutlineSizeL = Template.bind({});
 OutlineSizeL.args = {
     children: 'Text',
@@ -38,12 +43,21 @@ OutlineSizeL.args = {
     size: 'l',
 };
 
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
-    children: 'Text',
+export const OutlineDarkSuccess = Template.bind({});
+OutlineDarkSuccess.args = {
+    children: 'Success',
     variant: 'outline',
+    color: 'success',
 };
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+OutlineDarkSuccess.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineDarkError = Template.bind({});
+OutlineDarkError.args = {
+    children: 'Error',
+    variant: 'outline',
+    color: 'error',
+};
+OutlineDarkError.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Disabled = Template.bind({});
 Disabled.args = {
