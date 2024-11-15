@@ -97,7 +97,8 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <Button
                             fullwidth
-                            variant="outlineGreen"
+                            variant="outline"
+                            color="success"
                             onClick={cancelHandler}
                         >
                             {t('Send')}
@@ -110,14 +111,16 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
-                                variant="outlineRed"
+                                variant="outline"
+                                color="error"
                                 data-testid="RatingCard.Close"
                                 onClick={cancelHandler}
                             >
                                 {t('Close')}
                             </Button>
                             <Button
-                                variant="outlineGreen"
+                                variant="outline"
+                                color="success"
                                 data-testid="RatingCard.Send"
                                 onClick={acceptHandler}
                             >

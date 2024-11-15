@@ -85,58 +85,60 @@
 }
 
 .outline {
-    border: 1px solid var(--color-state-accent);
-    color: var(--color-state-accent);
-    background: var(--color-bg-light);
+    &.normal {
+        border: 1px solid var(--color-state-accent);
+        color: var(--color-state-accent);
+        background: var(--color-bg-light);
 
-    &:hover {
-        color: var(--color-text-inverted);
-        background-color: var(--color-state-accent);
-        box-shadow: 0 4px 12px 0 var(--shadow-dark);
-
-        .addonLeft svg, .addonRight svg {
+        &:hover {
             color: var(--color-text-inverted);
+            background-color: var(--color-state-accent);
+            box-shadow: 0 4px 12px 0 var(--shadow-dark);
+
+            .addonLeft svg, .addonRight svg {
+                color: var(--color-text-inverted);
+            }
         }
     }
-}
 
-.outlineRed {
-    border: 1px solid var(--color-state-cancel);
-    color: var(--color-state-cancel);
-    background: var(--color-bg-light);
-    outline: none;
+    &.error {
+        border: 1px solid var(--color-state-cancel);
+        color: var(--color-state-cancel);
+        background: var(--color-bg-light);
+        outline: none;
 
-    &:hover {
-        background-color: var(--color-state-cancel);
-        color: var(--color-text-inverted);
-
-        .addonLeft svg, .addonRight svg {
+        &:hover {
+            background-color: var(--color-state-cancel);
             color: var(--color-text-inverted);
+
+            .addonLeft svg, .addonRight svg {
+                color: var(--color-text-inverted);
+            }
+        }
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 2px var(--color-state-cancel);
         }
     }
-    &:focus,
-    &:active {
-        box-shadow: 0 0 0 2px var(--color-state-cancel);
-    }
-}
 
-.outlineGreen {
-    border: 1px solid var(--color-state-save);
-    color: var(--color-state-save);
-    background: var(--color-bg-light);
-    outline: none;
+    &.success {
+        border: 1px solid var(--color-state-save);
+        color: var(--color-state-save);
+        background: var(--color-bg-light);
+        outline: none;
 
-    &:hover {
-        background-color: var(--color-state-save);
-        color: var(--color-text-inverted);
-
-        .addonLeft svg, .addonRight svg {
+        &:hover {
+            background-color: var(--color-state-save);
             color: var(--color-text-inverted);
+
+            .addonLeft svg, .addonRight svg {
+                color: var(--color-text-inverted);
+            }
         }
-    }
-    &:focus,
-    &:active {
-        box-shadow: 0 0 0 2px var(--color-state-save);
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 2px var(--color-state-save);
+        }
     }
 }
 

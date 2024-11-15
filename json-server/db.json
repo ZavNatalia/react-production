@@ -1149,7 +1149,8 @@
             "password": "456",
             "roles": ["USER"],
             "features": {
-                "isArticleRatingEnabled": false
+                "isArticleRatingEnabled": true,
+                "isAppRedesigned": true
             },
             "jsonSettings": {
                 "theme": "app_light_theme",
@@ -1208,7 +1209,7 @@
             "firstname": "Vasya",
             "lastname": "Petrov",
             "age": 26,
-            "currency": "KZT",
+            "currency": "EUR",
             "country": "Kazakhstan",
             "city": "Astana",
             "username": "Vasya I",
@@ -1320,6 +1321,13 @@
             "profileId": "1",
             "rate": 4,
             "id": "A_kGvn-"
+        },
+        {
+            "userId": "2",
+            "profileId": "2",
+            "rate": 5,
+            "feedback": "",
+            "id": "CRyBF1q"
         }
     ]
 }
