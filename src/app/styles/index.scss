@@ -4,6 +4,10 @@
 @import "./themes/dark";
 @import "./themes/green";
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     font: var(--font-m-v2);
     color: var(--primary-color);
@@ -22,7 +26,6 @@ body {
     color: var(--color-text-primary);
     padding: 0;
     width: 100%;
-    overflow-y: scroll;
 }
 
 .content-page {
