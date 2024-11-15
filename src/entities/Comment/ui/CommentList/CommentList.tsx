@@ -36,7 +36,7 @@ export const CommentList = memo((props: CommentListProps) => {
                     />
                 ))
             ) : (
-                <Text text={t('No comments')} />
+                <Text text={t('No comments')} variant="hint" />
             )}
         </VStack>
     );

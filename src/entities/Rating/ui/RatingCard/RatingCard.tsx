@@ -3,7 +3,7 @@ import { memo, useCallback, useState } from 'react';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { StarRating } from '@/shared/ui/redesigned/StarRating';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Input } from '@/shared/ui/redesigned/Input';
@@ -38,17 +38,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [feedback, setFeedback] = useState('');
     const isMobile = useDevice();
 
-    const onSelectStarts = useCallback(
-        (selectedStarsCount: number) => {
-            setStartsCount(selectedStarsCount);
-            if (hasFeedback) {
-                setIsModalOpen(true);
-            } else {
-                onAccept?.(selectedStarsCount);
-            }
-        },
-        [hasFeedback, onAccept],
-    );
+    const onSelectStarts = (selectedStarsCount: number) => {
+        setStartsCount(selectedStarsCount);
+        if (hasFeedback) {
+            setIsModalOpen(true);
+        } else {
+            onAccept?.(selectedStarsCount);
+        }
+    };
 
     const acceptHandler = useCallback(() => {
         setIsModalOpen(false);
@@ -78,7 +75,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
             className={classNames(cls.RatingCard, {}, [className])}
             border="roundBorder"
             data-testid="RatingCard"
-            variant="dark"
+            variant="light"
             padding="24"
         >
             <VStack align="center" gap="16" max>
@@ -86,7 +83,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                     title={startsCount ? t('Thanks for the rating!') : title}
                 />
                 <StarRating
-                    size={24}
+                    size={28}
                     selectedStars={startsCount}
                     onSelect={onSelectStarts}
                 />

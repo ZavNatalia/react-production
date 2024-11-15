@@ -27,8 +27,8 @@ export const Icon = memo((props: IconProps) => {
         Svg,
         className,
         variant = 'normal',
-        width = 32,
-        height = 32,
+        width = 28,
+        height = 28,
         clickable,
         ...otherProps
     } = props;

@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+    gap: 4px;
 
     &:focus,
     &:active {
@@ -16,6 +17,9 @@
         .addonLeft svg, .addonRight svg {
             color: var(--color-text-inverted);
         }
+    }
+    &:active {
+        opacity: 0.7;
     }
 }
 
