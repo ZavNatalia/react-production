@@ -7,9 +7,9 @@ import { Sidebar } from '@/widgets/Sidebar';
 import { Navbar } from '@/widgets/Navbar';
 import { AppRouter } from './providers/router';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { PageLoader } from '@/widgets/PageLoader';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { MainLayout } from '@/shared/layouts/MainLayout';
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
 
 const App = () => {
     const { theme } = useTheme();
@@ -21,7 +21,7 @@ const App = () => {
     }, [dispatch]);
 
     if (!mounted) {
-        return <PageLoader />;
+        return <AppLoaderLayout />;
     }
 
     return (

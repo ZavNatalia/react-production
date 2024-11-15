@@ -1,0 +1,17 @@
+.AppLoaderLayout {
+  background-color: var(--color-bg-default);
+  padding-right: 26px;
+  padding-left: 16px;
+}
+
+.header {
+  margin-top: 16px;
+}
+
+.sidebar {
+  box-shadow: 0 2px 10px 0 var(--shadow-default);
+  background: var(--color-bg-dark);
+  height: calc(100vh - 36px);
+  width: var(--sidebar-width);
+  border-radius: 12px;
+}
