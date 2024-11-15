@@ -38,14 +38,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [feedback, setFeedback] = useState('');
     const isMobile = useDevice();
 
-    const onSelectStarts = (selectedStarsCount: number) => {
-        setStartsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    };
+    const onSelectStarts = useCallback(
+        (selectedStarsCount: number) => {
+            setStartsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandler = useCallback(() => {
         setIsModalOpen(false);
@@ -94,7 +97,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <Button
                             fullwidth
-                            variant="outline"
+                            variant="outlineGreen"
                             onClick={cancelHandler}
                         >
                             {t('Send')}
@@ -107,14 +110,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
-                                variant="filled"
+                                variant="outlineRed"
                                 data-testid="RatingCard.Close"
                                 onClick={cancelHandler}
                             >
                                 {t('Close')}
                             </Button>
                             <Button
-                                variant="outline"
+                                variant="outlineGreen"
                                 data-testid="RatingCard.Send"
                                 onClick={acceptHandler}
                             >

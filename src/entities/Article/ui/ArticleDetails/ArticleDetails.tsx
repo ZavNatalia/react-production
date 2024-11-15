@@ -100,7 +100,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                 title={t('An error occurred while loading the article')}
             />
         );
-    } else {
+    } else if (article) {
         content = (
             <>
                 <div className={cls.headerImgWrapper}>
@@ -142,6 +142,8 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                 {article?.blocks.map(renderBlock)}
             </>
         );
+    } else {
+        content = null;
     }
 
     return (

@@ -32,7 +32,6 @@ export const StarRating = memo((props: StarRatingProps) => {
     };
 
     const onClick = (starsCount: number) => () => {
-        console.log('starsCount', starsCount);
         if (!isSelected) {
             onSelect?.(starsCount);
             setCurrentStarsCount(starsCount);
@@ -54,9 +53,10 @@ export const StarRating = memo((props: StarRatingProps) => {
                         ],
                     )}
                     Svg={StarIcon}
-                    key={starNumber}
+                    key={`${starNumber}stars`}
                     width={size}
                     height={size}
+                    clickable={!isSelected}
                     data-testid={`StarRating.${starNumber}`}
                     data-selected={currentStarsCount >= starNumber}
                     onMouseLeave={onLeave}

@@ -34,8 +34,11 @@
                 },
                 {
                     "id": "4",
-                    "type": "CODE",
-                    "code": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+                    "type": "TEXT",
+                    "title": "",
+                    "paragraphs": [
+                        "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. \n\n\nProperty 'toUpperCase' does not exist on type 'string | number'.\nProperty 'toUpperCase' does not exist on type 'number'."
+                    ]
                 },
                 {
                     "id": "5",
@@ -1133,7 +1136,7 @@
                 "isAppRedesigned": true
             },
             "jsonSettings": {
-                "theme": "app_dark_theme",
+                "theme": "app_light_theme",
                 "isFirstVisit": true,
                 "settingsPageHasBeenOpen": false,
                 "isArticlesPageWasOpened": true
@@ -1269,6 +1272,39 @@
             "feedback": "Не хватило примеров в статье",
             "userId": "3",
             "articleId": "3"
+        },
+        {
+            "userId": "1",
+            "articleId": "2",
+            "rate": 5,
+            "feedback": "feedback",
+            "id": "_dcC4kU"
+        },
+        {
+            "userId": "1",
+            "articleId": "1",
+            "rate": 4,
+            "id": "HB7ER2C"
+        },
+        {
+            "userId": "1",
+            "articleId": "11",
+            "rate": 4,
+            "id": "hT9zsWs"
+        },
+        {
+            "userId": "1",
+            "articleId": "18",
+            "rate": 3,
+            "feedback": "",
+            "id": "HapO38q"
+        },
+        {
+            "userId": "1",
+            "articleId": "18",
+            "rate": 4,
+            "feedback": "",
+            "id": "r7-cLVz"
         }
     ],
     "profile-ratings": [
@@ -1278,6 +1314,12 @@
             "feedback": "Хорошие статьи у автора",
             "userId": "1",
             "profileId": "2"
+        },
+        {
+            "userId": "1",
+            "profileId": "1",
+            "rate": 4,
+            "id": "A_kGvn-"
         }
     ]
 }
