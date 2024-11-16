@@ -56,27 +56,17 @@
     }
 }
 
-.drawerOld {
-    .sheet {
-        background-color: var(--bg-color);
-        color: var(--primary-color);
-    }
-}
-
-.drawerNew {
+.drawer {
     .sheet {
         background-color: var(--color-bg-light);
         color: var(--color-text-primary);
+        z-index: var(--modal-z-index);
+        position: fixed;
+        left: 2vw;
+        height: calc(100vh + 100px);
+        width: 96vw;
+        border-radius: 12px 12px 0;
+        touch-action: none;
+        padding: 12px;
     }
-}
-
-.sheet {
-    z-index: var(--modal-z-index);
-    position: fixed;
-    left: 2vw;
-    height: calc(100vh + 100px);
-    width: 96vw;
-    border-radius: 12px 12px 0;
-    touch-action: none;
-    padding: 12px;
 }

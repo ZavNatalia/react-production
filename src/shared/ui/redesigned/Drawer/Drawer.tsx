@@ -100,7 +100,7 @@ const DrawerContent = memo((props: DrawerProps) => {
                 className={classNames(cls.Drawer, mods, [
                     className,
                     theme,
-                    cls.drawerNew,
+                    cls.drawer,
                 ])}
             >
                 <Overlay onClick={close} />

@@ -12,27 +12,17 @@
     align-items: center;
 }
 
-.modalOld {
-    .content {
-        background-color: var(--bg-color);
-        color: var(--primary-color);
-    }
-}
-
-.modalNew {
+.modal {
     .content {
         background-color: var(--color-bg-light);
         color: var(--color-text-primary);
+        padding: 20px;
+        transition: 0.3s transform;
+        transform: scale(0.5);
+        max-width: 60%;
+        border-radius: var(--radius-l);
+        z-index: var(--modal-z-index);
     }
-}
-
-.content {
-    padding: 20px;
-    transition: 0.3s transform;
-    transform: scale(0.5);
-    max-width: 60%;
-    border-radius: var(--radius-l);
-    z-index: var(--modal-z-index);
 }
 
 .opened {
