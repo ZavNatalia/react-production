@@ -1,0 +1,16 @@
+.Code {
+    border: 2px solid var(--code-border);
+    padding: 26px;
+    position: relative;
+    background: var(--code-bg);
+    color: var(--color-text-primary);
+    overflow: auto;
+    border-radius: var(--radius-xl);
+    white-space: break-spaces;
+}
+
+.copyIconWrapper {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}

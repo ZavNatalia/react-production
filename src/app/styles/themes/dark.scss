@@ -8,25 +8,39 @@
     --box-shadow: rgb(255 255 255 / 20%);
 
     // redesigned
-    --dark-bg-v2: #090f11;
-    --bg-v2: #0c1214;
-    --light-bg-v2: #151c1f;
-    --text-v2: #dbdbdb;
-    --hint-v2: #555;
-    --cancel-v2: #d95757;
-    --save-v2: #6cd98b;
-    --icon-v2: #74a2b2;
-    --accent-v2: #5ed3f3;
-    --accent-bg-v2: rgba(94, 211, 243, 0.1);
-    --box-shadow-v2: rgba(85, 85, 85, 0.2);
+
+    /* Background colors */
+    --color-bg-dark: #1c253c;
+    --color-bg-default: #293349;
+    --color-bg-light: #35415c;
+    --color-bg-accent: #3b569d;
+
+    /* Text colors */
+    --color-text-primary: #dbdbdb;
+    --color-text-inverted: #2b344d;
+    --color-text-hint: #8a8ea1;
+
+    /* State colors */
+    --color-state-cancel: #f18181;
+    --color-state-save: #58e3a7;
+    --color-state-accent: #7fa4f5;
+
+    /* Special colors */
+    --color-icon: #a0c2f8;
+
+    /* Shadows */
+    --shadow-default: rgb(0 0 0 / 20%);
+    --shadow-dark: rgb(0 0 0 / 50%);
+    --shadow-accent: rgb(94 140 241 / 70%);
 
     // skeleton
-    --skeleton-bg: #1c1d1e;
-    --skeleton-color: #3d454d;
+    --skeleton-bg: #2e384e;
+    --skeleton-color: #49597d;
     --skeleton-shadow: rgb(255 255 255 / 20%);
 
     // code
-    --code-bg: #363639;
+    --code-bg: #212838;
+    --code-border: #0c173b;
 
     // card
     --card-bg: #263442;
@@ -37,15 +51,15 @@
     --popover-border: #88888d;
 
     // scrollbar
-    --scroll-track: #4b4b54;
-    --scroll-thumb: #6a6a72;
-    --scroll-thumb-hover: #83839d;
+    --scroll-track: #293349;
+    --scroll-thumb: #4f5d7e;
+    --scroll-thumb-hover: #566da3;
 
     // view selector
     --selector-bg: #4d658a;
 
     // star
     --star-normal: #6a6a72;
-    --star-selected: rgb(39 155 239 / 90%);
+    --star-selected: #224cac;
     --star-border: rgba(0 0 0 / 30%);
 }

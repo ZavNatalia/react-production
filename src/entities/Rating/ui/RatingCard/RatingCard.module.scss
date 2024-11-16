@@ -1,7 +1,14 @@
-.input {
+.RatingCard {
     width: 100%;
-}
+    max-width: 500px;
+    margin: 0 auto;
 
-.modal {
-    width: 500px;
+    .input {
+        width: 100%;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: 460px;
+    }
 }

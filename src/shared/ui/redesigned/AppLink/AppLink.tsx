@@ -3,7 +3,7 @@ import { LinkProps, NavLink } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
 
-export type AppLinkVariant = 'primary' | 'red';
+export type AppLinkVariant = 'primary' | 'red' | 'filledBtn';
 
 interface AppLinkProps extends LinkProps {
     className?: string;
@@ -19,6 +19,7 @@ export const AppLink = forwardRef(
             className,
             children,
             variant = 'primary',
+            target = '_self',
             activeClassName = '',
             ...otherProps
         } = props;
@@ -27,6 +28,7 @@ export const AppLink = forwardRef(
             <NavLink
                 ref={ref}
                 to={to}
+                target={target}
                 className={({ isActive }) =>
                     classNames(cls.AppLink, { [activeClassName]: isActive }, [
                         className,

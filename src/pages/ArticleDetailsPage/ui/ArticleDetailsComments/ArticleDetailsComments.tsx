@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, Suspense, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { CommentList } from '@/entities/Comment';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -48,11 +48,7 @@ export const ArticleDetailsComments = memo(
 
         return (
             <VStack className={classNames('', {}, [className])} gap="16" max>
-                <Text
-                    className={cls.title}
-                    size={TextSize.L}
-                    title={t('Comments')}
-                />
+                <Text className={cls.title} size="l" title={t('Comments')} />
                 <Suspense fallback={<Skeleton width={600} height={100} />}>
                     <AddCommentForm onSendComment={onSendComment} />
                 </Suspense>

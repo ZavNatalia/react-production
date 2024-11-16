@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleList } from '@/entities/Article';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { useArticlesRecommendationsList } from '../../api/articleRecommendationsApi';
@@ -19,7 +19,7 @@ export const ArticleRecommendationsList = memo(
             isLoading,
             data: articles,
             error,
-        } = useArticlesRecommendationsList(6);
+        } = useArticlesRecommendationsList(4);
 
         if (isLoading || error || !articles) {
             return null;
@@ -28,13 +28,15 @@ export const ArticleRecommendationsList = memo(
         return (
             <VStack
                 data-testid="ArticleRecommendationsList"
-                gap="16"
+                gap="8"
                 max
-                className={classNames('', {}, [className])}
+                className={classNames(cls.ArticleRecommendationsList, {}, [
+                    className,
+                ])}
             >
                 <Text
                     className={cls.title}
-                    size={TextSize.L}
+                    size="l"
                     title={t('Recommendations')}
                 />
                 <ArticleList

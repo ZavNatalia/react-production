@@ -3,6 +3,10 @@
     width: 100%;
 }
 
-.link .NotificationItem:hover {
-    background-color: var(--light-bg-v2);
+.link .NotificationItem {
+    background-color: var(--color-bg-light);
+
+    &:hover {
+        background-color: var(--color-bg-accent);
+    }
 }

@@ -1,8 +1,7 @@
 import { memo, ReactNode, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Card } from '../Card/Card';
-import cls from './Tabs.module.scss';
 import { Flex, FlexDirection } from '../Stack/Flex/Flex';
+import { Button } from '../Button';
 
 export interface TabItem {
     value: string;
@@ -31,21 +30,19 @@ export const Tabs = memo((props: TabsProps) => {
             className={classNames('', {}, [className])}
             direction={direction}
             align="start"
+            gap="4"
         >
             {tabs.map((tab) => {
                 const isSelected = tab.value === value;
                 return (
-                    <Card
-                        className={classNames(cls.tab, {
-                            [cls.selected]: isSelected,
-                        })}
+                    <Button
                         key={tab.value}
-                        variant={tab.value === value ? 'light' : 'normal'}
-                        border="roundBorder"
+                        size="s"
+                        variant={isSelected ? 'outline' : 'transparent'}
                         onClick={onClickHandle(tab)}
                     >
                         {tab.content}
-                    </Card>
+                    </Button>
                 );
             })}
         </Flex>

@@ -1,31 +1,3 @@
 .Navbar {
-    width: 100%;
-    height: var(--navbar-height);
-    background-color: var(--inverted-bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 20px;
-}
-
-.links,
-.actions {
-    margin-left: auto;
-}
-
-.mainLink {
-    padding-right: 15px;
-}
-
-.appName {
-    font: var(--font-xl);
-    text-transform: uppercase;
-    margin-left: 16px;
-    flex: 1;
-}
-
-// redesigned
-
-.NavbarV2 {
-    padding: 16px;
+    padding-top: 16px;
 }

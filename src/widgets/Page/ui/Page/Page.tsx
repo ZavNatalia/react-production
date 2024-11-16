@@ -13,16 +13,18 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
-import { toggleFeatures } from '@/shared/lib/features';
+
+export type PageVariant = 'transparent' | 'filled';
 
 interface PageProps extends TestProps {
-    className?: string;
     children: ReactNode;
+    className?: string;
+    variant?: PageVariant;
     onScrollEnd?: () => void;
 }
 
 export const Page = (props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const { className, children, variant = 'transparent', onScrollEnd } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -33,11 +35,7 @@ export const Page = (props: PageProps) => {
 
     useInfiniteScroll({
         triggerRef,
-        wrapperRef: toggleFeatures({
-            name: 'isAppRedesigned',
-            off: () => wrapperRef,
-            on: () => undefined,
-        }),
+        wrapperRef,
         callback: onScrollEnd,
     });
 
@@ -56,15 +54,7 @@ export const Page = (props: PageProps) => {
 
     return (
         <main
-            className={classNames(
-                toggleFeatures({
-                    name: 'isAppRedesigned',
-                    on: () => cls.PageV2,
-                    off: () => cls.Page,
-                }),
-                {},
-                [className],
-            )}
+            className={classNames(cls.PageV2, {}, [className, cls[variant]])}
             ref={wrapperRef}
             onScroll={onScroll}
             data-testid={props['data-testid'] ?? 'Page'}

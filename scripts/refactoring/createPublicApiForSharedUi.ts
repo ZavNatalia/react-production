@@ -31,7 +31,6 @@ componentsDirs?.forEach((directory) => {
         const file = directory.createSourceFile(indexFilePath, sourceCode, {
             overwrite: true,
         });
-        console.log('file', file);
         file.save();
     }
 });

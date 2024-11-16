@@ -145,14 +145,13 @@ Webpack - ./config/build
 
 пример скрипта:
 
-`$ npx ts-node ./scripts/remove-feature.ts isCounterEnabled on`
+`$ npx ts-node ./scripts/remove-feature.ts isArticleRatingEnabled on`
 
 
 ## Сущности (entities)
 
 - [Article](/src/entities/Article)
 - [Comment](/src/entities/Comment)
-- [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
 - [Currency](/src/entities/Currency)
 - [Notification](/src/entities/Notification)

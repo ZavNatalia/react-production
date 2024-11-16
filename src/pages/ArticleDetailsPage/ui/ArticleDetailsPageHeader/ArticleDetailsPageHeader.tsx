@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Button } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/redesigned/Stack';
@@ -39,7 +39,7 @@ export const ArticleDetailsPageHeader = memo(
             >
                 <Button onClick={onBackToList}>{t('Back to the list')}</Button>
                 {canEdit && (
-                    <Button onClick={onEditArticle}>
+                    <Button variant="filled" onClick={onEditArticle}>
                         {t('Edit the article')}
                     </Button>
                 )}

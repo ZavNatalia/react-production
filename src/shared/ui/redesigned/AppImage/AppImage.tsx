@@ -19,7 +19,13 @@ export const AppImage = memo((props: AppImageProps) => {
         src,
         alt = 'image',
         fallback,
-        errorFallback,
+        errorFallback = (
+            <img
+                className={classNames('', {}, [className])}
+                src="https://www.shutterstock.com/image-vector/image-icon-600nw-211642900.jpg"
+                alt={alt}
+            />
+        ),
         ...otherProps
     } = props;
     const [isLoading, seIsLoading] = useState(true);

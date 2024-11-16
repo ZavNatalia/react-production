@@ -1,29 +1,35 @@
-.title {
-    font: var(--font-l-v2);
-    color: var(--text-v2);
-}
+.primary {
+    .title {
+        font: var(--font-l);
+        color: var(--color-text-primary);
+    }
 
-.text {
-    color: var(--text-v2);
+    .text {
+        color: var(--color-text-primary);
+    }
 }
 
 .error {
     .title {
-        color: var(--red-light);
+        color: var(--color-state-cancel);
     }
 
     .text {
-        color: var(--red-dark);
+        color: var(--color-state-cancel);
     }
 }
 
 .accent {
-    .title {
-        color: var(--accent-v2);
-    }
-
+    .title,
     .text {
-        color: var(--accent-v2);
+        color: var(--color-state-accent);
+    }
+}
+
+.hint {
+    .title,
+    .text {
+        color: var(--color-text-hint);
     }
 }
 
@@ -41,30 +47,30 @@
 
 .size_s {
     .title {
-        font: var(--font-m-v2);
+        font: bold var(--font-m);
     }
 
     .text {
-        font: var(--font-s-v2);
+        font: var(--font-s);
     }
 }
 
 .size_m {
     .title {
-        font: var(--font-l-v2);
+        font: bold var(--font-l);
     }
 
     .text {
-        font: var(--font-m-v2);
+        font: var(--font-m);
     }
 }
 
 .size_l {
     .title {
-        font: var(--font-xl-v2);
+        font: bold var(--font-xl);
     }
 
     .text {
-        font: var(--font-l-v2);
+        font: var(--font-l);
     }
 }

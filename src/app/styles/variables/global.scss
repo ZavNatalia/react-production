@@ -1,37 +1,38 @@
 :root {
     --font-family-main: "DejaVu Sans Mono", "Times New Roman", serif;
-    --font-family-text-v2: "Nunito Sans", sans-serif;
-    --font-family-title-v2: "Roboto", sans-serif;
+    --font-family-text: "Nunito Sans", sans-serif;
+    --font-family-title: "Roboto", sans-serif;
 
     // xs
-    --font-size-xs: 12px;
+    --font-size-xs: 13px;
     --font-line-xs: 20px;
-    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-text);
 
     // s
-    --font-size-s: 14px;
-    --font-line-s: 22px;
-    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+    --font-size-s: 15px;
+    --font-line-s: 20px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-text);
 
     // m
     --font-size-m: 16px;
-    --font-line-m: 24px;
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-line-m: 22px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-text);
 
     // l
     --font-size-l: 22px;
-    --font-line-l: 30px;
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    --font-line-l: 28px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-title);
 
     // xl
     --font-size-xl: 30px;
-    --font-line-xl: 38px;
-    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+    --font-line-xl: 40px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-title);
 
     // Sizes
     --navbar-height: 50px;
-    --sidebar-width: 264px;
+    --sidebar-width: 186px;
     --sidebar-width-collapsed: 80px;
+    --rightbar-width: 110px;
 
     // z - index
     --modal-z-index: 1000;
@@ -45,21 +46,5 @@
     // Radius
     --radius-m: 4px;
     --radius-l: 12px;
-
-    // redesigned
-
-    // xs
-    --font-xs-v2: var(--font-size-xs) / var(--font-line-xs) var(--font-family-text-v2);
-
-    // s
-    --font-s-v2: var(--font-size-s) / var(--font-line-s) var(--font-family-text-v2);
-
-    // m
-    --font-m-v2: var(--font-size-m) / var(--font-line-m) var(--font-family-text-v2);
-
-    // l
-    --font-l-v2: var(--font-size-l) / var(--font-line-l) var(--font-family-title-v2);
-
-    // xl
-    --font-xl-v2: var(--font-size-xl) / var(--font-line-xl) var(--font-family-title-v2);
+    --radius-xl: 24px;
 }

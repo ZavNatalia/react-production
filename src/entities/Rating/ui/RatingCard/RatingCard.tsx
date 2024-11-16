@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
-import { Card } from '@/shared/ui/deprecated/Card';
+import { Card } from '@/shared/ui/redesigned/Card';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { StarRating } from '@/shared/ui/redesigned/StarRating';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Modal } from '@/shared/ui/deprecated/Modal';
+import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Input } from '@/shared/ui/redesigned/Input';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import cls from './RatingCard.module.scss';
 
 interface RatingCardProps {
@@ -75,16 +75,18 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     return (
         <Card
-            className={classNames('', {}, [className])}
-            max
+            className={classNames(cls.RatingCard, {}, [className])}
+            border="roundBorder"
             data-testid="RatingCard"
+            variant="light"
+            padding="24"
         >
-            <VStack align="center" gap="8" max>
+            <VStack align="center" gap="16" max>
                 <Text
                     title={startsCount ? t('Thanks for the rating!') : title}
                 />
                 <StarRating
-                    size={24}
+                    size={28}
                     selectedStars={startsCount}
                     onSelect={onSelectStarts}
                 />
@@ -95,7 +97,8 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <Button
                             fullwidth
-                            theme={ButtonTheme.OUTLINE_RED}
+                            variant="outline"
+                            color="success"
                             onClick={cancelHandler}
                         >
                             {t('Send')}
@@ -108,13 +111,16 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
-                                theme={ButtonTheme.OUTLINE_RED}
+                                variant="outline"
+                                color="error"
                                 data-testid="RatingCard.Close"
                                 onClick={cancelHandler}
                             >
                                 {t('Close')}
                             </Button>
                             <Button
+                                variant="outline"
+                                color="success"
                                 data-testid="RatingCard.Send"
                                 onClick={acceptHandler}
                             >

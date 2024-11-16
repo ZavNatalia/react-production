@@ -6,7 +6,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { profileActions } from '../../model/slice/profileSlice';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
@@ -44,12 +44,12 @@ export const EditableProfilePageHeader = memo(
                 justify="between"
                 max
             >
-                <Text title={t('Profile')} />
+                <Text title={t('Profile')} size="l" variant="accent" />
                 {canEdit && (
                     <div>
                         {readonly ? (
                             <Button
-                                theme={ButtonTheme.OUTLINE}
+                                variant="filled"
                                 disabled={!!error}
                                 data-testid="EditableProfilePageHeader.EditButton"
                                 onClick={onEdit}
@@ -59,14 +59,16 @@ export const EditableProfilePageHeader = memo(
                         ) : (
                             <HStack gap="8">
                                 <Button
-                                    theme={ButtonTheme.OUTLINE_RED}
+                                    variant="outline"
+                                    color="error"
                                     data-testid="EditableProfilePageHeader.CancelButton"
                                     onClick={onCancelEdit}
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
-                                    theme={ButtonTheme.OUTLINE}
+                                    variant="outline"
+                                    color="success"
                                     data-testid="EditableProfilePageHeader.SaveButton"
                                     onClick={onSave}
                                 >

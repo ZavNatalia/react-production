@@ -4,7 +4,6 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { createReducerManager } from '../config/reducerManager';
 import { $api } from '@/shared/api/api';
@@ -18,7 +17,6 @@ export function createReduxStore(
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
-        counter: counterReducer,
         user: userReducer,
         scrollRestoration: scrollRestorationReducer,
         [rtkApi.reducerPath]: rtkApi.reducer,

@@ -7,6 +7,8 @@ import { HStack } from '../../../../redesigned/Stack';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
 import cls from './ListBox.module.scss';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
+import { Icon } from '../../../Icon';
 
 export interface ListBoxItem<T extends string> {
     value: string;
@@ -44,23 +46,27 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
     }, [items, value]);
 
     return (
-        <HStack
-            className={classNames(cls.ListBox, { [cls.readonly]: readonly }, [
-                className,
-                popupCls.popup,
-            ])}
-            gap="8"
-        >
+        <HStack gap="8">
             {label && <span className={cls.label}>{label}</span>}
 
             <HListBox
                 disabled={readonly}
                 as="div"
+                className={classNames(
+                    cls.ListBox,
+                    { [cls.readonly]: readonly },
+                    [className, popupCls.popup],
+                )}
                 value={value}
                 onChange={onChange}
             >
                 <HListBox.Button as="div" className={cls.trigger}>
-                    <Button variant="filled" disabled={readonly}>
+                    <Button
+                        variant="filled"
+                        size="s"
+                        disabled={readonly}
+                        addonRight={<Icon Svg={ArrowIcon} />}
+                    >
                         {selectedItem?.content ?? defaultValue}
                     </Button>
                 </HListBox.Button>

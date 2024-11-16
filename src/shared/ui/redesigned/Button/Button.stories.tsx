@@ -30,7 +30,12 @@ Outline.args = {
     children: 'Text',
     variant: 'outline',
 };
-
+export const OutlineSuccess = Template.bind({});
+OutlineSuccess.args = {
+    children: 'Success',
+    variant: 'outline',
+    color: 'success',
+};
 export const OutlineSizeL = Template.bind({});
 OutlineSizeL.args = {
     children: 'Text',
@@ -38,42 +43,21 @@ OutlineSizeL.args = {
     size: 'l',
 };
 
-export const OutlineSizeXL = Template.bind({});
-OutlineSizeXL.args = {
-    children: 'Text',
+export const OutlineDarkSuccess = Template.bind({});
+OutlineDarkSuccess.args = {
+    children: 'Success',
     variant: 'outline',
-    size: 'xl',
+    color: 'success',
 };
+OutlineDarkSuccess.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
-    children: 'Text',
+export const OutlineDarkError = Template.bind({});
+OutlineDarkError.args = {
+    children: 'Error',
     variant: 'outline',
+    color: 'error',
 };
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Square = Template.bind({});
-Square.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-};
-
-export const SquareSizeL = Template.bind({});
-SquareSizeL.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-    size: 'l',
-};
-
-export const SquareSizeXl = Template.bind({});
-SquareSizeXl.args = {
-    children: '>',
-    variant: 'outline',
-    square: true,
-    size: 'xl',
-};
+OutlineDarkError.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Disabled = Template.bind({});
 Disabled.args = {

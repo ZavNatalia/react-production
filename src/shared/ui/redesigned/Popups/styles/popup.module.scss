@@ -4,15 +4,15 @@
 }
 
 .menu {
-    border-radius: 18px;
+    border-radius: var(--radius-l);
     overflow: hidden;
-    background-color: var(--dark-bg-v2);
-    box-shadow: 0 0 8px 0 var(--box-shadow-v2);
+    background-color: var(--color-bg-dark);
+    box-shadow: 0 4px 12px 0 var(--shadow-dark);
 }
 
 .active {
-    background-color: var(--light-bg-v2);
-    color: var(--accent-v2);
+    color: var(--color-state-accent);
+    background-color: var(--color-bg-default);
 }
 
 .optionsBottomLeft {
@@ -39,25 +39,19 @@
     opacity: 0.5;
 }
 
-.readonly {
-    .label {
-        opacity: 0.8;
-    }
-}
-
 .selected {
-    color: var(--accent-v2);
-    background-color: var(--accent-bg-v2);
+    color: var(--color-state-accent);
+    background-color: var(--color-bg-dark);
+    font-weight: bold;
 }
 
 .trigger {
     background: none;
     margin: 0;
-    padding: 0;
     border: none;
     cursor: pointer;
-}
 
-button:focus {
-    outline: none;
+    &:active {
+        opacity: 0.7;
+    }
 }

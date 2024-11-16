@@ -1,51 +1,75 @@
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import React, {
+    ButtonHTMLAttributes,
+    ForwardedRef,
+    forwardRef,
+    ReactNode,
+} from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonVariant = 'clear' | 'outline' | 'filled';
+export type ButtonVariant = 'clear' | 'outline' | 'filled' | 'transparent';
 
-export type ButtonSize = 'm' | 'l' | 'xl';
+export type ButtonSize = 's' | 'm' | 'l';
+export type ButtonColor = 'normal' | 'success' | 'error';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     variant?: ButtonVariant;
-    square?: boolean;
+    color?: ButtonColor;
     size?: ButtonSize;
     disabled?: boolean;
     children?: ReactNode;
     fullwidth?: boolean;
+    addonLeft?: ReactNode;
+    addonRight?: ReactNode;
 }
 
-export const Button = memo((props: ButtonProps) => {
-    const {
-        className,
-        children,
-        variant = 'outline',
-        square,
-        disabled,
-        size = 'm',
-        fullwidth,
-        ...otherProps
-    } = props;
+const mapSizeToClass: Record<ButtonSize, string> = {
+    s: 'size_s',
+    m: 'size_m',
+    l: 'size_l',
+};
 
-    const mods: Mods = {
-        [cls.square]: square,
-        [cls.disabled]: disabled,
-        [cls.fullwidth]: fullwidth,
-    };
+export const Button = forwardRef(
+    (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+        const {
+            className,
+            children,
+            variant = 'clear',
+            disabled,
+            color = 'normal',
+            size = 'm',
+            fullwidth,
+            addonLeft,
+            addonRight,
+            ...otherProps
+        } = props;
 
-    return (
-        <button
-            type="button"
-            className={classNames(cls.Button, mods, [
-                className,
-                cls[variant],
-                cls[size],
-            ])}
-            disabled={disabled}
-            {...otherProps}
-        >
-            {children}
-        </button>
-    );
-});
+        const mods: Mods = {
+            [cls.disabled]: disabled,
+            [cls.fullwidth]: fullwidth,
+            [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
+        };
+
+        const sizeClass = mapSizeToClass[size];
+
+        return (
+            <button
+                type="button"
+                className={classNames(cls.Button, mods, [
+                    className,
+                    cls[variant],
+                    cls[sizeClass],
+                    cls[color],
+                ])}
+                disabled={disabled}
+                {...otherProps}
+                ref={ref}
+            >
+                <div className={cls.addonLeft}>{addonLeft}</div>
+                {children}
+                <div className={cls.addonRight}>{addonRight}</div>
+            </button>
+        );
+    },
+);

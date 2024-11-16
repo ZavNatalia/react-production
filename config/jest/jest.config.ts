@@ -22,10 +22,12 @@ export default {
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '\\.(png|jpg|jpeg|svg)': path.resolve(
+            __dirname,
+            'jestEmptyComponent.tsx',
+        ),
         '^@/(.*)$': '<rootDir>/src/$1',
     },
-
     reporters: [
         'default',
         [
@@ -38,6 +40,7 @@ export default {
             },
         ],
     ],
+    transformIgnorePatterns: ['/node_modules/(?!axios)'],
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -46,6 +49,8 @@ export default {
 
     // The directory where Jest should output its coverage files
     // coverageDirectory: undefined,
+
+    // An array of regexp pattern strings used to skip coverage collection
 
     // Indicates which provider should be used to instrument code for coverage
     // coverageProvider: "babel",
@@ -76,11 +81,12 @@ export default {
     // A path to a module which exports an async function that is triggered once after all test suites
     // globalTeardown: undefined,
 
-    // A set of global variables that need to be available in all test environments
-    // globals: {},
-
     // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
+
+    // An array of directory names to be searched recursively up from the requiring module's location
+
+    // An array of file extensions your modules use
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
@@ -115,6 +121,8 @@ export default {
     // Automatically restore mock state and implementation before every test
     // restoreMocks: false,
 
+    // The root directory that Jest should scan for tests and modules within
+
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -135,11 +143,15 @@ export default {
     // A list of paths to snapshot serializer modules Jest should use for snapshot testing
     // snapshotSerializers: [],
 
+    // The test environment that will be used for testing
+
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
 
     // Adds a location field to test results
     // testLocationInResults: false,
+
+    // The glob patterns Jest uses to detect test files
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [

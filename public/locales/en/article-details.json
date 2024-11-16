@@ -5,5 +5,8 @@
     "An error occurred while loading the article": "An error occurred while loading the article",
     "Edit page with id": "Edit page with id",
     "Create article": "Create article",
-    "Article ratings coming soon": "Article ratings coming soon"
+    "Article ratings coming soon": "Article ratings coming soon",
+    "views_zero": "{{count}} views",
+    "views_one": "{{count}} view",
+    "views_other": "{{count}} views"
 }

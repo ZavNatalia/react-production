@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { Input } from '@/shared/ui/redesigned/Input';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -65,18 +65,23 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 gap="8"
                 className={classNames(cls.LoginForm, {}, [className])}
             >
-                <Text className={cls.title} title={t('Authorization form')} />
+                <Text
+                    className={cls.title}
+                    title={t('Authorization form')}
+                    variant="accent"
+                />
                 {error && (
                     <Text
                         className={cls.error}
                         text={t('Invalid username or password')}
-                        theme={TextTheme.ERROR}
+                        variant="error"
                     />
                 )}
                 <Input
                     type="text"
                     className={cls.input}
                     label={t('Username')}
+                    placeholder={t('Username')}
                     direction="column"
                     autofocus
                     value={username}
@@ -86,12 +91,13 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     type="text"
                     className={cls.input}
                     label={t('Password')}
+                    placeholder={t('Password')}
                     direction="column"
                     value={password}
                     onChange={onChangePassword}
                 />
                 <Button
-                    theme={ButtonTheme.OUTLINE}
+                    variant="outline"
                     className={cls.loginBtn}
                     disabled={isLoading}
                     onClick={onLoginClick}

@@ -1,18 +1,43 @@
 .Icon {
-    fill: var(--icon-v2);
-    color: var(--icon-v2);
+    border-radius: 50%;
 }
 
-.button {
+.normal {
+    fill: var(--color-icon);
+    color: var(--color-icon);
+
+    &:hover {
+        color: var(--color-state-accent);
+    }
+}
+
+.hint {
+    fill: var(--color-text-hint);
+    color: var(--color-text-hint);
+
+    &:hover {
+        color: var(--color-icon);
+    }
+}
+
+.iconBtn {
     margin: 0;
     padding: 0;
     border: none;
-    outline: none;
     background: none;
     cursor: pointer;
-}
+    border-radius: 50%;
 
-.button:hover .Icon {
-    color: var(--accent-v2);
-    fill: var(--accent-v2);
+    &:hover {
+        color: var(--color-state-accent);
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 2px var(--shadow-accent);
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
 }
