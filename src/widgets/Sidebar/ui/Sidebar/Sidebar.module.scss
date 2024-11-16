@@ -1,72 +1,72 @@
 .Sidebar {
-  background: var(--color-bg-dark);
-  height: calc(100vh - 36px);
-  width: var(--sidebar-width);
-  border-radius: 12px;
-  position: relative;
-  padding: 18px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 2px 10px 0 var(--shadow-default);
-
-  .items {
+    background: var(--color-bg-dark);
+    height: calc(100vh - 36px);
+    width: var(--sidebar-width);
+    border-radius: 12px;
+    position: relative;
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    margin: 0;
-    display: flex;
-    flex: 1;
-  }
+    box-shadow: 0 2px 10px 0 var(--shadow-default);
 
-  .appLogo {
-    display: flex;
-    justify-content: center;
-  }
+    .items {
+        gap: 16px;
+        margin: 0;
+        display: flex;
+        flex: 1;
+    }
 
-  .switchers {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+    .appLogo {
+        display: flex;
+        justify-content: center;
+    }
 
-  .collapseBtnWrapper {
-    position: absolute;
-    right: 6px;
-    top: 50%;
-  }
+    .switchers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 
-  .collapseBtn {
-    transform: rotate(90deg);
-  }
+    .collapseBtnWrapper {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+    }
+
+    .collapseBtn {
+        transform: rotate(90deg);
+    }
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
 }
 
 .collapsed {
-  width: var(--sidebar-width-collapsed);
-  justify-content: center;
-  padding: 20px 0;
+    width: var(--sidebar-width-collapsed);
+    justify-content: center;
+    padding: 20px 0;
 
-  .items {
-    gap: 16px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
+    .items {
+        gap: 16px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
 
-  .switchers {
-    flex-direction: column;
-    align-items: center;
-  }
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .collapseBtn {
-    transform: rotate(-90deg);
-    right: 6px;
-  }
+    .collapseBtn {
+        transform: rotate(-90deg);
+        right: 6px;
+    }
 }

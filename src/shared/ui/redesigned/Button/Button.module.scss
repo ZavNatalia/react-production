@@ -14,10 +14,12 @@
     &:active {
         box-shadow: 0 0 0 2px var(--shadow-accent);
 
-        .addonLeft svg, .addonRight svg {
+        .addonLeft svg,
+        .addonRight svg {
             color: var(--color-text-inverted);
         }
     }
+
     &:active {
         opacity: 0.7;
     }
@@ -39,11 +41,13 @@
     padding: 2px 16px;
 }
 
-.addonLeft, .addonRight {
+.addonLeft,
+.addonRight {
     display: flex;
 }
 
-.addonLeft svg, .addonRight svg {
+.addonLeft svg,
+.addonRight svg {
     transition: color 0.3s ease;
     color: var(--color-text-hint);
 }
@@ -60,7 +64,8 @@
         border: 1px solid var(--color-state-accent);
         box-shadow: 0 4px 12px 0 var(--shadow-dark);
 
-        .addonLeft svg, .addonRight svg {
+        .addonLeft svg,
+        .addonRight svg {
             color: var(--color-text-inverted);
         }
     }
@@ -78,7 +83,8 @@
         background-color: var(--color-state-accent);
         box-shadow: 0 4px 12px 0 var(--shadow-dark);
 
-        .addonLeft svg, .addonRight svg {
+        .addonLeft svg,
+        .addonRight svg {
             color: var(--color-text-inverted);
         }
     }
@@ -95,7 +101,8 @@
             background-color: var(--color-state-accent);
             box-shadow: 0 4px 12px 0 var(--shadow-dark);
 
-            .addonLeft svg, .addonRight svg {
+            .addonLeft svg,
+            .addonRight svg {
                 color: var(--color-text-inverted);
             }
         }
@@ -111,10 +118,12 @@
             background-color: var(--color-state-cancel);
             color: var(--color-text-inverted);
 
-            .addonLeft svg, .addonRight svg {
+            .addonLeft svg,
+            .addonRight svg {
                 color: var(--color-text-inverted);
             }
         }
+
         &:focus,
         &:active {
             box-shadow: 0 0 0 2px var(--color-state-cancel);
@@ -131,10 +140,12 @@
             background-color: var(--color-state-save);
             color: var(--color-text-inverted);
 
-            .addonLeft svg, .addonRight svg {
+            .addonLeft svg,
+            .addonRight svg {
                 color: var(--color-text-inverted);
             }
         }
+
         &:focus,
         &:active {
             box-shadow: 0 0 0 2px var(--color-state-save);
@@ -154,7 +165,8 @@
         border: 1px solid var(--color-state-accent);
         color: var(--color-text-inverted);
 
-        .addonLeft svg, .addonRight svg {
+        .addonLeft svg,
+        .addonRight svg {
             color: var(--color-text-inverted);
         }
     }

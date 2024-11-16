@@ -9,7 +9,6 @@
     }
 }
 
-
 .error {
     .title {
         color: var(--color-state-cancel);
@@ -21,13 +20,15 @@
 }
 
 .accent {
-    .title, .text {
+    .title,
+    .text {
         color: var(--color-state-accent);
     }
 }
 
 .hint {
-    .title, .text {
+    .title,
+    .text {
         color: var(--color-text-hint);
     }
 }

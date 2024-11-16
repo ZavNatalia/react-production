@@ -2,6 +2,7 @@
     text-decoration: none;
     outline: none;
     cursor: pointer;
+
     &:active {
         opacity: 0.7;
     }
@@ -13,9 +14,11 @@
     &:hover {
         color: var(--color-state-accent);
     }
+
     &:active {
         background-color: var(--color-bg-default);
     }
+
     &:focus {
         box-shadow: 0 0 0 2px var(--shadow-accent);
     }
@@ -29,6 +32,7 @@
     &:hover {
         opacity: 0.8;
     }
+
     &:focus,
     &:active {
         box-shadow: 0 4px 12px 0 var(--color-state-cancel);

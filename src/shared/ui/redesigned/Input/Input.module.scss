@@ -11,6 +11,7 @@
     border-radius: var(--radius-xl);
     outline: none;
     transition: background-color 0.3s ease;
+
     &:not(.readonly) &:hover {
         background-color: var(--color-bg-light);
     }
@@ -41,6 +42,7 @@
     background-color: transparent;
     outline: none;
     color: var(--color-text-primary);
+
     &::placeholder {
         color: var(--color-text-hint);
     }
@@ -50,7 +52,8 @@
     border: 2px solid var(--color-state-accent);
     background-color: var(--color-bg-light);
 
-    .addonLeft svg, .addonRight svg {
+    .addonLeft svg,
+    .addonRight svg {
         color: var(--color-state-accent);
     }
 }
@@ -62,7 +65,8 @@
     }
 }
 
-.addonLeft, .addonRight {
+.addonLeft,
+.addonRight {
     display: flex;
 }
 

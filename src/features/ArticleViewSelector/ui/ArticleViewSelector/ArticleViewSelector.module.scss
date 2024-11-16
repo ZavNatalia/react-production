@@ -1,16 +1,16 @@
 .ArticleViewSelector {
     width: fit-content;
     box-shadow: 0 2px 10px 0 var(--shadow-default);
+
     .selected {
         fill: var(--color-state-accent);
-
     }
+
     .notSelected {
         fill: var(--color-text-hint);
+
         &:hover {
             fill: var(--color-state-accent);
         }
     }
-
-
 }

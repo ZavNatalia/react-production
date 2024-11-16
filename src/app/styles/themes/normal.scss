@@ -17,7 +17,7 @@
 
     /* Text colors */
     --color-text-primary: #1a282e;
-    --color-text-inverted: #ffffff;
+    --color-text-inverted: #fff;
     --color-text-hint: #828e93;
 
     /* State colors */
@@ -29,9 +29,9 @@
     --color-icon: #42a1ba;
 
     /* Shadows */
-    --shadow-default: rgba(173, 188, 192, 0.6);
-    --shadow-dark: rgba(77, 87, 90, 0.5);
-    --shadow-accent: rgba(8, 95, 123, 0.6);
+    --shadow-default: rgb(173 188 192 / 60%);
+    --shadow-dark: rgb(77 87 90 / 50%);
+    --shadow-accent: rgb(8 95 123 / 60%);
 
     // skeleton
     --skeleton-bg: #d6f1f8;
