@@ -3,6 +3,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 import ArticleDetailsPage from './ArticleDetailsPage';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'pages/ArticleDetailsPage',
@@ -10,6 +12,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
 const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
@@ -17,7 +20,7 @@ const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
 );
 
 const article: Article = {
-    id: '1',
+    id: '101',
     title: 'HTML news',
     subtitle: 'HTML: оцениваем и сравниваем изменения.',
     img: 'https://w0.peakpx.com/wallpaper/214/158/HD-wallpaper-html5-logo-white-silk-texture-html5-emblem-programming-language-html-silk-background.jpg',
@@ -92,6 +95,18 @@ Normal.args = {};
 Normal.decorators = [
     StoreDecorator({
         scrollRestoration: { scroll: { about: 0 } },
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
+
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        // scrollRestoration: { scroll: { about: 0 } },
         articleDetails: {
             data: article,
         },
