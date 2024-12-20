@@ -15,7 +15,7 @@ export const createArticle = (article?: Article) => {
         .request({
             method: 'POST',
             url: 'http://localhost:8000/articles',
-            headers: { Authorization: 'asfgh' },
+            headers: { Authorization: '1' },
             body: article ?? defaultArticle,
         })
         .then((resp) => resp.body);
@@ -25,7 +25,7 @@ export const removeArticle = (articleId: string) => {
     return cy.request({
         method: 'DELETE',
         url: `http://localhost:8000/articles/${articleId}`,
-        headers: { Authorization: 'asfgh' },
+        headers: { Authorization: '1' },
     });
 };
 

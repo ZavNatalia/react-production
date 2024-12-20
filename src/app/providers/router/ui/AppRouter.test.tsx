@@ -59,7 +59,7 @@ describe('app/router/AppRouter', () => {
                 initialState: {
                     user: {
                         _mounted: true,
-                        authData: {},
+                        authData: { id: '1' },
                     },
                 },
             });

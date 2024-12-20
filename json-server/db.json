@@ -1236,8 +1236,8 @@
     },
     {
       "id": "4",
-      "username": "John",
-      "password": "qwerty",
+      "username": "testuser",
+      "password": "gfhjkm",
       "roles": [
         "USER"
       ],
@@ -1247,7 +1247,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": true
       },
       "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
     }
@@ -1268,8 +1268,8 @@
       "id": "2",
       "firstname": "Vasya",
       "lastname": "Petrov",
-      "age": 26,
-      "currency": "USD",
+      "age": 29,
+      "currency": "KZT",
       "country": "Kazakhstan",
       "city": "Astana",
       "username": "Vasya I",
@@ -1290,11 +1290,11 @@
       "id": "4",
       "firstname": "test",
       "lastname": "user",
-      "age": 20,
+      "age": 40,
       "currency": "EUR",
       "country": "Kyrgyzstan",
       "city": "Bishkek",
-      "username": "test IX",
+      "username": "testuser",
       "avatar": "https://www.test-and-go.com/bundles/centraltesttestandgo/images/avatar-7.png?v7"
     }
   ],

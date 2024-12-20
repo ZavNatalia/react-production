@@ -10,7 +10,7 @@ import {
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { VStack } from '@/shared/ui/redesigned/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -21,14 +21,14 @@ import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
     className?: string;
-    onSuccess: () => void;
+    onClose: () => void;
 }
 
 const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 
-const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
+const LoginForm = memo(({ className, onClose }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
@@ -51,12 +51,16 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         [dispatch],
     );
 
+    const onCancelClick = () => {
+        onClose();
+    };
+
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
-            onSuccess();
+            onClose();
         }
-    }, [dispatch, onSuccess, password, username]);
+    }, [dispatch, onClose, password, username]);
 
     return (
         // eslint-disable-next-line i18next/no-literal-string
@@ -96,14 +100,22 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     value={password}
                     onChange={onChangePassword}
                 />
-                <Button
-                    variant="outline"
-                    className={cls.loginBtn}
-                    disabled={isLoading}
-                    onClick={onLoginClick}
-                >
-                    {t('Log in')}
-                </Button>
+                <HStack max justify="end" gap="8">
+                    <Button
+                        variant="clear"
+                        disabled={isLoading}
+                        onClick={onCancelClick}
+                    >
+                        {t('Cancel')}
+                    </Button>
+                    <Button
+                        variant="filled"
+                        disabled={isLoading}
+                        onClick={onLoginClick}
+                    >
+                        {t('Log in')}
+                    </Button>
+                </HStack>
             </VStack>
         </DynamicModuleLoader>
     );

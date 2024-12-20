@@ -9,7 +9,7 @@ export const resetProfile = (profileId: string) => {
     return cy.request({
         method: 'PUT',
         url: `http://localhost:8000/profile/${profileId}`,
-        headers: { Authorization: 'asfgh' },
+        headers: { Authorization: '1' },
         body: {
             id: '4',
             firstname: 'test',

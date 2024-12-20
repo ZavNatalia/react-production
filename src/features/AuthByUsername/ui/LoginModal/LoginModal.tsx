@@ -30,7 +30,7 @@ export const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => (
                 </Card>
             }
         >
-            <LoginFormAsync onSuccess={onClose} />
+            <LoginFormAsync onClose={onClose} />
         </Suspense>
     </Modal>
 );
