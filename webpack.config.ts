@@ -7,7 +7,7 @@ function getApiUrl(mode: BuildMode, apiUrl?: string) {
         return apiUrl;
     }
     return mode === 'production'
-        ? 'https://production-project-server-three-xi.vercel.app/'
+        ? 'https://react-production-orcin.vercel.app/'
         : 'http://localhost:8000';
 }
 
