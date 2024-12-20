@@ -6,7 +6,9 @@ function getApiUrl(mode: BuildMode, apiUrl?: string) {
     if (apiUrl) {
         return apiUrl;
     }
-    return mode === 'production' ? '/api' : 'http://localhost:8000';
+    return mode === 'production'
+        ? 'https://production-project-server-three-xi.vercel.app/'
+        : 'http://localhost:8000';
 }
 
 export default (env: BuildEnv) => {
