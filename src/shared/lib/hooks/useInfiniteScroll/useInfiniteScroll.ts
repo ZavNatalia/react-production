@@ -12,16 +12,14 @@ export function useInfiniteScroll({
     triggerRef,
 }: UseInfiniteScrollOptions) {
     useEffect(() => {
-        const wrapperElement = wrapperRef?.current || null;
         const triggerElement = triggerRef.current;
 
         let observer: IntersectionObserver | null = null;
 
         if (callback) {
             const options = {
-                root: wrapperElement,
-                rootMargin: '0px',
-                threshold: 1.0,
+                rootMargin: '100px',
+                threshold: 0.5,
             };
 
             observer = new IntersectionObserver(([entry]) => {
