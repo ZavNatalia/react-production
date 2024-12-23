@@ -1,4 +1,4 @@
-import React, { memo, Suspense, useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
@@ -28,14 +28,12 @@ const App = memo(() => {
 
     return (
         <div id="app" className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <MainLayout
-                    header={<Navbar />}
-                    content={<AppRouter />}
-                    sidebar={<Sidebar />}
-                    toolbar={toolbar}
-                />
-            </Suspense>
+            <MainLayout
+                header={<Navbar />}
+                content={<AppRouter />}
+                sidebar={<Sidebar />}
+                toolbar={toolbar}
+            />
         </div>
     );
 });
