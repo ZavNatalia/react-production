@@ -19,7 +19,7 @@ interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
     label?: string;
-    direction?: string;
+    direction?: 'row' | 'column';
     autofocus?: boolean;
     onChange?: (value: string) => void;
     readonly?: boolean;
@@ -44,6 +44,7 @@ export const Input = memo((props: InputProps) => {
     } = props;
     const ref = useRef<HTMLInputElement>(null);
     const [isFocused, setIsFocused] = useState(false);
+
     useEffect(() => {
         if (autofocus) {
             ref.current?.focus();
@@ -51,19 +52,32 @@ export const Input = memo((props: InputProps) => {
     }, [autofocus]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value);
+        if (!readonly) {
+            onChange?.(e.target.value);
+        }
     };
 
     const onFocus = () => {
-        setIsFocused(true);
+        if (!readonly) {
+            setIsFocused(true);
+        }
     };
+
     const onBlur = () => {
         setIsFocused(false);
     };
 
+    const onWrapperClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (ref.current && !ref.current.contains(e.target as Node)) {
+            if (!readonly) {
+                ref.current.focus();
+            }
+        }
+    };
+
     const mods: Mods = {
         [cls.readonly]: readonly,
-        [cls.focused]: isFocused,
+        [cls.focused]: isFocused && !readonly,
         [cls.withAddonLeft]: Boolean(addonLeft),
         [cls.withAddonRight]: Boolean(addonRight),
     };
@@ -74,8 +88,9 @@ export const Input = memo((props: InputProps) => {
                 className,
                 cls[direction],
             ])}
+            onClick={onWrapperClick}
         >
-            <div className={cls.addonLeft}>{addonLeft}</div>
+            {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
             <input
                 ref={ref}
                 type={type}
@@ -88,14 +103,14 @@ export const Input = memo((props: InputProps) => {
                 onChange={handleInputChange}
                 {...otherProps}
             />
-            <div className={cls.addonRight}>{addonRight}</div>
+            {addonRight && <div className={cls.addonRight}>{addonRight}</div>}
         </div>
     );
 
     if (label) {
         return (
             <HStack gap="8" max>
-                {label && <div className={cls.label}>{label}</div>}
+                <div className={cls.label}>{label}</div>
                 {input}
             </HStack>
         );

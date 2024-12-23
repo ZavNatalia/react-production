@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { memo, useCallback } from 'react';
+import { memo, useCallback, FormEvent } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Input } from '@/shared/ui/redesigned/Input';
@@ -55,68 +55,75 @@ const LoginForm = memo(({ className, onClose }: LoginFormProps) => {
         onClose();
     };
 
-    const onLoginClick = useCallback(async () => {
-        const result = await dispatch(loginByUsername({ username, password }));
-        if (result.meta.requestStatus === 'fulfilled') {
-            onClose();
-        }
-    }, [dispatch, onClose, password, username]);
+    const handleSubmit = useCallback(
+        async (event: FormEvent<HTMLFormElement>) => {
+            event.preventDefault();
+            const result = await dispatch(
+                loginByUsername({ username, password }),
+            );
+            if (result.meta.requestStatus === 'fulfilled') {
+                onClose();
+            }
+        },
+        [dispatch, onClose, password, username],
+    );
 
     return (
-        // eslint-disable-next-line i18next/no-literal-string
         <DynamicModuleLoader reducers={initialReducers}>
-            <VStack
-                gap="8"
+            <form
                 className={classNames(cls.LoginForm, {}, [className])}
+                onSubmit={handleSubmit}
             >
-                <Text
-                    className={cls.title}
-                    title={t('Authorization form')}
-                    variant="accent"
-                />
-                {error && (
+                <VStack gap="8">
                     <Text
-                        className={cls.error}
-                        text={t('Invalid username or password')}
-                        variant="error"
+                        className={cls.title}
+                        title={t('Authorization form')}
+                        variant="accent"
                     />
-                )}
-                <Input
-                    type="text"
-                    className={cls.input}
-                    label={t('Username')}
-                    placeholder={t('Username')}
-                    direction="column"
-                    autofocus
-                    value={username}
-                    onChange={onChangeUsername}
-                />
-                <Input
-                    type="text"
-                    className={cls.input}
-                    label={t('Password')}
-                    placeholder={t('Password')}
-                    direction="column"
-                    value={password}
-                    onChange={onChangePassword}
-                />
-                <HStack max justify="end" gap="8">
-                    <Button
-                        variant="clear"
-                        disabled={isLoading}
-                        onClick={onCancelClick}
-                    >
-                        {t('Cancel')}
-                    </Button>
-                    <Button
-                        variant="filled"
-                        disabled={isLoading}
-                        onClick={onLoginClick}
-                    >
-                        {t('Log in')}
-                    </Button>
-                </HStack>
-            </VStack>
+                    {error && (
+                        <Text
+                            className={cls.error}
+                            text={t('Invalid username or password')}
+                            variant="error"
+                        />
+                    )}
+                    <Input
+                        type="text"
+                        className={cls.input}
+                        label={t('Username')}
+                        placeholder={t('Username')}
+                        direction="column"
+                        autoFocus
+                        value={username}
+                        onChange={onChangeUsername}
+                    />
+                    <Input
+                        type="password"
+                        className={cls.input}
+                        label={t('Password')}
+                        placeholder={t('Password')}
+                        direction="column"
+                        value={password}
+                        onChange={onChangePassword}
+                    />
+                    <HStack max justify="end" gap="8">
+                        <Button
+                            variant="clear"
+                            disabled={isLoading}
+                            onClick={onCancelClick}
+                        >
+                            {t('Cancel')}
+                        </Button>
+                        <Button
+                            type="submit"
+                            variant="filled"
+                            disabled={isLoading}
+                        >
+                            {t('Log in')}
+                        </Button>
+                    </HStack>
+                </VStack>
+            </form>
         </DynamicModuleLoader>
     );
 });

@@ -10,15 +10,25 @@
     border: 2px solid var(--color-bg-accent);
     border-radius: var(--radius-xl);
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-    &:not(.readonly) &:hover {
+    &:not(.readonly):hover {
+        background-color: var(--color-bg-light);
+        cursor: text;
+    }
+
+    &:not(.readonly):focus-within {
         background-color: var(--color-bg-light);
     }
 
-    &:not(.readonly) &:focus {
-        box-shadow: 0 0 0 2px var(--shadow-accent);
-        background-color: var(--color-bg-light);
+    &.readonly {
+        cursor: not-allowed;
+        opacity: 0.6;
+        background-color: var(--color-bg-default);
+
+        .input {
+            opacity: 1;
+        }
     }
 }
 
