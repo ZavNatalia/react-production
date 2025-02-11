@@ -43,12 +43,12 @@ describe('app/router/AppRouter', () => {
         expect(page).toBeInTheDocument();
     });
 
-    test('redirect an unauthorized user to the main page', async () => {
+    test('redirect an unauthorized user to the about page', async () => {
         componentRender(<AppRouter />, {
             route: '/articles',
         });
 
-        const page = await screen.findByTestId('MainPage');
+        const page = await screen.findByTestId('AboutPage');
         expect(page).toBeInTheDocument();
     });
 

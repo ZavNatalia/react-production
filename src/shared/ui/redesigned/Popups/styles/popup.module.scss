@@ -6,13 +6,12 @@
 .menu {
     border-radius: var(--radius-l);
     overflow: hidden;
-    background-color: var(--color-bg-dark);
     box-shadow: 0 4px 12px 0 var(--shadow-dark);
 }
 
 .active {
-    color: var(--color-state-accent);
-    background-color: var(--color-bg-default);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
 }
 
 .optionsBottomLeft {
@@ -41,8 +40,12 @@
 
 .selected {
     color: var(--color-state-accent);
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-bg-light);
     font-weight: bold;
+
+    &:hover {
+        cursor: default;
+    }
 }
 
 .trigger {

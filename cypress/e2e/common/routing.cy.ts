@@ -4,11 +4,11 @@ describe('Routing', () => {
     describe('User is not authorized', () => {
         it('Go to the main page', () => {
             cy.visit('/');
-            cy.get(selectByTestId('MainPage')).should('exist');
+            cy.get(selectByTestId('AboutPage')).should('exist');
         });
         it('Go to the user page', () => {
             cy.visit('/profile/1');
-            cy.get(selectByTestId('MainPage')).should('exist');
+            cy.get(selectByTestId('ProfilePage')).should('exist');
         });
         it('Go to a non-existent route', () => {
             cy.visit('/profilenonexist/');

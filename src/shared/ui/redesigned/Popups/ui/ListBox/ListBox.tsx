@@ -62,8 +62,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
             >
                 <HListBox.Button as="div" className={cls.trigger}>
                     <Button
-                        variant="filled"
-                        size="s"
+                        variant="outline"
                         disabled={readonly}
                         addonRight={<Icon Svg={ArrowIcon} />}
                     >

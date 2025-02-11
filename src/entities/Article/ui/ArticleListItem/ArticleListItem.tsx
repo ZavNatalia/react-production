@@ -10,7 +10,7 @@ import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { getRouteArticleDetails } from '@/shared/const/router';
+import { getRouteArticleDetails, getRouteProfile } from '@/shared/const/router';
 import cls from './ArticleListItem.module.scss';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
@@ -31,7 +31,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={cls.types}
             text={article.type.join(', ')}
             size="s"
-            variant="hint"
+            variant="secondary"
         />
     );
     const views = (
@@ -43,7 +43,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 height="20px"
                 variant="hint"
             />
-            <Text text={String(article.views)} size="s" variant="hint" />
+            <Text text={String(article.views)} size="s" variant="secondary" />
         </div>
     );
     if (view === ArticleView.LIST) {
@@ -61,15 +61,20 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             >
                 <Card variant="light" border="roundBorder" padding="24">
                     <div className={cls.header}>
-                        <Avatar size={30} src={article.user?.avatar} />
-                        <Text
-                            className={cls.username}
-                            title={article.user?.username}
-                            size="s"
-                        />
+                        <AppLink
+                            className={cls.userInfo}
+                            to={getRouteProfile(article.user?.id)}
+                            target="_blank"
+                        >
+                            {article.user?.avatar ? (
+                                <Avatar size={30} src={article.user?.avatar} />
+                            ) : null}
+                            <Text size="s" title={article.user?.username} />
+                        </AppLink>
                         <Text
                             className={cls.date}
                             text={article.createdAt}
+                            variant="secondary"
                             size="s"
                         />
                     </div>

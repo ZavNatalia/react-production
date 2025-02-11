@@ -1,22 +1,13 @@
 :root {
-    --bg-color: #e5e5f1;
-    --primary-color: #36363a;
-    --secondary-color: #606069;
-    --inverted-bg-color: #53535a;
-    --inverted-primary-color: #f4f4fb;
-    --inverted-secondary-color: #bebec4;
-    --box-shadow: rgba(0 0 0 / 20%);
-
-    // redesigned
-
     /* Background colors */
     --color-bg-dark: #d5e9ee;
-    --color-bg-default: #ebf8fb;
-    --color-bg-light: #f6fbfc;
+    --color-bg-default: #f4f4f4;
+    --color-bg-light: #fff;
     --color-bg-accent: #a3deeb;
 
     /* Text colors */
     --color-text-primary: #1a282e;
+    --color-text-secondary: #575c5e;
     --color-text-inverted: #fff;
     --color-text-hint: #828e93;
 

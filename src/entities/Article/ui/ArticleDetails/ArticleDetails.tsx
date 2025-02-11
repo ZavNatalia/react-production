@@ -77,7 +77,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                 <HStack className={cls.headerImgWrapper}>
                     <Skeleton
                         className={cls.headerImg}
-                        width={500}
+                        width={400}
                         height={300}
                         border="12px"
                     />
@@ -111,7 +111,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         fallback={
                             <Skeleton
                                 className={cls.img}
-                                width="500px"
+                                width="400px"
                                 height="300px"
                                 border="12px"
                             />

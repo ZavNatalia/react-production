@@ -6,10 +6,9 @@
 
 .Button {
     cursor: pointer;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-l);
     box-shadow: 0 2px 10px 0 var(--shadow-default);
     transition: all 0.3s ease;
-    padding: 8px 16px;
     outline: none;
     display: flex;
     align-items: center;
@@ -33,18 +32,21 @@
 
 .size_s {
     font: bold var(--font-s);
+    padding: 4px 10px;
 }
 
 .size_m {
     font: bold var(--font-m);
+    padding: 6px 12px;
 }
 
 .size_l {
     font: bold var(--font-l);
+    padding: 8px 16px;
 }
 
 .withAddon {
-    padding: 2px 16px;
+    padding: 4px 14px;
 }
 
 .addonLeft,

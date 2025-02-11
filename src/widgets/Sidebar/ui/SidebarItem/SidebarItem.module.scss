@@ -5,11 +5,16 @@
     padding-left: 16px;
     width: 100%;
     border-left: 3px solid transparent;
+    transition: all 0.3s ease;
 
     .link {
         margin-left: 10px;
         white-space: nowrap;
         display: inline-block;
+    }
+
+    &:hover {
+        background-color: var(--color-bg-default);
     }
 }
 

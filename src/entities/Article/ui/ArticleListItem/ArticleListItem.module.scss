@@ -4,6 +4,18 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+
+        .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: var(--radius-xl);
+
+            &:hover {
+                background-color: var(--color-bg-default);
+            }
+        }
     }
 
     .imgWrapper {
@@ -32,7 +44,7 @@
     }
 
     .title {
-        margin: 12px 0 8px;
+        margin: 8px 0;
     }
 
     .infoWrapper {

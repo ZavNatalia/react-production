@@ -26,12 +26,15 @@ export const ArticleListItemSkeleton = memo(
                     <Card padding="24" border="roundBorder" variant="light">
                         <VStack gap="8">
                             <div className={cls.header}>
-                                <Skeleton border="50%" width={30} height={30} />
-                                <Skeleton
-                                    className={cls.username}
-                                    width={130}
-                                    height={20}
-                                />
+                                <div className={cls.userInfo}>
+                                    <Skeleton
+                                        border="50%"
+                                        width={32}
+                                        height={32}
+                                    />
+                                    <Skeleton width={100} height={24} />
+                                </div>
+
                                 <Skeleton
                                     className={cls.date}
                                     width={90}

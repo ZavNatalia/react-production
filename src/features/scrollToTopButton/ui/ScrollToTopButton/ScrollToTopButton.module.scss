@@ -1,3 +1,9 @@
 .ScrollToTopButton {
     fill: var(--color-text-primary);
+    opacity: 0.3;
+
+    &:hover {
+        opacity: 0.7;
+        fill: var(--color-state-accent);
+    }
 }

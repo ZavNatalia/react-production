@@ -1,4 +1,3 @@
-import { MainPage } from '@/pages/MainPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ArticlesPage } from '@/pages/ArticlesPage';
@@ -17,7 +16,6 @@ import {
     getRouteArticleEdit,
     getRouteArticles,
     getRouteForbidden,
-    getRouteMain,
     getRouteProfile,
     getRouteSettings,
 } from '@/shared/const/router';
@@ -25,10 +23,6 @@ import { AppRoutesProps } from '@/shared/types/router';
 import { SettingsPage } from '@/pages/SettingsPage';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
-    [AppRoutes.MAIN]: {
-        path: getRouteMain(),
-        element: <MainPage />,
-    },
     [AppRoutes.ABOUT]: {
         path: getRouteAbout(),
         element: <AboutPage />,

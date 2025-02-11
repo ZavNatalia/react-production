@@ -41,7 +41,7 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
         <Card
             className={classNames(cls.ArticlesFilters, {}, [className])}
             padding="16"
-            variant="dark"
+            variant="light"
         >
             <VStack gap="16">
                 <Input

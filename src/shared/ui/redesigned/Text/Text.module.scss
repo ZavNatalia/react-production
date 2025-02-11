@@ -9,6 +9,17 @@
     }
 }
 
+.secondary {
+    .title {
+        font: var(--font-m);
+        color: var(--color-text-secondary);
+    }
+
+    .text {
+        color: var(--color-text-secondary);
+    }
+}
+
 .error {
     .title {
         color: var(--color-state-cancel);
