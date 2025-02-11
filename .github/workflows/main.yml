@@ -4,113 +4,74 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: true
-
 jobs:
   build-and-ui-testing:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
-    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [ 17.x ]
     steps:
-      - uses: actions/checkout@v4
-      - name: Starting Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      # ✅ Очистка кеша перед установкой зависимостей
-      - name: Clear GitHub Actions cache
-        run: |
-          rm -rf ~/.npm
-          rm -rf ~/.cache
-
-      - name: Install dependencies
+      - name: install modules
         run: npm ci --force
-
-      - name: Build production project
+      - name: build production project
         run: npm run build:prod
         if: always()
-
-      - name: Build Storybook
+      - name: build storybook
         run: npm run storybook:build
         if: always()
-
-      - name: Run screenshot testing
+      - name: screenshot testing
         run: npm run test:ui:ci
         if: always()
-
-      - name: Run unit tests
-        run: npm run test:unit
-        if: always()
-
-      - name: Generate UI test report
+      - name: Generate HTML report
         run: npm run test:ui:report
         if: always()
-
-      - name: Move Loki reports
-        run: mv .loki reports/
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
         if: always()
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v2
-        if: always()
-
-      - name: Upload UI test reports (artifacts)
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         if: always()
         with:
-          name: ui-test-report
-          path: reports/
-
-      - name: Upload build for GitHub Pages
-        uses: actions/upload-pages-artifact@v2
-        if: always()
-        with:
-          path: reports/
-
+          path: '.loki'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
         if: always()
+        uses: actions/deploy-pages@v4
 
   checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [ 17.x ]
     steps:
-      - uses: actions/checkout@v4
-      - name: Starting Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Clear GitHub Actions cache
-        run: |
-          rm -rf ~/.npm
-          rm -rf ~/.cache
-
-      - name: Install dependencies
+      - name: install modules
         run: npm ci --force
-
-      - name: Lint TypeScript
+      - name: linting typescript
         run: npm run lint:ts
         if: always()
-
-      - name: Lint SCSS
+      - name: linting css
         run: npm run lint:scss
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
