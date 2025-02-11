@@ -24,7 +24,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 18.x ]
     steps:
       - uses: actions/checkout@v4
       - name: Starting Node.js ${{ matrix.node-version }}
@@ -32,34 +32,34 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: install modules
+      - name: Install dependencies
         run: npm ci --force
 
-      - name: build production project
+      - name: Build production project
         run: npm run build:prod
         if: always()
 
-      - name: build storybook
+      - name: Build Storybook
         run: npm run storybook:build
         if: always()
 
-      - name: screenshot testing
+      - name: Run screenshot testing
         run: npm run test:ui:ci
         if: always()
 
-      - name: unit testing
-        if: always()
+      - name: Run unit tests
         run: npm run test:unit
+        if: always()
 
-      - name: Generate HTML report
+      - name: Generate UI test report
         run: npm run test:ui:report
         if: always()
 
-      - name: move loki
+      - name: Move Loki reports
         run: mv .loki reports/
         if: always()
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v2
         if: always()
 
@@ -67,10 +67,10 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-report
+          name: ui-test-report
           path: reports/
 
-      - name: Upload artifact for GitHub Pages
+      - name: Upload build for GitHub Pages
         uses: actions/upload-pages-artifact@v2
         if: always()
         with:
@@ -78,15 +78,15 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        if: always()
         uses: actions/deploy-pages@v2
+        if: always()
 
   checks:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 18.x ]
     steps:
       - uses: actions/checkout@v4
       - name: Starting Node.js ${{ matrix.node-version }}
@@ -94,12 +94,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: install modules
+      - name: Install dependencies
         run: npm ci --force
 
-      - name: linting typescript
+      - name: Lint TypeScript
         run: npm run lint:ts
         if: always()
 
-      - name: linting css
+      - name: Lint SCSS
         run: npm run lint:scss
