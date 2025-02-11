@@ -57,10 +57,6 @@ const AboutPage = ({ className }: { className?: string }) => {
                     {t('for containerizing the application')}
                 </li>
                 <li>
-                    <span>{t('Netlify')}</span>&nbsp;
-                    {t('for deployment')}
-                </li>
-                <li>
                     <span>{t('Jest')}</span>&nbsp;
                     {t('for unit testing')}
                 </li>

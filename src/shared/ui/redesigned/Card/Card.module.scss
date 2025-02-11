@@ -25,11 +25,11 @@
 }
 
 .normalBorder {
-    border-radius: 12px;
+    border-radius: var(--radius-l);
 }
 
 .roundBorder {
-    border-radius: 24px;
+    border-radius: var(--radius-xl);
 }
 
 .max {

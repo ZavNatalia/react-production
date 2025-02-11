@@ -1,5 +1,6 @@
 import React, { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { getUserMounted, initAuthData } from '@/entities/User';
@@ -17,6 +18,7 @@ const App = memo(() => {
     const dispatch = useAppDispatch();
     const mounted = useSelector(getUserMounted);
     const toolbar = useAppToolbar();
+    const { t } = useTranslation();
 
     useEffect(() => {
         dispatch(initAuthData());
