@@ -36,6 +36,7 @@ export const Tabs = memo((props: TabsProps) => {
                 const isSelected = tab.value === value;
                 return (
                     <Button
+                        style={{ fontWeight: 'normal' }}
                         key={tab.value}
                         size="s"
                         variant={isSelected ? 'filled' : 'outline'}
