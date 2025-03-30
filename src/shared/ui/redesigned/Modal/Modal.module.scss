@@ -17,8 +17,9 @@
         background-color: var(--color-bg-light);
         color: var(--color-text-primary);
         padding: 20px;
-        transition: 0.3s transform;
-        transform: scale(0.5);
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease;
         max-width: 60%;
         border-radius: var(--radius-l);
         z-index: var(--modal-z-index);
@@ -32,11 +33,13 @@
 
     .content {
         transform: scale(1);
+        opacity: 1;
     }
 }
 
 .isClosing {
     .content {
-        transform: scale(0.2);
+        transform: scale(0.8);
+        opacity: 0;
     }
 }

@@ -33,7 +33,7 @@
         background: var(--color-state-accent);
     }
 
-    &:focus,
+    &:focus-visible,
     &:active {
         color: var(--color-state-accent);
     }

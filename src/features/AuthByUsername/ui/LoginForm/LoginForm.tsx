@@ -77,8 +77,9 @@ const LoginForm = memo(({ className, onClose }: LoginFormProps) => {
                 <VStack gap="8">
                     <Text
                         className={cls.title}
-                        title={t('Authorization form')}
+                        title={t('Welcome')}
                         variant="accent"
+                        align="center"
                     />
                     {error && (
                         <Text
